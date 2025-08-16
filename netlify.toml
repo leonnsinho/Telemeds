@@ -1,0 +1,37 @@
+[build]
+  # Comando que o Netlify executará para fazer o build
+  command = "npm run build"
+  
+  # Diretório que será publicado (onde estão os arquivos buildados)
+  publish = "dist"
+  
+  # Configurações de redirecionamento para SPA (Single Page Application)
+  [[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200
+
+[build.environment]
+  # Versão do Node.js (opcional, mas recomendado)
+  NODE_VERSION = "18"
+
+# Configurações de headers para otimização
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Headers específicos para arquivos estáticos
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Headers para o service worker (se houver)
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
