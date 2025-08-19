@@ -1,20 +1,76 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Activity, Calendar, Shield, Clock, ChevronDown } from 'lucide-react';
+import { Activity, Calendar, Shield, Clock, ChevronDown, Heart, Zap, Scale, Users, Thermometer, TrendingUp, Target } from 'lucide-react';
 import WaveDivider from '../components/WaveDivider';
 
 const Endocrinologia: React.FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   const commonCases = [
-    'Diabetes tipo 1 e 2',
-    'Obesidade e controle de peso',
-    'Distúrbios da tireoide',
-    'Síndrome do ovário policístico',
-    'Menopausa e reposição hormonal',
-    'Osteoporose',
-    'Distúrbios do crescimento',
-    'Hipertensão arterial'
+    {
+      title: 'Diabetes tipo 1 e 2',
+      description: 'Controle glicêmico avançado e prevenção de complicações diabéticas',
+      icon: Target,
+      color: 'from-red-500 to-rose-500',
+      bgColor: 'from-red-50 via-rose-50 to-pink-50',
+      borderColor: 'border-red-100 hover:border-red-300'
+    },
+    {
+      title: 'Obesidade e controle de peso',
+      description: 'Estratégias integradas para emagrecimento saudável e duradouro',
+      icon: Scale,
+      color: 'from-orange-500 to-amber-500',
+      bgColor: 'from-orange-50 via-amber-50 to-yellow-50',
+      borderColor: 'border-orange-100 hover:border-orange-300'
+    },
+    {
+      title: 'Distúrbios da tireoide',
+      description: 'Tratamento de hipertireoidismo, hipotireoidismo e nódulos tireoidianos',
+      icon: Thermometer,
+      color: 'from-blue-500 to-cyan-500',
+      bgColor: 'from-blue-50 via-cyan-50 to-sky-50',
+      borderColor: 'border-blue-100 hover:border-blue-300'
+    },
+    {
+      title: 'Síndrome do ovário policístico',
+      description: 'Abordagem completa para SOP: hormonal, metabólica e reprodutiva',
+      icon: Heart,
+      color: 'from-pink-500 to-rose-500',
+      bgColor: 'from-pink-50 via-rose-50 to-red-50',
+      borderColor: 'border-pink-100 hover:border-pink-300'
+    },
+    {
+      title: 'Menopausa e reposição hormonal',
+      description: 'Manejo dos sintomas da menopausa e terapia hormonal personalizada',
+      icon: Users,
+      color: 'from-purple-500 to-violet-500',
+      bgColor: 'from-purple-50 via-violet-50 to-indigo-50',
+      borderColor: 'border-purple-100 hover:border-purple-300'
+    },
+    {
+      title: 'Osteoporose',
+      description: 'Prevenção e tratamento da perda óssea com foco na qualidade de vida',
+      icon: Activity,
+      color: 'from-emerald-500 to-teal-500',
+      bgColor: 'from-emerald-50 via-teal-50 to-green-50',
+      borderColor: 'border-emerald-100 hover:border-emerald-300'
+    },
+    {
+      title: 'Distúrbios do crescimento',
+      description: 'Avaliação e tratamento de alterações no crescimento e desenvolvimento',
+      icon: TrendingUp,
+      color: 'from-indigo-500 to-blue-500',
+      bgColor: 'from-indigo-50 via-blue-50 to-sky-50',
+      borderColor: 'border-indigo-100 hover:border-indigo-300'
+    },
+    {
+      title: 'Hipertensão arterial',
+      description: 'Controle da pressão alta com foco nas causas endócrinas',
+      icon: Zap,
+      color: 'from-green-500 to-emerald-500',
+      bgColor: 'from-green-50 via-emerald-50 to-teal-50',
+      borderColor: 'border-green-100 hover:border-green-300'
+    }
   ];
 
   const faqItems = [
@@ -119,54 +175,97 @@ const Endocrinologia: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {commonCases.map((case_item, index) => (
-              <div
-                key={index}
-                className="group bg-gradient-to-br from-green-50 via-blue-50 to-teal-50 p-6 rounded-2xl border border-green-100 hover:border-green-300 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
-              >
-                <div className="flex items-center space-x-3 mb-3">
-                  <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Activity className="w-5 h-5 text-white" />
+            {commonCases.map((case_item, index) => {
+              const IconComponent = case_item.icon;
+              return (
+                <div
+                  key={index}
+                  className={`group bg-gradient-to-br ${case_item.bgColor} p-6 rounded-2xl border ${case_item.borderColor} hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer relative overflow-hidden`}
+                >
+                  {/* Background pattern */}
+                  <div className="absolute top-0 right-0 w-16 h-16 opacity-5">
+                    <IconComponent className="w-full h-full" />
                   </div>
-                  <div className="w-1 h-8 bg-gradient-to-b from-green-400 to-blue-400 rounded-full"></div>
+                  
+                  <div className="relative z-10">
+                    <div className="flex items-start space-x-4 mb-4">
+                      <div className={`flex-shrink-0 w-12 h-12 bg-gradient-to-r ${case_item.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                        <IconComponent className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-gray-900 font-bold text-lg mb-2 leading-tight">{case_item.title}</h3>
+                        <p className="text-gray-600 text-sm leading-relaxed">{case_item.description}</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-2">
+                        <div className={`w-2 h-2 bg-gradient-to-r ${case_item.color} rounded-full`}></div>
+                        <span className="text-xs font-medium text-gray-500">Especializado</span>
+                      </div>
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <ChevronDown className="w-4 h-4 text-gray-400 rotate-[-90deg]" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-gray-800 font-semibold text-sm mb-2">Tratamento hormonal</h3>
-                <p className="text-gray-700 font-medium text-base leading-relaxed">{case_item}</p>
-                <div className="mt-4 flex items-center text-green-600 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span>Saiba mais</span>
-                  <ChevronDown className="w-4 h-4 ml-1 rotate-[-90deg]" />
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
-          {/* Estatísticas */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="p-6">
-              <div className="text-4xl font-bold text-green-600 mb-2">92%</div>
-              <p className="text-gray-600 font-medium">Controle glicêmico</p>
+          {/* Estatísticas com novo design */}
+          <div className="mt-20">
+            <div className="text-center mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Resultados que comprovam nossa expertise</h3>
+              <p className="text-gray-600">Números que refletem nosso compromisso com seu tratamento hormonal</p>
             </div>
-            <div className="p-6">
-              <div className="text-4xl font-bold text-blue-600 mb-2">1200+</div>
-              <p className="text-gray-600 font-medium">Pacientes atendidos</p>
-            </div>
-            <div className="p-6">
-              <div className="text-4xl font-bold text-teal-600 mb-2">15anos</div>
-              <p className="text-gray-600 font-medium">Experiência combinada</p>
-            </div>
-            <div className="p-6">
-              <div className="text-4xl font-bold text-green-600 mb-2">8h-20h</div>
-              <p className="text-gray-600 font-medium">Seg a Sex</p>
-            </div>
-            <div className="p-6">
-              <div className="text-4xl font-bold text-blue-600 mb-2">8h-13h</div>
-              <p className="text-gray-600 font-medium">Sáb e Dom</p>
+            
+            <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
+              <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-6 rounded-2xl text-center border border-green-100 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-green-600 mb-2">92%</div>
+                <p className="text-gray-600 font-medium text-sm">Controle glicêmico</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-100 p-6 rounded-2xl text-center border border-blue-100 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-blue-600 mb-2">1200+</div>
+                <p className="text-gray-600 font-medium text-sm">Pacientes atendidos</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-teal-50 to-green-100 p-6 rounded-2xl text-center border border-teal-100 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-green-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Activity className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-teal-600 mb-2">15anos</div>
+                <p className="text-gray-600 font-medium text-sm">Experiência combinada</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-orange-50 to-amber-100 p-6 rounded-2xl text-center border border-orange-100 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Calendar className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-orange-600 mb-2">8h-20h</div>
+                <p className="text-gray-600 font-medium text-sm">Seg a Sex</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-purple-50 to-violet-100 p-6 rounded-2xl text-center border border-purple-100 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Heart className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-purple-600 mb-2">8h-13h</div>
+                <p className="text-gray-600 font-medium text-sm">Sáb e Dom</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <WaveDivider color="#C5E4F6" />
+      <WaveDivider gradientFrom="#C5E4F6" gradientTo="#E5D8F0" />
 
       {/* Dra. Gabriela Iervolino */}
       <section className="section-padding gradient-secondary">
@@ -179,7 +278,8 @@ const Endocrinologia: React.FC = () => {
                   <img
                     src="/dra.jpeg"
                     alt="Dra. Gabriela Iervolino"
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: 'top 15%' }}
                   />
                 </div>
                 {/* Badge de credencial */}
@@ -314,7 +414,7 @@ const Endocrinologia: React.FC = () => {
         </div>
       </section>
 
-      <WaveDivider color="#E8DAEB" />
+      <WaveDivider gradientFrom="#D8CAE7" gradientTo="#FEF7D3" />
 
       {/* FAQ */}
       <section className="section-padding-large gradient-primary">

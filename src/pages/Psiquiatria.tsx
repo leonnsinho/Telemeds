@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, Calendar, Shield, Clock, ChevronDown } from 'lucide-react';
+import { Brain, Calendar, Shield, Clock, ChevronDown, Heart, Zap, Moon, Users, AlertTriangle, Activity, Coffee, Smile } from 'lucide-react';
 import WaveDivider from '../components/WaveDivider';
 import medicoSerioImg from '../assets/images/medico serio.jpg';
 import medico2Img from '../assets/images/medico 2.jpeg';
@@ -9,14 +9,70 @@ const Psiquiatria: React.FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   const commonCases = [
-    'Depressão e transtornos do humor',
-    'Ansiedade e transtornos ansiosos',
-    'Transtorno do pânico',
-    'Transtorno bipolar',
-    'TDAH (Transtorno de Déficit de Atenção)',
-    'Transtornos do sono',
-    'Dependência química',
-    'Transtornos alimentares'
+    {
+      title: 'Depressão e transtornos do humor',
+      description: 'Tratamento especializado para episódios depressivos e alterações de humor',
+      icon: Heart,
+      color: 'from-rose-500 to-pink-500',
+      bgColor: 'from-rose-50 via-pink-50 to-red-50',
+      borderColor: 'border-rose-100 hover:border-rose-300'
+    },
+    {
+      title: 'Ansiedade e transtornos ansiosos',
+      description: 'Controle da ansiedade generalizada, social e transtornos relacionados',
+      icon: Zap,
+      color: 'from-amber-500 to-orange-500',
+      bgColor: 'from-amber-50 via-yellow-50 to-orange-50',
+      borderColor: 'border-amber-100 hover:border-amber-300'
+    },
+    {
+      title: 'Transtorno do pânico',
+      description: 'Tratamento eficaz para crises de pânico e agorafobia',
+      icon: AlertTriangle,
+      color: 'from-red-500 to-rose-500',
+      bgColor: 'from-red-50 via-rose-50 to-pink-50',
+      borderColor: 'border-red-100 hover:border-red-300'
+    },
+    {
+      title: 'Transtorno bipolar',
+      description: 'Estabilização do humor e prevenção de episódios maníacos e depressivos',
+      icon: Activity,
+      color: 'from-purple-500 to-violet-500',
+      bgColor: 'from-purple-50 via-violet-50 to-indigo-50',
+      borderColor: 'border-purple-100 hover:border-purple-300'
+    },
+    {
+      title: 'TDAH (Transtorno de Déficit de Atenção)',
+      description: 'Melhora da concentração, foco e controle da hiperatividade',
+      icon: Brain,
+      color: 'from-blue-500 to-cyan-500',
+      bgColor: 'from-blue-50 via-cyan-50 to-sky-50',
+      borderColor: 'border-blue-100 hover:border-blue-300'
+    },
+    {
+      title: 'Transtornos do sono',
+      description: 'Tratamento para insônia, hipersonia e distúrbios do ciclo do sono',
+      icon: Moon,
+      color: 'from-indigo-500 to-purple-500',
+      bgColor: 'from-indigo-50 via-purple-50 to-violet-50',
+      borderColor: 'border-indigo-100 hover:border-indigo-300'
+    },
+    {
+      title: 'Dependência química',
+      description: 'Suporte para tratamento de vícios e dependências diversas',
+      icon: Coffee,
+      color: 'from-emerald-500 to-teal-500',
+      bgColor: 'from-emerald-50 via-teal-50 to-green-50',
+      borderColor: 'border-emerald-100 hover:border-emerald-300'
+    },
+    {
+      title: 'Transtornos alimentares',
+      description: 'Abordagem integrada para anorexia, bulimia e compulsão alimentar',
+      icon: Smile,
+      color: 'from-teal-500 to-green-500',
+      bgColor: 'from-teal-50 via-green-50 to-emerald-50',
+      borderColor: 'border-teal-100 hover:border-teal-300'
+    }
   ];
 
   const doctors = [
@@ -138,44 +194,83 @@ const Psiquiatria: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {commonCases.map((case_item, index) => (
-              <div
-                key={index}
-                className="group bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 p-6 rounded-2xl border border-blue-100 hover:border-blue-300 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
-              >
-                <div className="flex items-center space-x-3 mb-3">
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Brain className="w-5 h-5 text-white" />
+            {commonCases.map((case_item, index) => {
+              const IconComponent = case_item.icon;
+              return (
+                <div
+                  key={index}
+                  className={`group bg-gradient-to-br ${case_item.bgColor} p-6 rounded-2xl border ${case_item.borderColor} hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer relative overflow-hidden`}
+                >
+                  {/* Background pattern */}
+                  <div className="absolute top-0 right-0 w-16 h-16 opacity-5">
+                    <IconComponent className="w-full h-full" />
                   </div>
-                  <div className="w-1 h-8 bg-gradient-to-b from-blue-400 to-purple-400 rounded-full"></div>
+                  
+                  <div className="relative z-10">
+                    <div className="flex items-start space-x-4 mb-4">
+                      <div className={`flex-shrink-0 w-12 h-12 bg-gradient-to-r ${case_item.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                        <IconComponent className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-gray-900 font-bold text-lg mb-2 leading-tight">{case_item.title}</h3>
+                        <p className="text-gray-600 text-sm leading-relaxed">{case_item.description}</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-2">
+                        <div className={`w-2 h-2 bg-gradient-to-r ${case_item.color} rounded-full`}></div>
+                        <span className="text-xs font-medium text-gray-500">Especializado</span>
+                      </div>
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <ChevronDown className="w-4 h-4 text-gray-400 rotate-[-90deg]" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-gray-800 font-semibold text-sm mb-2">Tratamento especializado</h3>
-                <p className="text-gray-700 font-medium text-base leading-relaxed">{case_item}</p>
-                <div className="mt-4 flex items-center text-blue-600 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span>Saiba mais</span>
-                  <ChevronDown className="w-4 h-4 ml-1 rotate-[-90deg]" />
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
-          {/* Estatísticas */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="p-6">
-              <div className="text-4xl font-bold text-blue-600 mb-2">95%</div>
-              <p className="text-gray-600 font-medium">Taxa de melhoria</p>
+          {/* Estatísticas com novo design */}
+          <div className="mt-20">
+            <div className="text-center mb-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Resultados que comprovam nossa excelência</h3>
+              <p className="text-gray-600">Números que refletem nosso compromisso com seu bem-estar</p>
             </div>
-            <div className="p-6">
-              <div className="text-4xl font-bold text-purple-600 mb-2">1000+</div>
-              <p className="text-gray-600 font-medium">Pacientes atendidos</p>
-            </div>
-            <div className="p-6">
-              <div className="text-4xl font-bold text-indigo-600 mb-2">8h-20h</div>
-              <p className="text-gray-600 font-medium">Seg a Sex</p>
-            </div>
-            <div className="p-6">
-              <div className="text-4xl font-bold text-purple-600 mb-2">8h-13h</div>
-              <p className="text-gray-600 font-medium">Sáb e Dom</p>
+            
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-2xl text-center border border-blue-100 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Brain className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-blue-600 mb-2">95%</div>
+                <p className="text-gray-600 font-medium text-sm">Taxa de melhoria</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-purple-50 to-violet-100 p-6 rounded-2xl text-center border border-purple-100 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-purple-600 mb-2">1000+</div>
+                <p className="text-gray-600 font-medium text-sm">Pacientes atendidos</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-100 p-6 rounded-2xl text-center border border-emerald-100 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Clock className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-emerald-600 mb-2">8h-20h</div>
+                <p className="text-gray-600 font-medium text-sm">Seg a Sex</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-rose-50 to-pink-100 p-6 rounded-2xl text-center border border-rose-100 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-rose-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Heart className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-rose-600 mb-2">8h-13h</div>
+                <p className="text-gray-600 font-medium text-sm">Sáb e Dom</p>
+              </div>
             </div>
           </div>
         </div>
