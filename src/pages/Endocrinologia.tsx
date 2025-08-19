@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Activity, Calendar, Shield, Clock, ChevronDown } from 'lucide-react';
 import WaveDivider from '../components/WaveDivider';
-import medicoSerioImg from '../assets/images/medico serio.jpg';
-import medico2Img from '../assets/images/medico 2.jpeg';
 
 const Endocrinologia: React.FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -17,23 +15,6 @@ const Endocrinologia: React.FC = () => {
     'Osteoporose',
     'Distúrbios do crescimento',
     'Hipertensão arterial'
-  ];
-
-  const doctors = [
-    {
-      name: 'Dr. Bruno Hees Toews',
-      crm: 'CRM-SP: 167551',
-      specialty: 'Endocrinologia',
-      experience: 'Atua há mais de 10 anos como endocrinologista e clínico geral, com especialização pela Santa Casa de São Paulo e vivência internacional. Reconhecido por sua abordagem empática e foco em resultados, oferece atendimento bilíngue (português e inglês) e conduz os atendimentos com excelência e responsabilidade médica.',
-      image: medicoSerioImg
-    },
-    {
-      name: 'Dr. Rennan Hollen',
-      crm: 'CRM-SP: 208989',
-      specialty: 'Endocrinologia',
-      experience: 'Com mais de 6 anos de experiência em endocrinologia e clínica médica, é especialista pelo Hospital Israelita Albert Einstein. Está em constante atualização profissional e dedica-se a um atendimento humanizado, personalizado e bilíngue (português e inglês), sempre priorizando o bem-estar e a qualidade de vida dos seus pacientes.',
-      image: medico2Img
-    }
   ];
 
   const faqItems = [
@@ -187,40 +168,97 @@ const Endocrinologia: React.FC = () => {
 
       <WaveDivider color="#C5E4F6" />
 
-      {/* Endocrinologistas */}
+      {/* Dra. Gabriela Iervolino */}
       <section className="section-padding gradient-secondary">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 slide-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Nossos <span className="gradient-text">Especialistas</span>
-            </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Médicos especialistas com vasta experiência em distúrbios hormonais e metabólicos
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {doctors.map((doctor, index) => (
-              <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
-                <div className="aspect-square overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Foto da médica */}
+            <div className="order-2 lg:order-1">
+              <div className="relative">
+                <div className="aspect-square overflow-hidden rounded-3xl shadow-2xl">
                   <img
-                    src={doctor.image}
-                    alt={doctor.name}
-                    className={`w-full h-full object-cover ${
-                      doctor.name.includes('Bruno') ? 'doctor-image-bruno' : 'doctor-image-rennan'
-                    }`}
+                    src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                    alt="Dra. Gabriela Iervolino"
+                    className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {doctor.name}
-                  </h3>
-                  <p className="text-green-600 font-semibold mb-1">{doctor.crm}</p>
-                  <p className="text-gray-600 mb-3">{doctor.specialty}</p>
-                  <p className="text-sm text-gray-500">{doctor.experience}</p>
+                {/* Badge de credencial */}
+                <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-4 shadow-lg">
+                  <div className="text-center">
+                    <p className="text-sm font-semibold text-gray-900">CRM</p>
+                    <p className="text-lg font-bold text-green-600">167067</p>
+                  </div>
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* Informações da médica */}
+            <div className="order-1 lg:order-2 space-y-6">
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                  Conheça a <span className="gradient-text">Dra. Gabriela Iervolino</span>
+                </h2>
+                <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                  Endocrinologista com linguagem acolhedora e explicações didáticas, especializada em tireoide, 
+                  emagrecimento, diabetes tipo 2, saúde hormonal masculina e osteometabolismo.
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                  Mais de 10 anos de experiência prática, formação nas melhores universidades do país (UNIFESP e FMABC) 
+                  e título pela Sociedade Brasileira de Endocrinologia e Metabologia. Oferece prescrição digital com 
+                  renovação de receitas controladas pelo Memed.
+                </p>
+              </div>
+
+              {/* Credenciais */}
+              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">Credenciais</h3>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span className="text-gray-700"><strong>CRM:</strong> 167067</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span className="text-gray-700"><strong>RQE:</strong> 92003</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Principais condições atendidas */}
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Principais Condições Atendidas
+                </h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    'Diabetes tipo 2',
+                    'Tireoide',
+                    'SOP',
+                    'Obesidade',
+                    'Deficiências hormonais',
+                    'Osteoporose',
+                    'Cirurgia bariátrica',
+                    'Dislipidemia'
+                  ].map((condition, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
+                      <span className="text-gray-700 text-sm">{condition}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* CTA */}
+              <div className="pt-4">
+                <Link 
+                  to="/agendamento"
+                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  <Calendar className="w-5 h-5" />
+                  <span>Agendar com Dra. Gabriela</span>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
