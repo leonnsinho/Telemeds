@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Calendar, Shield, Clock, ChevronDown } from 'lucide-react';
 import WaveDivider from '../components/WaveDivider';
-import medicoSerioImg from '../assets/images/medico serio.jpg';
-import medico2Img from '../assets/images/medico 2.jpeg';
+// removed unused doctor images (specialists section removed)
 
 const Psicologia: React.FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -19,22 +18,7 @@ const Psicologia: React.FC = () => {
     'Terapia de casal'
   ];
 
-  const doctors = [
-    {
-      name: 'Dr. Bruno Hees Toews',
-      crm: 'CRM-SP: 167551',
-      specialty: 'Psiquiatria',
-      description: 'Atua há mais de 10 anos como psiquiatra e clínico geral, com especialização pela Santa Casa de São Paulo e vivência internacional. Reconhecido por sua abordagem empática e foco em resultados, oferece atendimento bilíngue (português e inglês) e conduz os atendimentos com excelência e responsabilidade médica.',
-      image: medicoSerioImg
-    },
-    {
-      name: 'Dr. Rennan Hollen',
-      crm: 'CRM-SP: 208989',
-      specialty: 'Psiquiatria',
-      description: 'Com mais de 6 anos de experiência em psiquiatria e clínica médica, é especialista pelo Hospital Israelita Albert Einstein. Está em constante atualização profissional e dedica-se a um atendimento humanizado, personalizado e bilíngue (português e inglês), sempre priorizando o bem-estar e a qualidade de vida dos seus pacientes.',
-      image: medico2Img
-    }
-  ];
+  // specialists list removed as requested
 
   const faqItems = [
     {
@@ -187,95 +171,8 @@ const Psicologia: React.FC = () => {
 
       <WaveDivider color="#E5D8F0" />
 
-      {/* Psicólogos */}
-      <section className="section-padding gradient-primary">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 slide-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Nossos <span className="gradient-text">Especialistas</span>
-            </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Profissionais qualificados e empáticos, prontos para te acompanhar em sua jornada
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {doctors.map((doctor, index) => (
-              <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
-                <div className="aspect-square overflow-hidden">
-                  <img
-                    src={doctor.image}
-                    alt={doctor.name}
-                    className={`w-full h-full object-cover ${
-                      doctor.name.includes('Bruno') ? 'doctor-image-bruno' : 'doctor-image-rennan'
-                    }`}
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {doctor.name}
-                  </h3>
-                  <p className="text-purple-600 font-semibold mb-3">{doctor.crm}</p>
-                  <p className="text-gray-600 mb-3 font-medium">{doctor.specialty}</p>
-                  <p className="text-sm text-gray-700 leading-relaxed">{doctor.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <WaveDivider flip color="#ffffff" />
-
-      {/* Como Funciona */}
-      <section className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 slide-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Como funciona a <span className="gradient-text">terapia online</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Processo acolhedor e profissional para cuidar da sua saúde emocional
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center fade-in">
-              <div className="w-20 h-20 gradient-secondary rounded-full flex items-center justify-center mx-auto mb-6">
-                <Calendar className="w-10 h-10 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">1. Agende sua sessão</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Escolha o psicólogo e horário ideal para você. 
-                Agendamento flexível online.
-              </p>
-            </div>
-
-            <div className="text-center fade-in">
-              <div className="w-20 h-20 gradient-secondary rounded-full flex items-center justify-center mx-auto mb-6">
-                <Heart className="w-10 h-10 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">2. Sessão terapêutica</h3>
-              <p className="text-gray-600 leading-relaxed">
-                As consultas são padronizadas em 1 hora de duração.
-              </p>
-            </div>
-
-            <div className="text-center fade-in">
-              <div className="w-20 h-20 gradient-secondary rounded-full flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-10 h-10 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">3. Acompanhamento</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Evolução contínua com suporte entre sessões 
-                e orientações personalizadas.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <WaveDivider color="#C5E4F6" />
+  {/* Especialistas removidos conforme solicitado */}
+  <WaveDivider flip color="#ffffff" />
 
       {/* FAQ */}
       <section className="section-padding-large gradient-secondary">
