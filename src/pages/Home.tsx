@@ -444,7 +444,7 @@ const Home: React.FC = () => {
                     }}
                     className="w-full border-2 border-gray-300 text-gray-700 px-4 lg:px-6 py-3 sm:py-3.5 lg:py-3 rounded-lg lg:rounded-xl text-base lg:text-lg font-semibold hover:bg-gray-50 transition-all duration-200"
                   >
-                    Economize até 20%
+                    Ver Planos
                   </button>
                 </div>
               </div>
