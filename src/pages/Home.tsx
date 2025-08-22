@@ -185,31 +185,31 @@ const Home: React.FC = () => {
 
   const plans = [
     {
-      name: 'Cuidar + Mensal',
+      name: 'Cuidar+ Telemeds Familiar & Amigos – Mensal',
       price: 'R$ 24,90',
       period: '/mês',
-      description: 'Acompanhamento médico mensal completo',
+      description: 'Assinatura mensal para você e até 5 pessoas',
       features: [
-        'Consultas online ilimitadas',
-        'Prioridade no agendamento',
-        'Receita médica digital',
-        'Suporte via WhatsApp',
-        'Sem carência para uso'
+        'Você + até 5 familiares ou amigos',
+        'Descontos de R$20 a R$50 em consultas',
+        'Benefícios em farmácias parceiras',
+        'Vantagens em parceiros digitais',
+        'Acesso imediato sem contrato longo'
       ],
       highlight: true,
       link: 'https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=012e8183531e44e2bfa325bc8b8d8813'
     },
     {
-      name: 'Cuidar + Anual',
-      price: 'R$ 19,99',
+      name: 'Cuidar+ Telemeds Familiar & Amigos – Anual',
+      price: 'R$ 20,00',
       period: '/mês*',
-      description: 'Máxima economia com pagamento anual',
+      description: 'Plano anual com economia para até 5 pessoas',
       features: [
-        'Consultas online ilimitadas',
-        'Máxima prioridade no agendamento',
-        'Receita médica digital',
-        'Suporte via WhatsApp premium',
-        '2 meses grátis (economia de 16%)'
+        'Você + até 5 familiares ou amigos',
+        'Descontos de R$20 a R$50 em consultas',
+        'Benefícios em farmácias parceiras',
+        'Vantagens exclusivas em parceiros digitais',
+        'Economia de R$4,90/mês vs plano mensal'
       ],
       highlight: false,
       link: 'https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=a691f77e7b7244bfb25126dcc5e4e49c'
@@ -828,7 +828,7 @@ const Home: React.FC = () => {
                       <div className="mt-4 sm:mt-6 lg:mt-8 p-3 lg:p-4 bg-blue-50 rounded-xl lg:rounded-2xl">
                         <div className="flex items-center justify-between">
                           <span className="font-medium text-xs sm:text-sm lg:text-base text-gray-700">Economia vs Plano Mensal:</span>
-                          <span className="text-lg sm:text-xl lg:text-2xl font-bold text-green-600">16% OFF</span>
+                          <span className="text-lg sm:text-xl lg:text-2xl font-bold text-green-600">R$4,90/mês</span>
                         </div>
                       </div>
                     )}
@@ -837,8 +837,8 @@ const Home: React.FC = () => {
                     {plan.highlight && (
                       <div className="mt-4 sm:mt-6 lg:mt-8 p-3 lg:p-4 bg-white/10 rounded-xl lg:rounded-2xl backdrop-blur-sm">
                         <div className="flex items-center justify-between text-white">
-                          <span className="font-medium text-xs sm:text-sm lg:text-base">Pagamento Flexível:</span>
-                          <span className="text-lg sm:text-xl lg:text-2xl font-bold text-green-300">Mensal</span>
+                          <span className="font-medium text-xs sm:text-sm lg:text-base">Cobertura Familiar:</span>
+                          <span className="text-lg sm:text-xl lg:text-2xl font-bold text-green-300">Até 6 pessoas</span>
                         </div>
                       </div>
                     )}
@@ -890,8 +890,8 @@ const Home: React.FC = () => {
             <span className="text-lg font-semibold text-blue-800">Informação importante</span>
           </div>
           <p className="text-gray-700 leading-relaxed">
-            <strong>*Plano Anual:</strong> No Cuidar + Anual, o valor de R$ 19,99/mês é cobrado anualmente (R$ 239,88/ano), 
-            oferecendo economia de 16% comparado ao plano mensal. O pagamento é processado anualmente via Mercado Pago.
+            <strong>*Plano Anual:</strong> No Cuidar+ Telemeds Familiar & Amigos Anual, o valor de R$ 20,00/mês é cobrado mensalmente no cartão de crédito durante 12 meses (total R$ 240,00/ano), 
+            oferecendo economia de R$4,90 por mês comparado ao plano mensal. Cobertura para você + até 5 familiares ou amigos.
           </p>
         </div>
       </section>
