@@ -16,9 +16,6 @@ import {
   Instagram,
   Facebook,
   Info,
-  CreditCard,
-  Zap,
-  Phone,
   ChevronLeft,
   ChevronRight,
   ExternalLink,
@@ -32,7 +29,6 @@ const Home: React.FC = () => {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const [selectedSpecialty, setSelectedSpecialty] = useState<string>('');
   const [isFloatingMenuOpen, setIsFloatingMenuOpen] = useState<boolean>(false);
-  const [openModal, setOpenModal] = useState<number | null>(null);
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState<number>(0);
   const [isPaused, setIsPaused] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -201,55 +197,7 @@ const Home: React.FC = () => {
         'Sem carência para uso'
       ],
       highlight: true,
-      link: 'https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=012e8183531e44e2bfa325bc8b8d8813',
-      howItWorks: {
-        title: 'Como Funciona o Cuidar + Mensal',
-        description: 'Acompanhamento médico contínuo com economia e conveniência',
-        process: [
-          {
-            step: 1,
-            title: 'Assine',
-            description: 'Contrate o plano mensal com cobrança automática',
-            icon: CreditCard
-          },
-          {
-            step: 2,
-            title: 'Agende',
-            description: 'Reserve suas consultas com prioridade',
-            icon: Calendar
-          },
-          {
-            step: 3,
-            title: 'Consulte',
-            description: 'Videochamadas a partir de 20 minutos sempre que precisar',
-            icon: Phone
-          },
-          {
-            step: 4,
-            title: 'Economize',
-            description: 'Valor fixo mensal com acesso completo',
-            icon: Zap
-          }
-        ],
-        benefits: [
-          'Economia máxima com pagamento mensal',
-          'Prioridade total no agendamento',
-          'Suporte via WhatsApp exclusivo',
-          'Consultas ilimitadas durante o mês',
-          'Sem carência - use imediatamente',
-          'Acompanhamento médico contínuo',
-          'Histórico médico unificado',
-          'Cancelamento sem multa'
-        ],
-        contracting: [
-          'Faça seu cadastro na plataforma',
-          'Escolha o Cuidar + Mensal por R$ 24,90/mês',
-          'Configure a cobrança automática no cartão',
-          'Confirme a assinatura do plano',
-          'Agende suas consultas',
-          'Comece a usar imediatamente'
-        ]
-      }
+      link: 'https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=012e8183531e44e2bfa325bc8b8d8813'
     },
     {
       name: 'Cuidar + Anual',
@@ -264,55 +212,7 @@ const Home: React.FC = () => {
         '2 meses grátis (economia de 16%)'
       ],
       highlight: false,
-      link: 'https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=a691f77e7b7244bfb25126dcc5e4e49c',
-      howItWorks: {
-        title: 'Como Funciona o Cuidar + Anual',
-        description: 'Máxima economia com compromisso anual e benefícios exclusivos',
-        process: [
-          {
-            step: 1,
-            title: 'Assine',
-            description: 'Contrate o plano anual com desconto especial',
-            icon: CreditCard
-          },
-          {
-            step: 2,
-            title: 'Economize',
-            description: 'Ganhe 2 meses grátis no pagamento anual',
-            icon: Users
-          },
-          {
-            step: 3,
-            title: 'Priorize',
-            description: 'Máxima prioridade em agendamentos durante todo o ano',
-            icon: Zap
-          },
-          {
-            step: 4,
-            title: 'Aproveite',
-            description: 'Acesso completo por 12 meses',
-            icon: Phone
-          }
-        ],
-        benefits: [
-          'Economia de 16% vs plano mensal',
-          'Máxima prioridade no agendamento',
-          'Suporte premium durante todo o ano',
-          'Consultas ilimitadas por 12 meses',
-          'Sem carência - use imediatamente',
-          'Acompanhamento médico anual garantido',
-          'Histórico médico completo',
-          'Valor fixo sem reajustes durante o ano'
-        ],
-        contracting: [
-          'Cadastre-se na plataforma',
-          'Escolha o Cuidar + Anual por R$ 19,99/mês',
-          'Confirme o pagamento anual com desconto',
-          'Ative sua assinatura de 12 meses',
-          'Agende quantas consultas precisar',
-          'Aproveite por todo o ano'
-        ]
-      }
+      link: 'https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=a691f77e7b7244bfb25126dcc5e4e49c'
     }
   ];
 
@@ -845,7 +745,7 @@ const Home: React.FC = () => {
                 {/* Conteúdo Principal */}
                 <div className="flex flex-col lg:flex-row items-center lg:items-stretch">
                   {/* Seção do Preço e Nome - Lado Esquerdo */}
-                  <div className={`lg:w-1/3 p-4 sm:p-6 lg:p-12 flex flex-col justify-center text-center lg:text-left ${
+                  <div className={`lg:w-1/2 p-4 sm:p-6 lg:p-12 flex flex-col justify-center text-center lg:text-left ${
                     plan.highlight 
                       ? 'text-white' 
                       : 'bg-gradient-to-br from-gray-50 to-gray-100'
@@ -943,25 +843,6 @@ const Home: React.FC = () => {
                       </div>
                     )}
                   </div>
-
-                  {/* Seção de Ação - Lado Direito */}
-                  <div className={`lg:w-1/6 p-4 sm:p-6 lg:p-12 flex flex-col justify-center items-center lg:border-l ${
-                    plan.highlight 
-                      ? 'border-white/20' 
-                      : 'border-gray-200'
-                  }`}>
-                    <button
-                      onClick={() => setOpenModal(index)}
-                      className={`w-full lg:w-auto p-3 lg:p-4 rounded-xl lg:rounded-2xl transition-all duration-300 ${
-                        plan.highlight
-                          ? 'bg-white/10 hover:bg-white/20 text-white border border-white/30'
-                          : 'bg-gray-50 hover:bg-gray-100 text-gray-700 border border-gray-200'
-                      }`}
-                    >
-                      <Info className="w-5 h-5 lg:w-6 lg:h-6 mx-auto mb-1 lg:mb-2" />
-                      <span className="text-xs sm:text-sm font-medium block">Como Funciona</span>
-                    </button>
-                  </div>
                 </div>
 
                 {/* Efeito de brilho no hover */}
@@ -1014,108 +895,6 @@ const Home: React.FC = () => {
           </p>
         </div>
       </section>
-
-      {/* Modal Como Funciona */}
-      {openModal !== null && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-            <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex justify-between items-center rounded-t-2xl">
-              <h2 className="text-2xl font-bold text-gray-900">
-                {plans[openModal].howItWorks.title}
-              </h2>
-              <button
-                onClick={() => setOpenModal(null)}
-                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
-              >
-                <X className="w-6 h-6 text-gray-500" />
-              </button>
-            </div>
-
-            <div className="p-6">
-              <p className="text-lg text-gray-600 mb-8 text-center">
-                {plans[openModal].howItWorks.description}
-              </p>
-
-              {/* Como Funciona - Processo */}
-              <div className="mb-10">
-                <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                  <Zap className="w-6 h-6 text-blue-600 mr-2" />
-                  Processo Passo a Passo
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {plans[openModal].howItWorks.process.map((step, index) => {
-                    const IconComponent = step.icon;
-                    return (
-                      <div key={index} className="text-center">
-                        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                          <IconComponent className="w-8 h-8 text-white" />
-                        </div>
-                        <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-3 text-sm font-bold">
-                          {step.step}
-                        </div>
-                        <h4 className="font-bold text-gray-900 mb-2">{step.title}</h4>
-                        <p className="text-gray-600 text-sm">{step.description}</p>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* Processo de Contratação */}
-              <div className="mb-10">
-                <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                  <CreditCard className="w-6 h-6 text-green-600 mr-2" />
-                  Como Contratar
-                </h3>
-                <div className="bg-gray-50 rounded-xl p-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {plans[openModal].howItWorks.contracting.map((step, index) => (
-                      <div key={index} className="flex items-start space-x-3">
-                        <div className="bg-green-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-1">
-                          {index + 1}
-                        </div>
-                        <p className="text-gray-700">{step}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Benefícios Detalhados */}
-              <div className="mb-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                  <Star className="w-6 h-6 text-yellow-500 mr-2" />
-                  Benefícios Inclusos
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {plans[openModal].howItWorks.benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700">{benefit}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Botões de Ação */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center border-t border-gray-200 pt-6">
-                <button
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-                  onClick={() => setOpenModal(null)}
-                >
-                  Escolher {plans[openModal].name}
-                </button>
-                <button
-                  className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-full font-semibold hover:bg-gray-50 transition-all duration-300"
-                  onClick={() => setOpenModal(null)}
-                >
-                  Fechar
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 
   {/* Avaliações do Google */}
       <section className="section-padding-large gradient-primary">
