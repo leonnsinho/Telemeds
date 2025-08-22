@@ -189,77 +189,21 @@ const Home: React.FC = () => {
 
   const plans = [
     {
-      name: 'Consulta Avulsa',
-      price: 'R$ 89',
-      description: 'Ideal para consultas pontuais',
-      features: [
-        'Consulta online a partir de 20 minutos',
-        'Receita médica digital',
-        'Suporte pós-consulta',
-        'Agendamento flexível'
-      ],
-      highlight: false,
-      howItWorks: {
-        title: 'Como Funciona a Consulta Avulsa',
-        description: 'Solução prática e imediata para suas necessidades de saúde',
-        process: [
-          {
-            step: 1,
-            title: 'Agende',
-            description: 'Escolha o médico e horário disponível em nossa plataforma',
-            icon: Calendar
-          },
-          {
-            step: 2,
-            title: 'Pague',
-            description: 'Pagamento seguro via cartão, PIX ou boleto',
-            icon: CreditCard
-          },
-          {
-            step: 3,
-            title: 'Consulte',
-            description: 'Videochamadas a partir de 20 minutos com o especialista',
-            icon: Phone
-          },
-          {
-            step: 4,
-            title: 'Receba',
-            description: 'Receita digital válida e orientações médicas',
-            icon: Check
-          }
-        ],
-        benefits: [
-          'Sem mensalidade ou compromisso',
-          'Pagamento apenas quando usar',
-          'Acesso imediato aos melhores especialistas',
-          'Receitas digitais com validade nacional',
-          'Suporte técnico incluído',
-          'Consulta de qualidade no conforto de casa'
-        ],
-        contracting: [
-          'Cadastre-se gratuitamente na plataforma',
-          'Escolha a especialidade médica desejada',
-          'Selecione data e horário disponível',
-          'Efetue o pagamento de R$ 89',
-          'Receba link da consulta por email/SMS',
-          'Participe da consulta no horário agendado'
-        ]
-      }
-    },
-    {
-      name: 'Plano Cuidar',
-      price: 'R$ 179',
+      name: 'Cuidar + Mensal',
+      price: 'R$ 24,90',
       period: '/mês',
-      description: 'Para quem precisa de acompanhamento regular',
+      description: 'Acompanhamento médico mensal completo',
       features: [
-        '2 consultas por mês',
+        'Consultas online ilimitadas',
         'Prioridade no agendamento',
-        'Desconto em consultas extras',
-        'Suporte via WhatsApp'
+        'Receita médica digital',
+        'Suporte via WhatsApp',
+        'Sem carência para uso'
       ],
       highlight: true,
+      link: 'https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=012e8183531e44e2bfa325bc8b8d8813',
       howItWorks: {
-        title: 'Como Funciona o Plano Cuidar',
+        title: 'Como Funciona o Cuidar + Mensal',
         description: 'Acompanhamento médico contínuo com economia e conveniência',
         process: [
           {
@@ -271,7 +215,7 @@ const Home: React.FC = () => {
           {
             step: 2,
             title: 'Agende',
-            description: 'Reserve suas 2 consultas mensais com prioridade',
+            description: 'Reserve suas consultas com prioridade',
             icon: Calendar
           },
           {
@@ -283,15 +227,15 @@ const Home: React.FC = () => {
           {
             step: 4,
             title: 'Economize',
-            description: 'Desconto em consultas extras além das incluídas',
+            description: 'Valor fixo mensal com acesso completo',
             icon: Zap
           }
         ],
         benefits: [
-          'Economia de até 60% vs consultas avulsas',
+          'Economia máxima com pagamento mensal',
           'Prioridade total no agendamento',
           'Suporte via WhatsApp exclusivo',
-          'Desconto de 30% em consultas extras',
+          'Consultas ilimitadas durante o mês',
           'Sem carência - use imediatamente',
           'Acompanhamento médico contínuo',
           'Histórico médico unificado',
@@ -299,74 +243,74 @@ const Home: React.FC = () => {
         ],
         contracting: [
           'Faça seu cadastro na plataforma',
-          'Escolha o Plano Cuidar por R$ 179/mês',
+          'Escolha o Cuidar + Mensal por R$ 24,90/mês',
           'Configure a cobrança automática no cartão',
           'Confirme a assinatura do plano',
-          'Agende suas primeiras consultas',
+          'Agende suas consultas',
           'Comece a usar imediatamente'
         ]
       }
     },
     {
-      name: 'Plano Familiar',
-      price: 'R$ 299',
-      period: '/mês',
-      description: 'Cuidado completo para toda a família',
+      name: 'Cuidar + Anual',
+      price: 'R$ 19,99',
+      period: '/mês*',
+      description: 'Máxima economia com pagamento anual',
       features: [
-        'Até 4 pessoas',
-        '3 consultas por pessoa/mês',
-        'Prioridade máxima',
-        'Suporte 24/7'
+        'Consultas online ilimitadas',
+        'Máxima prioridade no agendamento',
+        'Receita médica digital',
+        'Suporte via WhatsApp premium',
+        '2 meses grátis (economia de 16%)'
       ],
       highlight: false,
+      link: 'https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=a691f77e7b7244bfb25126dcc5e4e49c',
       howItWorks: {
-        title: 'Como Funciona o Plano Familiar',
-        description: 'Saúde completa para toda família com máxima economia',
+        title: 'Como Funciona o Cuidar + Anual',
+        description: 'Máxima economia com compromisso anual e benefícios exclusivos',
         process: [
           {
             step: 1,
-            title: 'Cadastre',
-            description: 'Inclua até 4 familiares no mesmo plano',
-            icon: Users
+            title: 'Assine',
+            description: 'Contrate o plano anual com desconto especial',
+            icon: CreditCard
           },
           {
             step: 2,
-            title: 'Distribua',
-            description: 'Até 3 consultas por pessoa, 12 consultas/mês total',
-            icon: Calendar
+            title: 'Economize',
+            description: 'Ganhe 2 meses grátis no pagamento anual',
+            icon: Users
           },
           {
             step: 3,
             title: 'Priorize',
-            description: 'Prioridade máxima para toda família',
+            description: 'Máxima prioridade em agendamentos durante todo o ano',
             icon: Zap
           },
           {
             step: 4,
-            title: 'Suporte',
-            description: 'Suporte estendido durante finais de semana',
+            title: 'Aproveite',
+            description: 'Acesso completo por 12 meses',
             icon: Phone
           }
         ],
         benefits: [
-          'Economia de até 75% para famílias',
-          'Até 4 pessoas cobertas',
-          'Total de 12 consultas mensais',
-          'Prioridade máxima no agendamento',
-          'Suporte durante horários estendidos',
-          'Consultas extras com 40% desconto',
-          'Histórico médico familiar unificado',
-          'Flexibilidade na distribuição das consultas',
-          'Especialidades ilimitadas',
-          'Cancelamento sem multa'
+          'Economia de 16% vs plano mensal',
+          'Máxima prioridade no agendamento',
+          'Suporte premium durante todo o ano',
+          'Consultas ilimitadas por 12 meses',
+          'Sem carência - use imediatamente',
+          'Acompanhamento médico anual garantido',
+          'Histórico médico completo',
+          'Valor fixo sem reajustes durante o ano'
         ],
         contracting: [
-          'Cadastre o titular do plano',
-          'Adicione até 3 dependentes',
-          'Configure cobrança automática',
-          'Confirme o Plano Familiar R$ 299/mês',
-          'Distribua consultas entre os familiares',
-          'Toda família pode usar imediatamente'
+          'Cadastre-se na plataforma',
+          'Escolha o Cuidar + Anual por R$ 19,99/mês',
+          'Confirme o pagamento anual com desconto',
+          'Ative sua assinatura de 12 meses',
+          'Agende quantas consultas precisar',
+          'Aproveite por todo o ano'
         ]
       }
     }
@@ -936,16 +880,18 @@ const Home: React.FC = () => {
 
                       {/* Botão CTA Principal */}
                       <div className="pt-2 lg:pt-4">
-                        <Link
-                          to="/agendamento"
+                        <a
+                          href={plan.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className={`inline-block w-full lg:w-auto px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 rounded-xl lg:rounded-2xl font-bold text-sm sm:text-base lg:text-lg transition-all duration-300 text-center ${
                             plan.highlight
                               ? 'bg-white text-blue-700 hover:bg-blue-50 shadow-lg hover:shadow-xl'
                               : 'bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 shadow-lg hover:shadow-xl'
                           }`}
                         >
-                          Escolher {plan.name}
-                        </Link>
+                          Assinar {plan.name}
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -977,12 +923,22 @@ const Home: React.FC = () => {
                       ))}
                     </div>
 
-                    {/* Valor destacado para plano popular */}
+                    {/* Valor destacado para plano anual */}
+                    {!plan.highlight && plan.name.includes('Anual') && (
+                      <div className="mt-4 sm:mt-6 lg:mt-8 p-3 lg:p-4 bg-blue-50 rounded-xl lg:rounded-2xl">
+                        <div className="flex items-center justify-between">
+                          <span className="font-medium text-xs sm:text-sm lg:text-base text-gray-700">Economia vs Plano Mensal:</span>
+                          <span className="text-lg sm:text-xl lg:text-2xl font-bold text-green-600">16% OFF</span>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Valor destacado para plano mensal popular */}
                     {plan.highlight && (
                       <div className="mt-4 sm:mt-6 lg:mt-8 p-3 lg:p-4 bg-white/10 rounded-xl lg:rounded-2xl backdrop-blur-sm">
                         <div className="flex items-center justify-between text-white">
-                          <span className="font-medium text-xs sm:text-sm lg:text-base">Economia vs Consultas Avulsas:</span>
-                          <span className="text-lg sm:text-xl lg:text-2xl font-bold text-green-300">60% OFF</span>
+                          <span className="font-medium text-xs sm:text-sm lg:text-base">Pagamento Flexível:</span>
+                          <span className="text-lg sm:text-xl lg:text-2xl font-bold text-green-300">Mensal</span>
                         </div>
                       </div>
                     )}
@@ -1042,6 +998,20 @@ const Home: React.FC = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Nota sobre o plano anual */}
+      <section className="bg-blue-50 py-8">
+        <div className="max-w-4xl mx-auto text-center px-4">
+          <div className="flex items-center justify-center mb-4">
+            <Info className="w-6 h-6 text-blue-600 mr-2" />
+            <span className="text-lg font-semibold text-blue-800">Informação importante</span>
+          </div>
+          <p className="text-gray-700 leading-relaxed">
+            <strong>*Plano Anual:</strong> No Cuidar + Anual, o valor de R$ 19,99/mês é cobrado anualmente (R$ 239,88/ano), 
+            oferecendo economia de 16% comparado ao plano mensal. O pagamento é processado anualmente via Mercado Pago.
+          </p>
         </div>
       </section>
 

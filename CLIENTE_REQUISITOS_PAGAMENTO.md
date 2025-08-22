@@ -1,209 +1,232 @@
-# Requisitos do Cliente - Integração de Pagamentos
+# Requisitos do Cliente - Integração Mercado Pago
 
-## 📋 O que o Cliente Precisa Fornecer
+## 📋 O que Você Precisa Fazer para Ativar os Pagamentos Online
 
-Este documento lista **exclusivamente** os itens que o cliente deve providenciar para que eu possa implementar o sistema de pagamentos nos planos mensais da Telemeds.
+Este documento lista **exclusivamente** os passos que você deve seguir e as informações que deve nos enviar para implementarmos o sistema de pagamentos mensais da Telemeds usando **Mercado Pago**.
 
 ---
 
-## 🏢 **1. Informações da Empresa**
+## 🏢 **1. Informações da Sua Empresa**
 
-### Dados Obrigatórios:
+### Dados Obrigatórios para o Mercado Pago:
 - [ ] **Razão Social** completa da empresa
-- [ ] **CNPJ** (necessário para ativação das contas)
-- [ ] **Endereço comercial** completo
-- [ ] **Telefone comercial** para contato
+- [ ] **CNPJ** (obrigatório para empresas)
+- [ ] **Endereço comercial** completo (com CEP)
+- [ ] **Telefone comercial** da empresa
 - [ ] **E-mail corporativo** do responsável financeiro
-- [ ] **Dados bancários** (banco, agência, conta) para recebimento
+- [ ] **Dados bancários** completos:
+  - Nome do banco
+  - Agência (com dígito)
+  - Conta corrente (com dígito)
+  - Tipo de conta (corrente/poupança)
 
-### Documentação Necessária:
-- [ ] **Contrato Social** ou documento equivalente
-- [ ] **Cartão CNPJ** atualizado
-- [ ] **Comprovante de endereço** da empresa
-- [ ] **RG e CPF** do representante legal
+### Documentos que Você Deve Ter em Mãos:
+- [ ] **Contrato Social** atualizado
+- [ ] **Cartão CNPJ** (gerado nos últimos 90 dias)
+- [ ] **Comprovante de endereço** da empresa (últimos 3 meses)
+- [ ] **RG e CPF** do sócio administrador/representante legal
+- [ ] **Comprovante de endereço pessoal** do representante legal
 
 ---
 
-## 💳 **2. Conta Mercado Pago (Recomendado)**
+## 💳 **2. Criação da Conta Mercado Pago - PASSO A PASSO**
 
-### O Cliente Deve:
-- [ ] **Criar conta** em [www.mercadopago.com.br/developers](https://www.mercadopago.com.br/developers)
-- [ ] **Validar a conta** com os documentos da empresa
-- [ ] **Ativar recebimento** configurando dados bancários
-- [ ] **Fornecer credenciais** após aprovação:
+### **PASSO 1**: Criar a Conta
+1. Acesse: [www.mercadopago.com.br](https://www.mercadopago.com.br)
+2. Clique em **"Criar conta"**
+3. Escolha **"Quero vender"** 
+4. Selecione **"Pessoa Jurídica"**
+5. Preencha os dados da empresa
+
+### **PASSO 2**: Validar a Conta
+1. Faça upload dos documentos listados acima
+2. Aguarde a análise (3-5 dias úteis)
+3. Configure os dados bancários para recebimento
+4. Ative o recebimento de pagamentos
+
+### **PASSO 3**: Obter as Credenciais
+Após aprovação, você deve acessar:
+1. **Mercado Pago** → **Seu negócio** → **Configurações** → **Credenciais**
+2. **Copiar e nos enviar estas 4 informações**:
 
 ```
-Credenciais Necessárias:
-- Access Token (Produção): APP_USR-xxxxx
-- Public Key (Produção): APP_USR-xxxxx
-- Access Token (Teste): TEST-xxxxx  
-- Public Key (Teste): TEST-xxxxx
+🔑 CREDENCIAIS NECESSÁRIAS:
+Access Token (Produção): APP_USR-xxxxxxxx...
+Public Key (Produção): APP_USR-xxxxxxxx...
+Access Token (Sandbox/Teste): TEST-xxxxxxxx...
+Public Key (Sandbox/Teste): TEST-xxxxxxxx...
 ```
 
-### Processo:
-1. Cliente cria a conta
-2. Cliente envia documentos para validação
-3. Mercado Pago aprova (3-5 dias úteis)
-4. Cliente me fornece as credenciais
-5. Eu configuro no sistema
+### **⚠️ IMPORTANTE**: 
+- **NÃO compartilhe** essas credenciais publicamente
+- **Envie apenas para nós** por e-mail ou WhatsApp
+- **Guarde** essas informações em local seguro
 
 ---
 
-## 🌍 **3. Conta Stripe (Alternativa)**
+## 💰 **3. Configuração dos Planos e Valores**
 
-### O Cliente Deve:
-- [ ] **Criar conta** em [dashboard.stripe.com](https://dashboard.stripe.com)
-- [ ] **Verificar identidade** com documentos da empresa
-- [ ] **Ativar conta** para recebimento no Brasil
-- [ ] **Fornecer credenciais** após ativação:
+### Confirme os Valores dos Planos:
+- [ ] **Plano Básico**: R$ 99,00/mês ✅
+- [ ] **Plano Cuidar**: R$ 179,00/mês ✅
+- [ ] **Plano Familiar**: R$ 299,00/mês ✅
 
-```
-Credenciais Necessárias:
-- Secret Key (Produção): sk_live_xxxxx
-- Publishable Key (Produção): pk_live_xxxxx
-- Secret Key (Teste): sk_test_xxxxx
-- Publishable Key (Teste): pk_test_xxxxx
-```
+*(Se quiser alterar algum valor, nos informe)*
 
-### Observação:
-- Stripe pode demorar mais para ativar contas brasileiras
-- Recomendo Mercado Pago para facilitar o processo
+### Formas de Pagamento que Você Terá:
+✅ **Cartão de Crédito** (Visa, Master, Elo, etc.)  
+✅ **PIX** (aprovação instantânea)  
+✅ **Boleto Bancário** (aprovação em 1-2 dias úteis)  
 
----
+### Defina Suas Políticas:
+- [ ] **Dia de vencimento**: Que dia do mês prefere? (ex: dia 5, 10, 15...)
+- [ ] **Tolerância para atraso**: Quantos dias após vencimento? (recomendado: 5 dias)
+- [ ] **Ação após inadimplência**: 
+  - [ ] Pausar acesso aos serviços
+  - [ ] Cancelar assinatura
+  - [ ] Enviar cobrança via WhatsApp
 
-## 🏦 **4. Informações Financeiras**
-
-### Definições Necessárias:
-- [ ] **Valor dos planos** (confirmar se mantém os atuais):
-  - Plano Básico: R$ 99/mês
-  - Plano Cuidar: R$ 179/mês  
-  - Plano Familiar: R$ 299/mês
-
-- [ ] **Política de cobrança**:
-  - [ ] Dia de vencimento preferido
-  - [ ] Tolerância para pagamento em atraso
-  - [ ] Ação após inadimplência (pausar/cancelar)
-
-- [ ] **Política de cancelamento**:
-  - [ ] Cancelamento imediato ou no fim do período?
-  - [ ] Reembolso em caso de cancelamento?
-  - [ ] Período de carência para reativação?
+### Política de Cancelamento:
+- [ ] **Cancelamento**: Imediato ou só no fim do período pago?
+- [ ] **Reembolso**: Oferece reembolso proporcional?
+- [ ] **Reativação**: Cliente pode reativar depois de cancelar?
 
 ---
 
-## 📞 **5. Informações de Contato**
+## 📞 **4. Informações Adicionais**
 
-### Para Configuração:
-- [ ] **WhatsApp** para suporte (se diferente do atual)
-- [ ] **E-mail** para notificações de pagamento
-- [ ] **URL do site** para configurar redirects
-- [ ] **Logo da empresa** para checkout (formato PNG/SVG)
+### Para Personalização do Checkout:
+- [ ] **Logo da empresa** (formato PNG ou SVG, fundo transparente)
+- [ ] **Cores da marca** (se quiser personalizar o checkout)
+- [ ] **Nome fantasia** (como aparecerá para os clientes)
 
----
+### Para Notificações:
+- [ ] **E-mail** para receber avisos de novos pagamentos
+- [ ] **WhatsApp** para envio de cobranças automáticas
+- [ ] **Site/URL** da empresa (para redirects após pagamento)
 
-## ⚙️ **6. Preferências Técnicas**
-
-### O Cliente Deve Definir:
-- [ ] **Provedor preferido**: Mercado Pago ou Stripe?
-- [ ] **Métodos de pagamento** aceitos:
-  - [ ] Cartão de crédito
-  - [ ] PIX (apenas Mercado Pago)
-  - [ ] Boleto (apenas Mercado Pago)
-  - [ ] Débito automático
-
-- [ ] **Notificações desejadas**:
-  - [ ] E-mail para cliente após pagamento
-  - [ ] E-mail para empresa sobre novos pagamentos
-  - [ ] WhatsApp para cobranças em atraso
+### Suporte ao Cliente:
+- [ ] **WhatsApp de suporte** (para clientes com dúvidas sobre pagamento)
+- [ ] **E-mail de suporte** (alternativo ao WhatsApp)
+- [ ] **Horário de atendimento** (para informar no checkout)
 
 ---
 
-## 📧 **7. Acesso para Configuração**
+## ⏱️ **5. Cronograma - O que Acontece Quando**
 
-### O Cliente Deve Fornecer:
-- [ ] **Acesso admin** ao painel do provedor escolhido
-- [ ] **Permissões** para configurar webhooks
-- [ ] **Autorização** para realizar testes com a conta
+### **HOJE** (Você deve fazer):
+- [ ] Criar conta no Mercado Pago
+- [ ] Separar todos os documentos listados
+- [ ] Enviar documentos para validação
 
-### Usuário Temporário (Recomendado):
-- Criar usuário temporário com permissões limitadas
-- Remover acesso após implementação concluída
+### **Dias 1-5** (Mercado Pago analisa):
+- Aguardar aprovação da conta
+- Acompanhar e-mails do Mercado Pago
+- Responder se solicitarem documentos adicionais
 
----
+### **Após Aprovação** (Você deve fazer):
+- [ ] Configurar dados bancários no Mercado Pago
+- [ ] Copiar as 4 credenciais (Access Token e Public Key)
+- [ ] **Enviar credenciais para nós IMEDIATAMENTE**
 
-## 📅 **8. Timeline de Fornecimento**
+### **Após Recebermos as Credenciais** (Nós fazemos):
+- Implementar integração no site (1-2 dias)
+- Configurar webhooks e notificações
+- Realizar testes de pagamento
+- Ativar sistema em produção
 
-### Cronograma Ideal:
-- **Dia 1-2**: Cliente cria conta no provedor
-- **Dia 3-7**: Validação de documentos pelo provedor  
-- **Dia 8**: Cliente fornece credenciais
-- **Dia 9-10**: Implementação e testes
-- **Dia 11**: Deploy e ativação
-
-### Fatores que Podem Atrasar:
-- Demora na validação de documentos
-- Problemas com dados bancários
-- Documentação incompleta
+### **Timeline Total**: 7-10 dias úteis
 
 ---
 
-## ⚠️ **Importante - O que NÃO Preciso**
+## � **6. ATENÇÃO - O que Você NÃO Precisa Se Preocupar**
 
-### Não é Necessário Fornecer:
-- ❌ Código de implementação
-- ❌ Detalhes técnicos do sistema
-- ❌ Configurações de servidor
-- ❌ Banco de dados
-- ❌ Hospedagem
+### ❌ **Você NÃO precisa**:
+- Entender de programação ou código
+- Configurar sistemas técnicos
+- Instalar nada no computador
+- Contratar desenvolvedores
+- Pagar taxas extras para nós
 
-### Eu Vou Implementar:
-- ✅ Todo o código de integração
-- ✅ Interface de checkout
-- ✅ Webhook de sincronização
-- ✅ Dashboard administrativo
-- ✅ Testes e validações
+### ✅ **Nós cuidamos de TUDO**:
+- Integração técnica completa
+- Páginas de pagamento
+- Sistema de notificações
+- Dashboard administrativo
+- Testes e validações
+- Suporte técnico
 
----
+### 💸 **Custos do Mercado Pago**:
+- **Cartão de Crédito**: 4,99% + R$ 0,39 por transação
+- **PIX**: 0,99% (sem taxa fixa)
+- **Boleto**: R$ 3,49 por boleto
+- **Sem mensalidade** ou taxas de adesão
 
-## 📋 **Checklist Final para o Cliente**
-
-### Antes de Começar:
-- [ ] Documentos da empresa separados
-- [ ] Dados bancários confirmados
-- [ ] Valores dos planos definidos
-- [ ] Política de cobrança decidida
-- [ ] Provedor de pagamento escolhido
-
-### Durante o Processo:
-- [ ] Conta criada no provedor
-- [ ] Documentos enviados para validação
-- [ ] Acompanhar aprovação por e-mail
-- [ ] Credenciais fornecidas assim que disponíveis
-
-### Após Implementação:
-- [ ] Teste de pagamento aprovado
-- [ ] Acesso ao dashboard funcionando
-- [ ] Webhooks configurados e testados
-- [ ] Treinamento sobre o sistema
+*Essas taxas são padrão do Mercado Pago e são descontadas automaticamente antes do dinheiro cair na sua conta.*
 
 ---
 
-## 🚨 **Prazos Críticos**
+## ✅ **7. CHECKLIST FINAL - Marque Conforme For Fazendo**
 
-### Para Não Atrasar o Projeto:
-1. **Criação da conta**: Fazer HOJE
-2. **Envio de documentos**: Máximo 1 dia após criação
-3. **Fornecimento de credenciais**: Imediatamente após aprovação
-4. **Aprovação de testes**: Máximo 1 dia
+### **ANTES DE COMEÇAR** (Prepare tudo):
+- [ ] Documentos da empresa separados e digitalizados
+- [ ] Dados bancários em mãos (agência, conta, etc.)
+- [ ] CPF e RG do representante legal
+- [ ] E-mail corporativo funcionando
+- [ ] Definir valores e políticas dos planos
 
-### Contatos para Dúvidas:
-- **Implementação técnica**: Comigo
-- **Problemas com conta**: Suporte do provedor
-- **Documentação**: Suporte do provedor
+### **CRIAÇÃO DA CONTA** (Faça hoje):
+- [ ] Acessar www.mercadopago.com.br
+- [ ] Criar conta como "Pessoa Jurídica"
+- [ ] Preencher todos os dados solicitados
+- [ ] Fazer upload de todos os documentos
+
+### **APÓS APROVAÇÃO** (Assim que receber e-mail):
+- [ ] Acessar as credenciais no painel
+- [ ] Copiar Access Token de Produção
+- [ ] Copiar Public Key de Produção  
+- [ ] Copiar Access Token de Teste
+- [ ] Copiar Public Key de Teste
+- [ ] **ENVIAR TODAS AS 4 CREDENCIAIS PARA NÓS**
+
+### **INFORMAÇÕES EXTRAS** (Enviar junto):
+- [ ] Logo da empresa
+- [ ] Políticas definidas (vencimento, cancelamento, etc.)
+- [ ] Contatos para suporte (WhatsApp, e-mail)
 
 ---
 
-**⏰ Tempo total estimado: 5-10 dias úteis**
-**👥 Dependências: 80% cliente, 20% implementação**
+## � **8. CONTATOS PARA DÚVIDAS**
 
-*Este documento deve ser preenchido e devolvido antes do início da implementação.*
+### **Para Problemas Técnicos da Integração**:
+📧 **E-mail**: [SEU_EMAIL_AQUI]  
+📱 **WhatsApp**: [SEU_WHATSAPP_AQUI]
+
+### **Para Problemas com a Conta Mercado Pago**:
+📞 **Suporte MP**: 0800 633 4000  
+📧 **E-mail MP**: suporte@mercadopago.com.br  
+🌐 **Central de Ajuda**: help.mercadopago.com.br
+
+### **Para Dúvidas sobre Documentação**:
+📞 **Mercado Pago**: Mesmo contato acima  
+⏰ **Horário**: Segunda a sexta, 8h às 20h
+
+---
+
+## 🎯 **RESUMO DO QUE VOCÊ DEVE FAZER AGORA**
+
+### **AÇÃO IMEDIATA** (hoje mesmo):
+1. **Criar conta** no Mercado Pago (pessoa jurídica)
+2. **Enviar documentos** para validação
+3. **Aguardar aprovação** (3-5 dias úteis)
+
+### **ASSIM QUE APROVADO**:
+1. **Copiar credenciais** do painel
+2. **Enviar para nós** por WhatsApp ou e-mail
+3. **Aguardar implementação** (2-3 dias)
+
+### **PRAZO TOTAL**: 7-10 dias úteis para tudo funcionar
+
+---
+
+**🚀 Vamos começar? Acesse www.mercadopago.com.br agora mesmo!**
