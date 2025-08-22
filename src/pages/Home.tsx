@@ -433,7 +433,7 @@ const Home: React.FC = () => {
                     className="expand-button w-full text-white px-4 lg:px-6 py-3 sm:py-3.5 lg:py-3 rounded-lg lg:rounded-xl text-base lg:text-lg font-semibold flex items-center justify-center space-x-2 transition-all duration-200 hover:scale-105"
                   >
                     <Calendar className="w-4 h-4 lg:w-5 lg:h-5" />
-                    <span>Agendar Consulta Online</span>
+                    <span>Consultar Agora</span>
                   </Link>
                   <button 
                     onClick={() => {
@@ -444,7 +444,7 @@ const Home: React.FC = () => {
                     }}
                     className="w-full border-2 border-gray-300 text-gray-700 px-4 lg:px-6 py-3 sm:py-3.5 lg:py-3 rounded-lg lg:rounded-xl text-base lg:text-lg font-semibold hover:bg-gray-50 transition-all duration-200"
                   >
-                    Ver Planos
+                    Economize até 20%
                   </button>
                 </div>
               </div>
@@ -568,13 +568,13 @@ const Home: React.FC = () => {
                                 className="expand-button flex-1 text-white px-4 py-2 rounded-xl text-sm font-semibold flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-200"
                               >
                                 <Calendar className="w-4 h-4" />
-                                <span>Agendar Consulta</span>
+                                <span>Consultar</span>
                               </Link>
                               <Link
                                 to={specialty.path}
                                 className="border-2 border-gray-200 text-gray-700 px-4 py-2 rounded-xl text-sm font-semibold hover:bg-gray-50 transition-colors flex items-center justify-center"
                               >
-                                Saiba mais
+                                Ver Detalhes
                               </Link>
                             </>
                           ) : (
@@ -790,7 +790,7 @@ const Home: React.FC = () => {
                               : 'bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 shadow-lg hover:shadow-xl'
                           }`}
                         >
-                          Assinar {plan.name}
+                          {plan.highlight ? 'Assinar Cuidar +' : 'Assinar Cuidar + Anual'}
                         </a>
                       </div>
                     </div>
@@ -1125,7 +1125,7 @@ const Home: React.FC = () => {
             {/* Agendar Consulta - Ícone de Stethoscope */}
             <div className="group relative flex items-center justify-end">
               <div className="absolute right-16 top-1/2 transform -translate-y-1/2 bg-white rounded-lg px-3 py-2 shadow-lg border-l-4 border-blue-500 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-10 whitespace-nowrap">
-                <span className="text-sm font-medium text-gray-700">Agendar Consulta Online</span>
+                <span className="text-sm font-medium text-gray-700">Consultar Online Agora</span>
                 <div className="absolute left-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-white border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
               </div>
               <Link 
