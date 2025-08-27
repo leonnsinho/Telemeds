@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, Calendar, Shield, Clock, ChevronDown, Heart, Zap, Moon, Users, AlertTriangle, Activity, Coffee, Smile } from 'lucide-react';
+import { Brain, Calendar, Shield, Clock, ChevronDown, Heart, Activity, Baby, FileText, Leaf, BookOpen, Search, XCircle, Users } from 'lucide-react';
 import WaveDivider from '../components/WaveDivider';
 import medicoSerioImg from '../assets/images/medico serio.jpg';
 import medico2Img from '../assets/images/medico 2.jpeg';
@@ -10,68 +10,76 @@ const Psiquiatria: React.FC = () => {
 
   const commonCases = [
     {
-      title: 'Depressão e transtornos do humor',
-      description: 'Tratamento especializado para episódios depressivos e alterações de humor',
+      title: 'Consulta Clínica Geral',
+      description: 'Avaliação de sintomas inespecíficos e queixas do dia a dia (cefaleias, infecções respiratórias e urinárias, gastrointestinais, dermatológicas, ginecológicas, osteomusculares), deficiências nutricionais e reposição de vitaminas.',
       icon: Heart,
-      color: 'from-rose-500 to-pink-500',
-      bgColor: 'from-rose-50 via-pink-50 to-red-50',
-      borderColor: 'border-rose-100 hover:border-rose-300'
+      color: 'from-blue-500 to-cyan-500',
+      bgColor: 'from-blue-50 via-cyan-50 to-sky-50',
+      borderColor: 'border-blue-100 hover:border-blue-300',
+      category: 'Essencial'
     },
     {
-      title: 'Ansiedade e transtornos ansiosos',
-      description: 'Controle da ansiedade generalizada, social e transtornos relacionados',
-      icon: Zap,
-      color: 'from-amber-500 to-orange-500',
-      bgColor: 'from-amber-50 via-yellow-50 to-orange-50',
-      borderColor: 'border-amber-100 hover:border-amber-300'
+      title: 'Renovação de Receita Simples e Controladas / Encaminhamentos',
+      description: 'Reemissão de prescrições estáveis (hipertensão, diabetes, colesterol, asma, anticoncepcionais, exames nutricionais, hormônios e psicotrópicos). Inclui encaminhamentos para fisioterapia, acupuntura, pilates e RPG.',
+      icon: FileText,
+      color: 'from-green-500 to-emerald-500',
+      bgColor: 'from-green-50 via-emerald-50 to-teal-50',
+      borderColor: 'border-green-100 hover:border-green-300',
+      category: 'Essencial'
     },
     {
-      title: 'Transtorno do pânico',
-      description: 'Tratamento eficaz para crises de pânico e agorafobia',
-      icon: AlertTriangle,
-      color: 'from-red-500 to-rose-500',
-      bgColor: 'from-red-50 via-rose-50 to-pink-50',
-      borderColor: 'border-red-100 hover:border-red-300'
+      title: 'Puericultura Básica Online',
+      description: 'Acompanhamento do crescimento e desenvolvimento infantil. Orientações sobre marcos do desenvolvimento, dúvidas frequentes e triagem de sinais de alerta. Não substitui consultas presenciais obrigatórias do pediatra.',
+      icon: Baby,
+      color: 'from-pink-500 to-rose-500',
+      bgColor: 'from-pink-50 via-rose-50 to-red-50',
+      borderColor: 'border-pink-100 hover:border-pink-300',
+      category: 'Familiar'
     },
     {
-      title: 'Transtorno bipolar',
-      description: 'Estabilização do humor e prevenção de episódios maníacos e depressivos',
+      title: 'Check-up Clínico e Exames Laboratoriais',
+      description: 'Consulta preventiva com solicitação de exames: metabólicos, hormonais, autoimunes, marcadores tumorais, alergias, vitaminas e micronutrientes. Inclui check-up pré-nupcial e pré-gestacional.',
       icon: Activity,
       color: 'from-purple-500 to-violet-500',
       bgColor: 'from-purple-50 via-violet-50 to-indigo-50',
-      borderColor: 'border-purple-100 hover:border-purple-300'
+      borderColor: 'border-purple-100 hover:border-purple-300',
+      category: 'Preventivo'
     },
     {
-      title: 'TDAH (Transtorno de Déficit de Atenção)',
-      description: 'Melhora da concentração, foco e controle da hiperatividade',
-      icon: Brain,
-      color: 'from-blue-500 to-cyan-500',
-      bgColor: 'from-blue-50 via-cyan-50 to-sky-50',
-      borderColor: 'border-blue-100 hover:border-blue-300'
-    },
-    {
-      title: 'Transtornos do sono',
-      description: 'Tratamento para insônia, hipersonia e distúrbios do ciclo do sono',
-      icon: Moon,
-      color: 'from-indigo-500 to-purple-500',
-      bgColor: 'from-indigo-50 via-purple-50 to-violet-50',
-      borderColor: 'border-indigo-100 hover:border-indigo-300'
-    },
-    {
-      title: 'Dependência química',
-      description: 'Suporte para tratamento de vícios e dependências diversas',
-      icon: Coffee,
+      title: 'Tratamento com Canabinoides Medicinais',
+      description: 'Indicado para dor crônica, epilepsia refratária, doença de Parkinson, esclerose múltipla, Alzheimer, fibromialgia, enxaqueca crônica e efeitos da quimioterapia/radioterapia.',
+      icon: Leaf,
       color: 'from-emerald-500 to-teal-500',
       bgColor: 'from-emerald-50 via-teal-50 to-green-50',
-      borderColor: 'border-emerald-100 hover:border-emerald-300'
+      borderColor: 'border-emerald-100 hover:border-emerald-300',
+      category: 'Especializado'
     },
     {
-      title: 'Transtornos alimentares',
-      description: 'Abordagem integrada para anorexia, bulimia e compulsão alimentar',
-      icon: Smile,
-      color: 'from-teal-500 to-green-500',
-      bgColor: 'from-teal-50 via-green-50 to-emerald-50',
-      borderColor: 'border-teal-100 hover:border-teal-300'
+      title: 'Orientações em Saúde e Uso de Medicamentos',
+      description: 'Prevenção de doenças infecciosas, promoção de hábitos saudáveis, revisão de polifarmácia e esclarecimento sobre efeitos colaterais e interações medicamentosas.',
+      icon: BookOpen,
+      color: 'from-amber-500 to-orange-500',
+      bgColor: 'from-amber-50 via-yellow-50 to-orange-50',
+      borderColor: 'border-amber-100 hover:border-amber-300',
+      category: 'Orientação'
+    },
+    {
+      title: 'Laudos e Atestados Médicos',
+      description: 'Emissão de documentos mediante avaliação clínica: Atividades físicas (academia, clubes, esportes), Escolares (faltas, restrições temporárias), INSS, Documentos para empregadores/instituições.',
+      icon: FileText,
+      color: 'from-slate-500 to-gray-500',
+      bgColor: 'from-slate-50 via-gray-50 to-zinc-50',
+      borderColor: 'border-slate-100 hover:border-slate-300',
+      category: 'Documentação'
+    },
+    {
+      title: 'Segunda Opinião Clínica',
+      description: 'Revisão de exames e condutas anteriores, discussão de diagnósticos, alternativas terapêuticas e apoio na tomada de decisão segura, evitando tratamentos redundantes.',
+      icon: Search,
+      color: 'from-indigo-500 to-blue-500',
+      bgColor: 'from-indigo-50 via-blue-50 to-sky-50',
+      borderColor: 'border-indigo-100 hover:border-indigo-300',
+      category: 'Apoio'
     }
   ];
 
@@ -189,7 +197,7 @@ const Psiquiatria: React.FC = () => {
               Casos que <span className="gradient-text">atendemos</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Nossa equipe de psiquiatria é especializada no tratamento de diversos transtornos mentais
+              Nossa equipe de clínica médica e medicina de família é especializada em cuidados abrangentes, contínuos e preventivos para todas as idades.
             </p>
           </div>
 
@@ -220,7 +228,7 @@ const Psiquiatria: React.FC = () => {
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-2">
                         <div className={`w-2 h-2 bg-gradient-to-r ${case_item.color} rounded-full`}></div>
-                        <span className="text-xs font-medium text-gray-500">Especializado</span>
+                        <span className="text-xs font-medium text-gray-500">{case_item.category}</span>
                       </div>
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <ChevronDown className="w-4 h-4 text-gray-400 rotate-[-90deg]" />
@@ -230,6 +238,22 @@ const Psiquiatria: React.FC = () => {
                 </div>
               );
             })}
+          </div>
+
+          {/* Atendimentos que NÃO realizamos */}
+          <div className="mt-16 bg-red-50 rounded-2xl p-8 border border-red-100">
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
+                <XCircle className="w-6 h-6 text-red-600" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-red-800 mb-3">Atendimentos que NÃO realizamos</h3>
+                <p className="text-red-700 leading-relaxed">
+                  <strong>Importante:</strong> Pré-natal de alto risco, laudos judiciais (curatela, interdição), invalidez/isenção de IR, 
+                  porte/posse de arma, PCD, troca de sexo/transgêneros.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Estatísticas com novo design */}
