@@ -401,8 +401,8 @@ const Psiquiatria: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">2. Consulte</h3>
               <p className="text-gray-600 leading-relaxed">
-                Videochamada segura com psiquiatra especializado. 
-                Consultas a partir de 20 minutos.
+                Videoconsulta segura com médico de clínica geral ou medicina de família. 
+                Opções de 20 ou 40 minutos, conforme sua necessidade.
               </p>
             </div>
 
@@ -412,8 +412,8 @@ const Psiquiatria: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">3. Receba</h3>
               <p className="text-gray-600 leading-relaxed">
-                Receita médica digital válida e orientações personalizadas 
-                para seu tratamento.
+                Receita médica digital válida, laudos e orientações personalizadas 
+                para seu cuidado contínuo.
               </p>
             </div>
           </div>
