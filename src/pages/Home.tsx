@@ -83,11 +83,11 @@ const Home: React.FC = () => {
       title: 'Clínica Médica & Medicina de Família',
       description: 'Atendimento médico abrangente e cuidado contínuo para toda a família.',
       path: '/psiquiatria',
-      available: true,
+      available: false,
       detailedInfo: {
         symptoms: ['Check-up', 'Sintomas gerais', 'Prevenção', 'Acompanhamento familiar', 'Cuidados básicos', 'Exames'],
         duration: '30-50 minutos',
-        nextAvailable: 'Hoje às 14:00'
+        nextAvailable: 'Em breve'
       }
     },
     {
