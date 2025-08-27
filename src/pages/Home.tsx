@@ -28,7 +28,7 @@ const Home: React.FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const [selectedSpecialty, setSelectedSpecialty] = useState<string>('');
-  const [isFloatingMenuOpen, setIsFloatingMenuOpen] = useState<boolean>(false);
+  const [isFloatingMenuOpen, setIsFloatingMenuOpen] = useState<boolean>(true);
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState<number>(0);
   const [isPaused, setIsPaused] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
