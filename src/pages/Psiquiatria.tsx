@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, Calendar, Shield, Clock, ChevronDown, Heart, Activity, Baby, FileText, Leaf, BookOpen, Search, XCircle, Users } from 'lucide-react';
 import WaveDivider from '../components/WaveDivider';
-import medicoSerioImg from '../assets/images/medico serio.jpg';
 import medico2Img from '../assets/images/medico 2.jpeg';
 
 const Psiquiatria: React.FC = () => {
@@ -83,22 +82,15 @@ const Psiquiatria: React.FC = () => {
     }
   ];
 
-  const doctors = [
-    {
-      name: 'Dr. Bruno Hees Toews',
-      crm: 'CRM-SP: 167551',
-      specialty: 'Psiquiatria',
-      description: 'Atua há mais de 10 anos em psiquiatria e clínica médica, com especialização pela Santa Casa de São Paulo e vivência internacional. Reconhecido por sua abordagem empática e foco em resultados, oferece atendimento bilíngue (português e inglês) e conduz os atendimentos com excelência e responsabilidade médica.',
-      image: medicoSerioImg
-    },
-    {
-      name: 'Dr. Rennan Hollen',
-      crm: 'CRM-SP: 208989',
-      specialty: 'Psiquiatria',
-      description: 'Com mais de 6 anos de experiência em psiquiatria e clínica médica, é especialista pelo Hospital Israelita Albert Einstein. Está em constante atualização profissional e dedica-se a um atendimento humanizado, personalizado e bilíngue (português e inglês), sempre priorizando o bem-estar e a qualidade de vida dos seus pacientes.',
-      image: medico2Img
-    }
-  ];
+  const doctor = {
+    name: 'Dra. Keila Hees',
+    crm: 'CRM-SP: XXXXXX', // Será atualizado posteriormente
+    specialty: 'Clínica Médica, Medicina de Família e Pediatria',
+    quote: 'Num mundo em que muitos médicos parecem frios e distantes, a Dra.Keila Hees se destaca pela empatia e atenção total a você.',
+    description: 'Com mais de 30 anos de experiência em clínica médica, medicina de família e pediatria, ela não apenas vai te ouvir – mas oferecer soluções concretas, baseadas em conhecimento e prática. Aqui você encontra o cuidado e a eficácia que tantos outros não conseguem entregar.',
+    experience: '30+ anos',
+    image: medico2Img // Imagem temporária, será atualizada
+  };
 
   const faqItems = [
     {
@@ -307,35 +299,72 @@ const Psiquiatria: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 slide-up">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Nossos <span className="gradient-text">Especialistas</span>
+              Nossa <span className="gradient-text">Especialista</span>
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Profissionais qualificados e experientes, prontos para cuidar da sua saúde mental
+              Profissional qualificada e experiente, pronta para diagnosticar, tratar e acompanhar suas necessidades de saúde com agilidade e segurança.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {doctors.map((doctor, index) => (
-              <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
-                <div className="aspect-square overflow-hidden">
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-gradient-to-br from-white to-blue-50 rounded-3xl overflow-hidden shadow-2xl">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                {/* Seção da Imagem */}
+                <div className="relative h-64 lg:h-auto min-h-[400px] overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10"></div>
                   <img
                     src={doctor.image}
                     alt={doctor.name}
-                    className={`w-full h-full object-cover ${
-                      doctor.name.includes('Bruno') ? 'doctor-image-bruno' : 'doctor-image-rennan'
-                    }`}
+                    className="w-full h-full object-cover"
                   />
+                  {/* Badge de experiência */}
+                  <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                      <span className="text-sm font-bold text-gray-900">{doctor.experience} de experiência</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {doctor.name}
-                  </h3>
-                  <p className="text-blue-600 font-semibold mb-3">{doctor.crm}</p>
-                  <p className="text-gray-600 mb-3 font-medium">{doctor.specialty}</p>
-                  <p className="text-sm text-gray-700 leading-relaxed">{doctor.description}</p>
+
+                {/* Seção do Conteúdo */}
+                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                  <div className="mb-6">
+                    <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
+                      {doctor.name}
+                    </h3>
+                    <p className="text-blue-600 font-semibold text-lg mb-2">{doctor.crm}</p>
+                    <p className="text-gray-600 font-medium text-lg">{doctor.specialty}</p>
+                  </div>
+
+                  {/* Quote destacada */}
+                  <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl mb-6">
+                    <blockquote className="text-gray-700 italic leading-relaxed">
+                      "{doctor.quote}"
+                    </blockquote>
+                  </div>
+
+                  {/* Descrição */}
+                  <p className="text-gray-700 leading-relaxed mb-8 text-lg">
+                    {doctor.description}
+                  </p>
+
+                  {/* CTA */}
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Link
+                      to="/agendamento"
+                      className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+                    >
+                      <Calendar className="w-5 h-5" />
+                      <span>Agendar Consulta</span>
+                    </Link>
+                    <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 flex items-center justify-center space-x-2">
+                      <Heart className="w-5 h-5" />
+                      <span>Saiba Mais</span>
+                    </button>
+                  </div>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
