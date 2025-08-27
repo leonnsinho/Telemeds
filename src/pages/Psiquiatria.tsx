@@ -121,19 +121,19 @@ const Psiquiatria: React.FC = () => {
             <div className="fade-in">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 gradient-secondary rounded-xl flex items-center justify-center">
-                  <Brain className="w-6 h-6 text-blue-600" />
+                  <Heart className="w-6 h-6 text-blue-600" />
                 </div>
-                <span className="text-blue-600 font-semibold text-lg">Psiquiatria</span>
+                <span className="text-blue-600 font-semibold text-lg">Clínica Médica & Medicina de Família</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Cuidado especializado para sua
-                <span className="gradient-text"> saúde mental</span>
+                Cuidado completo para sua
+                <span className="gradient-text"> saúde e da sua família</span>
               </h1>
               
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                Atendimento psiquiátrico online com médicos especializados, 
-                diagnóstico preciso e tratamento personalizado para seu bem-estar.
+                Atendimento online com médicos de clínica geral e medicina de família, 
+                para prevenção, diagnóstico e tratamento personalizado em todas as fases da vida.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
