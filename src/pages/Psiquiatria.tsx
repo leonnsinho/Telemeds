@@ -420,10 +420,10 @@ const Psiquiatria: React.FC = () => {
         </div>
       </section>
 
-      <WaveDivider color="#D5D4F1" />
+      <WaveDivider gradientFrom="#D8CAE7" gradientTo="#FEF7D3" />
 
       {/* FAQ */}
-      <section className="section-padding-large gradient-primary">
+      <section className="section-padding-large bg-gradient-to-r from-[#D8CAE7] to-[#FEF7D3]">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16 slide-up">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
