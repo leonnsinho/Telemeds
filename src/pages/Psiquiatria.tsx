@@ -292,10 +292,10 @@ const Psiquiatria: React.FC = () => {
         </div>
       </section>
 
-      <WaveDivider color="#C5E4F6" />
+      <WaveDivider gradientFrom="#C5E4F6" gradientTo="#E5D8F0" />
 
       {/* Médicos */}
-      <section className="section-padding gradient-secondary">
+      <section className="section-padding bg-gradient-to-r from-[#C5E4F6] to-[#E5D8F0]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 slide-up">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
