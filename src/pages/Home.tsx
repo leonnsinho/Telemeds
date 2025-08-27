@@ -80,26 +80,14 @@ const Home: React.FC = () => {
     },
     {
       icon: Users,
-      title: 'Clínica Médica',
-      description: 'Atendimento médico abrangente para toda a família.',
-      path: '/clinica-medica',
-      available: false,
+      title: 'Clínica Médica & Medicina de Família',
+      description: 'Atendimento médico abrangente e cuidado contínuo para toda a família.',
+      path: '/psiquiatria',
+      available: true,
       detailedInfo: {
-        symptoms: ['Check-up', 'Sintomas gerais', 'Prevenção', 'Exames'],
-        duration: '30-40 minutos',
-        nextAvailable: 'Em breve'
-      }
-    },
-    {
-      icon: Heart,
-      title: 'Medicina de Família juntos',
-      description: 'Cuidado contínuo e preventivo para toda a família.',
-      path: '/medicina-de-familia-juntos',
-      available: false,
-      detailedInfo: {
-        symptoms: ['Acompanhamento familiar', 'Prevenção', 'Cuidados básicos'],
-        duration: '40 minutos',
-        nextAvailable: 'Em breve'
+        symptoms: ['Check-up', 'Sintomas gerais', 'Prevenção', 'Acompanhamento familiar', 'Cuidados básicos', 'Exames'],
+        duration: '30-50 minutos',
+        nextAvailable: 'Hoje às 14:00'
       }
     },
     {
