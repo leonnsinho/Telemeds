@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run build:prod && vite build",
+    "build": "tsc && vite build",
     "build:dev": "vite build",
     "build:prod": "copy index.production.html index.html",
     "build:revert": "copy index.dev.html index.html",
@@ -14,9 +14,11 @@
     "deploy": "npm run build && netlify deploy --prod",
     "deploy:preview": "npm run build && netlify deploy",
     "netlify:status": "netlify status",
-    "netlify:open": "netlify open"
+    "netlify:open": "netlify open",
+    "extract-critical": "node extract-critical-css.js"
   },
   "dependencies": {
+    "critical": "^5.0.0",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

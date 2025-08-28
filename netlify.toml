@@ -15,7 +15,7 @@
   # Versão do Node.js (opcional, mas recomendado)
   NODE_VERSION = "18"
 
-# Configurações de headers para otimização
+# Configurações de headers básicas sem forçar compressão
 [[headers]]
   for = "/*"
   [headers.values]
@@ -24,14 +24,27 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# Headers específicos para arquivos estáticos
+# Headers específicos para arquivos CSS sem conflito de compressão
 [[headers]]
-  for = "/assets/*"
+  for = "/assets/*.css"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Headers para o service worker (se houver)
+# Headers específicos para arquivos JS sem conflito de compressão
 [[headers]]
-  for = "/sw.js"
+  for = "/assets/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Headers para imagens SVG
+[[headers]]
+  for = "/assets/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Type = "image/svg+xml"
+
+# Headers para o HTML principal sem preload que causa warnings
+[[headers]]
+  for = "/index.html"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
