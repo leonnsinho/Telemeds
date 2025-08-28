@@ -84,12 +84,12 @@ const Psiquiatria: React.FC = () => {
 
   const doctor = {
     name: 'Dra. Keila Hees',
-    crm: 'CRM-SP: XXXXXX', // Será atualizado posteriormente
+    crm: 'CRM-SP: 86684', // Será atualizado posteriormente
     specialty: 'Clínica Médica, Medicina de Família e Pediatria',
     quote: 'Num mundo em que muitos médicos parecem frios e distantes, a Dra.Keila Hees se destaca pela empatia e atenção total a você.',
     description: 'Com mais de 30 anos de experiência em clínica médica, medicina de família e pediatria, ela não apenas vai te ouvir – mas oferecer soluções concretas, baseadas em conhecimento e prática. Aqui você encontra o cuidado e a eficácia que tantos outros não conseguem entregar.',
     experience: '30+ anos',
-    image: medico2Img // Imagem temporária, será atualizada
+    image: '/dr keila.png'
   };
 
   const faqItems = [
