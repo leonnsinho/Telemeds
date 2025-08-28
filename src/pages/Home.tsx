@@ -336,24 +336,60 @@ const Home: React.FC = () => {
 
   const faqItems = [
     {
-      question: 'Como funciona a consulta online?',
-      answer: 'A consulta é realizada por chat ou videochamada com médicos qualificados.'
+      question: 'O que é uma consulta de Clínica Médica e Medicina de Família?',
+      answer: 'São consultas abrangentes, realizadas por médicos capacitados para atender desde queixas do dia a dia até acompanhamento de doenças crônicas, prevenção de saúde e orientações familiares. Nosso objetivo é oferecer cuidado resolutivo, contínuo e acessível para todas as idades.'
     },
     {
-      question: 'As receitas têm validade legal?',
-      answer: 'Sim! Todas as receitas são digitais e têm validade legal em todo território nacional, conforme regulamentação do CFM.'
+      question: 'Quais tipos de consultas posso agendar?',
+      answer: 'Oferecemos diferentes modalidades de atendimento, sempre online e com emissão de receita digital válida em todo o Brasil: Consulta Clínica Geral, Renovação de Receita Simples, Puericultura Básica Online, Check-up Clínico e Exames Laboratoriais, Tratamento com Canabinoides Medicinais, Orientações em Saúde e Uso de Medicamentos, Laudos e Atestados Médicos, Segunda Opinião Clínica.'
     },
     {
-      question: 'Posso usar meu plano de saúde?',
-      answer: 'Atualmente não trabalhamos com convênios, mas nossos preços são acessíveis e você pode solicitar reembolso ao seu plano.'
+      question: 'Qual é a duração da consulta?',
+      answer: 'Você escolhe de acordo com a sua necessidade: 20 minutos – consultas curtas, ideais para renovações de receita, orientações pontuais, afastamentos simples e laudos. 40 minutos – consultas completas, para acompanhamento familiar, avaliação de múltiplas condições, check-ups e casos mais complexos.'
     },
     {
-      question: 'E se eu precisar de exames?',
-      answer: 'O médico pode solicitar exames durante a consulta. Você pode realizá-los em qualquer laboratório de sua preferência.'
+      question: 'Quais condições podem ser avaliadas em Clínica Médica?',
+      answer: 'Nossos especialistas estão preparados para lidar com: Queixas agudas (febre, gripes, infecções leves, dores de cabeça, problemas gastrointestinais e dermatológicos), Doenças crônicas (hipertensão, diabetes, colesterol, asma, tireoide), Deficiências nutricionais, suplementação e reposição de vitaminas, Prevenção e promoção de saúde, incluindo vacinação, hábitos de vida e orientações gerais, Encaminhamentos e solicitações de exames.'
     },
     {
-      question: 'Qual é o tempo de duração da consulta?',
-      answer: 'As consultas têm duração a partir de 20 minutos, tempo suficiente para uma avaliação completa e esclarecimento de dúvidas.'
+      question: 'Vocês emitem receitas médicas?',
+      answer: 'Sim ✅. Todas as consultas permitem emissão de receita médica digital válida em todo o Brasil, inclusive controlados de uso clínico (conforme avaliação médica). Também podemos prescrever vitaminas, reposições hormonais, anticoncepcionais e outros medicamentos de uso contínuo.'
+    },
+    {
+      question: 'Posso renovar minha receita online?',
+      answer: 'Sim. A renovação de receita é indicada para pacientes já estabilizados em uso de medicações contínuas (como para hipertensão, diabetes, colesterol, anticoncepcionais e psicotrópicos estáveis). Durante a consulta, o médico poderá revalidar a receita, ajustar doses se necessário e solicitar exames de acompanhamento.'
+    },
+    {
+      question: 'O que é a Puericultura Básica Online?',
+      answer: 'É um acompanhamento voltado para crianças, com foco em crescimento e desenvolvimento. Inclui: Orientações sobre marcos do desenvolvimento infantil, Dúvidas frequentes de pais e responsáveis, Triagem de sinais de alerta, Vacinação. ⚠ Importante: não substitui as consultas presenciais obrigatórias com o pediatra.'
+    },
+    {
+      question: 'Como funciona o Check-up Clínico?',
+      answer: 'O check-up é uma consulta preventiva, em que avaliamos seu histórico clínico e solicitamos exames laboratoriais de acordo com seu perfil. Podem ser solicitados: Exames metabólicos e hormonais (climatério, fertilidade, obesidade, próstata), Avaliação nutricional (bioimpedância, calorimetria), Marcadores tumorais e autoimunes, Alergias alimentares, respiratórias e cutâneas, Exames pré-nupciais e pré-gestacionais, Vitaminas e micronutrientes.'
+    },
+    {
+      question: 'Vocês oferecem tratamento com canabinoides medicinais?',
+      answer: 'Sim. Temos médica credenciada para prescrever canabinoides medicinais de forma segura e personalizada. As principais indicações clínicas são: Dor crônica (neuropática, osteomuscular, fibromialgia), Epilepsia refratária, Doença de Parkinson, Esclerose múltipla, Alzheimer e outras condições neurodegenerativas, Efeitos da quimioterapia (náuseas, perda de apetite), Espasticidade muscular, Enxaqueca crônica.'
+    },
+    {
+      question: 'Vocês fazem laudos e atestados médicos?',
+      answer: 'Sim. Emitimos documentos mediante avaliação clínica: Atividades físicas (academia, esportes, clubes), Escolares (faltas, restrições temporárias), Atestados para empregadores/instituições, Laudos para INSS (consulta de 20 min – valor fixo). ⚠ Importante: alguns laudos específicos não são realizados.'
+    },
+    {
+      question: 'Como funciona a consulta de Segunda Opinião Clínica?',
+      answer: 'É um atendimento voltado para revisão de exames, condutas e diagnósticos anteriores. O objetivo é oferecer segurança, discutir alternativas terapêuticas e evitar tratamentos redundantes.'
+    },
+    {
+      question: 'Quais atendimentos e laudos NÃO realizamos?',
+      answer: 'Por motivos éticos e legais, não realizamos: Pré-natal de alto risco, Laudos para readequação de gênero, Laudo de curatela, Laudo de interdição (retirada de direitos legais da pessoa), Laudo para aposentadoria por invalidez ou isenção de IR, Laudo para porte ou posse de arma de fogo, Laudo PCD.'
+    },
+    {
+      question: 'Qual é o valor da consulta?',
+      answer: 'Consulta curta (20 min) – R$ 129,90, Consulta estendida (40 min) – R$ 239,90, Laudos específicos (INSS e empregadores) – R$ 300,00 (fixo – 20 min).'
+    },
+    {
+      question: 'Como agendar uma consulta?',
+      answer: 'O processo é simples: 1-Escolha o dia e horário que melhor se adapta à sua rotina, 2-Realize a consulta online (20 ou 40 min), 3-Receba sua receita, orientações ou laudo diretamente no celular.'
     }
   ];
 
@@ -1048,10 +1084,10 @@ const Home: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 slide-up">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Perguntas <span className="gradient-text">Frequentes</span>
+              FAQ – Clínica Médica & <span className="gradient-text">Medicina de Família</span>
             </h2>
             <p className="text-xl text-gray-600">
-              Tire suas dúvidas sobre nosso atendimento
+              Tire suas dúvidas sobre nosso atendimento especializado
             </p>
           </div>
 
