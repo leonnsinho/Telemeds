@@ -94,20 +94,60 @@ const Psiquiatria: React.FC = () => {
 
   const faqItems = [
     {
-      question: 'Qual a diferença entre psiquiatra e psicólogo?',
-      answer: 'O psiquiatra é um médico especializado em transtornos mentais e pode prescrever medicamentos. Já o psicólogo é um profissional da saúde mental que trabalha com terapia e não prescreve medicamentos.'
+      question: 'O que é uma consulta de Clínica Médica e Medicina de Família?',
+      answer: 'São consultas abrangentes, realizadas por médicos capacitados para atender desde queixas do dia a dia até acompanhamento de doenças crônicas, prevenção de saúde e orientações familiares. Nosso objetivo é oferecer cuidado resolutivo, contínuo e acessível para todas as idades.'
     },
     {
-      question: 'A consulta online é eficaz para tratamento psiquiátrico?',
-      answer: 'Sim! Estudos mostram que a telepsiquiatria é tão eficaz quanto o atendimento presencial para a maioria dos casos, oferecendo maior comodidade e acessibilidade.'
+      question: 'Quais tipos de consultas posso agendar?',
+      answer: 'Oferecemos diferentes modalidades de atendimento, sempre online e com emissão de receita digital válida em todo o Brasil: Consulta Clínica Geral, Renovação de Receita Simples, Puericultura Básica Online, Check-up Clínico e Exames Laboratoriais, Tratamento com Canabinoides Medicinais, Orientações em Saúde e Uso de Medicamentos, Laudos e Atestados Médicos, Segunda Opinião Clínica.'
     },
     {
-      question: 'Posso obter receita de medicamentos controlados?',
-      answer: 'Sim, nossos psiquiatras podem prescrever medicamentos controlados através de receitas digitais válidas, seguindo todas as normas do CFM e ANVISA.'
+      question: 'Qual é a duração da consulta?',
+      answer: 'Você escolhe de acordo com a sua necessidade: 20 minutos – consultas curtas, ideais para renovações de receita, orientações pontuais, afastamentos simples e laudos. 40 minutos – consultas completas, para acompanhamento familiar, avaliação de múltiplas condições, check-ups e casos mais complexos.'
     },
     {
-      question: 'Quanto tempo dura o tratamento?',
-      answer: 'O tempo varia conforme cada caso. Algumas condições podem melhorar em semanas, enquanto outras requerem acompanhamento prolongado. Seu médico fará essa avaliação.'
+      question: 'Quais condições podem ser avaliadas em Clínica Médica?',
+      answer: 'Nossos especialistas estão preparados para lidar com: Queixas agudas (febre, gripes, infecções leves, dores de cabeça, problemas gastrointestinais e dermatológicos), Doenças crônicas (hipertensão, diabetes, colesterol, asma, tireoide), Deficiências nutricionais, suplementação e reposição de vitaminas, Prevenção e promoção de saúde, incluindo vacinação, hábitos de vida e orientações gerais, Encaminhamentos e solicitações de exames.'
+    },
+    {
+      question: 'Vocês emitem receitas médicas?',
+      answer: 'Sim ✅. Todas as consultas permitem emissão de receita médica digital válida em todo o Brasil, inclusive controlados de uso clínico (conforme avaliação médica). Também podemos prescrever vitaminas, reposições hormonais, anticoncepcionais e outros medicamentos de uso contínuo.'
+    },
+    {
+      question: 'Posso renovar minha receita online?',
+      answer: 'Sim. A renovação de receita é indicada para pacientes já estabilizados em uso de medicações contínuas (como para hipertensão, diabetes, colesterol, anticoncepcionais e psicotrópicos estáveis). Durante a consulta, o médico poderá revalidar a receita, ajustar doses se necessário e solicitar exames de acompanhamento.'
+    },
+    {
+      question: 'O que é a Puericultura Básica Online?',
+      answer: 'É um acompanhamento voltado para crianças, com foco em crescimento e desenvolvimento. Inclui orientações sobre marcos do desenvolvimento infantil, dúvidas frequentes de pais e responsáveis, triagem de sinais de alerta e vacinação. ⚠ Importante: não substitui as consultas presenciais obrigatórias com o pediatra.'
+    },
+    {
+      question: 'Como funciona o Check-up Clínico?',
+      answer: 'O check-up é uma consulta preventiva, em que avaliamos seu histórico clínico e solicitamos exames laboratoriais de acordo com seu perfil. Podem ser solicitados: Exames metabólicos e hormonais, Avaliação nutricional, Marcadores tumorais e autoimunes, Alergias alimentares, respiratórias e cutâneas, Exames pré-nupciais e pré-gestacionais, Vitaminas e micronutrientes.'
+    },
+    {
+      question: 'Vocês oferecem tratamento com canabinoides medicinais?',
+      answer: 'Sim. Temos médica credenciada para prescrever canabinoides medicinais de forma segura e personalizada. As principais indicações clínicas são: Dor crônica, Epilepsia refratária, Doença de Parkinson, Esclerose múltipla, Alzheimer e outras condições neurodegenerativas, Efeitos da quimioterapia, Espasticidade muscular, Enxaqueca crônica.'
+    },
+    {
+      question: 'Vocês fazem laudos e atestados médicos?',
+      answer: 'Sim. Emitimos documentos mediante avaliação clínica: Atividades físicas (academia, esportes, clubes), Escolares (faltas, restrições temporárias), Atestados para empregadores/instituições, Laudos para INSS (consulta de 20 min – valor fixo). ⚠ Importante: alguns laudos específicos não são realizados.'
+    },
+    {
+      question: 'Como funciona a consulta de Segunda Opinião Clínica?',
+      answer: 'É um atendimento voltado para revisão de exames, condutas e diagnósticos anteriores. O objetivo é oferecer segurança, discutir alternativas terapêuticas e evitar tratamentos redundantes.'
+    },
+    {
+      question: 'Quais atendimentos e laudos NÃO realizamos?',
+      answer: 'Por motivos éticos e legais, não realizamos: Pré-natal de alto risco, Laudos para readequação de gênero, Laudo de curatela, Laudo de interdição, Laudo para aposentadoria por invalidez ou isenção de IR, Laudo para porte ou posse de arma de fogo, Laudo PCD.'
+    },
+    {
+      question: 'Qual é o valor da consulta?',
+      answer: 'Consulta curta (20 min) – R$ 129,90, Consulta estendida (40 min) – R$ 239,90, Laudos específicos (INSS e empregadores) – R$ 300,00 (fixo – 20 min).'
+    },
+    {
+      question: 'Como agendar uma consulta?',
+      answer: 'O processo é simples: 1-Escolha o dia e horário que melhor se adapta à sua rotina, 2-Realize a consulta online (20 ou 40 min), 3-Receba sua receita, orientações ou laudo diretamente no celular.'
     }
   ];
 
@@ -427,7 +467,7 @@ const Psiquiatria: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16 slide-up">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Dúvidas sobre <span className="gradient-text">Psiquiatria</span>
+              Dúvidas sobre <span className="gradient-text">Clínica Médica & Medicina de Família</span>
             </h2>
             <p className="text-xl text-gray-700">
               Respondemos às perguntas mais frequentes sobre nosso atendimento
