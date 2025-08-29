@@ -80,7 +80,7 @@ const Home: React.FC = () => {
     },
     {
       icon: Users,
-      title: 'Medicina Geral',
+      title: 'Medicina de Família',
       description: 'Atendimento médico abrangente e cuidado contínuo para toda a família.',
       path: '/medicina',
       available: true,
@@ -141,7 +141,7 @@ const Home: React.FC = () => {
     },
     { 
       icon: Users, 
-      title: 'Medicina Geral', 
+      title: 'Medicina de Família', 
       path: '/medicina', 
       available: true,
       description: 'Consultas gerais e check-ups'

@@ -93,7 +93,7 @@ const Medicina: React.FC = () => {
 
   const faqItems = [
     {
-      question: 'O que é uma consulta de Medicina Geral?',
+      question: 'O que é uma consulta de Medicina de Família?',
       answer: 'São consultas abrangentes, realizadas por médicos capacitados para atender desde queixas do dia a dia até acompanhamento de doenças crônicas, prevenção de saúde e orientações gerais. Nosso objetivo é oferecer cuidado resolutivo, contínuo e acessível para todas as idades.'
     },
     {
@@ -105,7 +105,7 @@ const Medicina: React.FC = () => {
       answer: 'Você escolhe de acordo com a sua necessidade: 20 minutos – consultas curtas, ideais para renovações de receita, orientações pontuais, afastamentos simples e laudos. 40 minutos – consultas completas, para acompanhamento familiar, avaliação de múltiplas condições, check-ups e casos mais complexos.'
     },
     {
-      question: 'Quais condições podem ser avaliadas na Medicina Geral?',
+      question: 'Quais condições podem ser avaliadas na Medicina de Família?',
       answer: 'Nossos especialistas estão preparados para lidar com: Queixas agudas (febre, gripes, infecções leves, dores de cabeça, problemas gastrointestinais e dermatológicos), Doenças crônicas (hipertensão, diabetes, colesterol, asma, tireoide), Deficiências nutricionais, suplementação e reposição de vitaminas, Prevenção e promoção de saúde, incluindo vacinação, hábitos de vida e orientações gerais, Encaminhamentos e solicitações de exames.'
     },
     {
@@ -162,7 +162,7 @@ const Medicina: React.FC = () => {
                 <div className="w-12 h-12 gradient-secondary rounded-xl flex items-center justify-center">
                   <Stethoscope className="w-6 h-6 text-blue-600" />
                 </div>
-                <span className="text-blue-600 font-semibold text-lg">Medicina Geral</span>
+                <span className="text-blue-600 font-semibold text-lg">Medicina de Família</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
@@ -201,7 +201,7 @@ const Medicina: React.FC = () => {
               <div className="relative">
                 <img
                   src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-                  alt="Consulta de Medicina Geral Online"
+                  alt="Consulta de Medicina de Família Online"
                   className="rounded-3xl shadow-2xl"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-lg">
@@ -440,7 +440,7 @@ const Medicina: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">2. Consulte</h3>
               <p className="text-gray-600 leading-relaxed">
-                Videoconsulta segura com médico de medicina geral. 
+                Videoconsulta segura com médico de medicina de família. 
                 Opções de 20 ou 40 minutos, conforme sua necessidade.
               </p>
             </div>
@@ -466,7 +466,7 @@ const Medicina: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16 slide-up">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Dúvidas sobre <span className="gradient-text">Medicina Geral</span>
+              Dúvidas sobre <span className="gradient-text">Medicina de Família</span>
             </h2>
             <p className="text-xl text-gray-700">
               Respondemos às perguntas mais frequentes sobre nosso atendimento
@@ -510,7 +510,7 @@ const Medicina: React.FC = () => {
               Pronto para cuidar da sua saúde?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Agende sua consulta com nossos médicos de medicina geral e dê o primeiro passo 
+              Agende sua consulta com nossos médicos de medicina de família e dê o primeiro passo 
               para uma vida mais equilibrada e saudável.
             </p>
             <div className="flex justify-center">

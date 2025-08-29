@@ -24,7 +24,7 @@ const Header: React.FC = () => {
     { name: 'Psiquiatria', path: '/psiquiatria' },
     { name: 'Psicologia', path: '/psico' },
     { name: 'Endocrinologia', path: '/endo' },
-    { name: 'Medicina', path: '/medicina' },
+    { name: 'Medicina de Família', path: '/medicina' },
   ];
 
   const currentPage = navigationItems.find(item => item.path === location.pathname)?.name || 'Menu';

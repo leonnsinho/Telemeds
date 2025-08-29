@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, Calendar, Shield, Clock, ChevronDown, Heart, Activity, Baby, FileText, Leaf, BookOpen, Search, XCircle, Users } from 'lucide-react';
+import { Brain, Calendar, Shield, Clock, ChevronDown, Heart, Zap, Moon, Users, AlertCircle, Activity, Pill } from 'lucide-react';
 import WaveDivider from '../components/WaveDivider';
+import medicoSerioImg from '../assets/images/medico serio.jpg';
 import medico2Img from '../assets/images/medico 2.jpeg';
 
 const Psiquiatria: React.FC = () => {
@@ -9,145 +10,112 @@ const Psiquiatria: React.FC = () => {
 
   const commonCases = [
     {
-      title: 'Consulta Clínica Geral',
-      description: 'Avaliação de sintomas inespecíficos e queixas do dia a dia (cefaleias, infecções respiratórias e urinárias, gastrointestinais, dermatológicas, ginecológicas, osteomusculares), deficiências nutricionais e reposição de vitaminas.',
+      title: 'Depressão e Transtornos do Humor',
+      description: 'Diagnóstico e tratamento de episódios depressivos, distimia e transtornos bipolares com abordagem personalizada e medicação adequada.',
       icon: Heart,
       color: 'from-blue-500 to-cyan-500',
       bgColor: 'from-blue-50 via-cyan-50 to-sky-50',
       borderColor: 'border-blue-100 hover:border-blue-300',
-      category: 'Essencial'
+      category: 'Transtornos do Humor'
     },
     {
-      title: 'Renovação de Receita Simples e Controladas / Encaminhamentos',
-      description: 'Reemissão de prescrições estáveis (hipertensão, diabetes, colesterol, asma, anticoncepcionais, exames nutricionais, hormônios e psicotrópicos). Inclui encaminhamentos para fisioterapia, acupuntura, pilates e RPG.',
-      icon: FileText,
-      color: 'from-green-500 to-emerald-500',
-      bgColor: 'from-green-50 via-emerald-50 to-teal-50',
-      borderColor: 'border-green-100 hover:border-green-300',
-      category: 'Essencial'
+      title: 'Ansiedade e Transtornos Ansiosos',
+      description: 'Tratamento de ansiedade generalizada, fobias específicas, transtorno obsessivo-compulsivo e ataques de pânico com terapias eficazes.',
+      icon: Zap,
+      color: 'from-amber-500 to-orange-500',
+      bgColor: 'from-amber-50 via-yellow-50 to-orange-50',
+      borderColor: 'border-amber-100 hover:border-amber-300',
+      category: 'Transtornos Ansiosos'
     },
     {
-      title: 'Puericultura Básica Online',
-      description: 'Acompanhamento do crescimento e desenvolvimento infantil. Orientações sobre marcos do desenvolvimento, dúvidas frequentes e triagem de sinais de alerta. Não substitui consultas presenciais obrigatórias do pediatra.',
-      icon: Baby,
-      color: 'from-pink-500 to-rose-500',
-      bgColor: 'from-pink-50 via-rose-50 to-red-50',
-      borderColor: 'border-pink-100 hover:border-pink-300',
-      category: 'Familiar'
+      title: 'Transtornos do Sono',
+      description: 'Avaliação e tratamento de insônia, hipersonia, parassonias e outros distúrbios que afetam a qualidade do sono e descanso.',
+      icon: Moon,
+      color: 'from-indigo-500 to-purple-500',
+      bgColor: 'from-indigo-50 via-purple-50 to-violet-50',
+      borderColor: 'border-indigo-100 hover:border-indigo-300',
+      category: 'Transtornos do Sono'
     },
     {
-      title: 'Check-up Clínico e Exames Laboratoriais',
-      description: 'Consulta preventiva com solicitação de exames: metabólicos, hormonais, autoimunes, marcadores tumorais, alergias, vitaminas e micronutrientes. Inclui check-up pré-nupcial e pré-gestacional.',
+      title: 'TDAH (Transtorno de Déficit de Atenção)',
+      description: 'Diagnóstico e acompanhamento de TDAH em adultos e adolescentes, com estratégias medicamentosas e comportamentais.',
+      icon: AlertCircle,
+      color: 'from-red-500 to-pink-500',
+      bgColor: 'from-red-50 via-pink-50 to-rose-50',
+      borderColor: 'border-red-100 hover:border-red-300',
+      category: 'Transtornos do Neurodesenvolvimento'
+    },
+    {
+      title: 'Dependência Química',
+      description: 'Suporte especializado para tratamento de dependência de álcool, drogas e outras substâncias, com acompanhamento contínuo.',
+      icon: Pill,
+      color: 'from-emerald-500 to-teal-500',
+      bgColor: 'from-emerald-50 via-teal-50 to-green-50',
+      borderColor: 'border-emerald-100 hover:border-emerald-300',
+      category: 'Dependências'
+    },
+    {
+      title: 'Transtornos Alimentares',
+      description: 'Tratamento de anorexia, bulimia, compulsão alimentar e outros transtornos relacionados à alimentação e imagem corporal.',
       icon: Activity,
       color: 'from-purple-500 to-violet-500',
       bgColor: 'from-purple-50 via-violet-50 to-indigo-50',
       borderColor: 'border-purple-100 hover:border-purple-300',
-      category: 'Preventivo'
+      category: 'Transtornos Alimentares'
     },
     {
-      title: 'Tratamento com Canabinoides Medicinais',
-      description: 'Indicado para dor crônica, epilepsia refratária, doença de Parkinson, esclerose múltipla, Alzheimer, fibromialgia, enxaqueca crônica e efeitos da quimioterapia/radioterapia.',
-      icon: Leaf,
-      color: 'from-emerald-500 to-teal-500',
-      bgColor: 'from-emerald-50 via-teal-50 to-green-50',
-      borderColor: 'border-emerald-100 hover:border-emerald-300',
-      category: 'Especializado'
+      title: 'Transtorno Bipolar',
+      description: 'Diagnóstico e estabilização de episódios maníacos e depressivos, com monitoramento contínuo e ajuste medicamentoso.',
+      icon: Zap,
+      color: 'from-orange-500 to-red-500',
+      bgColor: 'from-orange-50 via-red-50 to-pink-50',
+      borderColor: 'border-orange-100 hover:border-orange-300',
+      category: 'Transtornos do Humor'
     },
     {
-      title: 'Orientações em Saúde e Uso de Medicamentos',
-      description: 'Prevenção de doenças infecciosas, promoção de hábitos saudáveis, revisão de polifarmácia e esclarecimento sobre efeitos colaterais e interações medicamentosas.',
-      icon: BookOpen,
-      color: 'from-amber-500 to-orange-500',
-      bgColor: 'from-amber-50 via-yellow-50 to-orange-50',
-      borderColor: 'border-amber-100 hover:border-amber-300',
-      category: 'Orientação'
-    },
-    {
-      title: 'Laudos e Atestados Médicos',
-      description: 'Emissão de documentos mediante avaliação clínica: Atividades físicas (academia, clubes, esportes), Escolares (faltas, restrições temporárias), INSS, Documentos para empregadores/instituições.',
-      icon: FileText,
+      title: 'Estresse e Burnout',
+      description: 'Tratamento de estresse excessivo, síndrome de burnout e esgotamento mental relacionado ao trabalho e vida pessoal.',
+      icon: Users,
       color: 'from-slate-500 to-gray-500',
       bgColor: 'from-slate-50 via-gray-50 to-zinc-50',
       borderColor: 'border-slate-100 hover:border-slate-300',
-      category: 'Documentação'
-    },
-    {
-      title: 'Segunda Opinião Clínica',
-      description: 'Revisão de exames e condutas anteriores, discussão de diagnósticos, alternativas terapêuticas e apoio na tomada de decisão segura, evitando tratamentos redundantes.',
-      icon: Search,
-      color: 'from-indigo-500 to-blue-500',
-      bgColor: 'from-indigo-50 via-blue-50 to-sky-50',
-      borderColor: 'border-indigo-100 hover:border-indigo-300',
-      category: 'Apoio'
+      category: 'Estresse e Adaptação'
     }
   ];
 
-  const doctor = {
-    name: 'Dra. Keila Hees',
-    crm: 'CRM-SP: 86684', // Será atualizado posteriormente
-    specialty: 'Clínica Médica, Medicina de Família e Pediatria',
-    quote: 'Num mundo em que muitos médicos parecem frios e distantes, a Dra.Keila Hees se destaca pela empatia e atenção total a você.',
-    description: 'Com mais de 30 anos de experiência em clínica médica, medicina de família e pediatria, ela não apenas vai te ouvir – mas oferecer soluções concretas, baseadas em conhecimento e prática. Aqui você encontra o cuidado e a eficácia que tantos outros não conseguem entregar.',
-    experience: '30+ anos',
-    image: '/dr keila.png'
-  };
+  const doctors = [
+    {
+      name: 'Dr. Bruno Hees Toews',
+      crm: 'CRM-SP: 167551',
+      specialty: 'Psiquiatria',
+      description: 'Atua há mais de 10 anos em psiquiatria e clínica médica, com especialização pela Santa Casa de São Paulo e vivência internacional. Reconhecido por sua abordagem empática e foco em resultados, oferece atendimento bilíngue (português e inglês) e conduz os atendimentos com excelência e responsabilidade médica.',
+      image: medicoSerioImg
+    },
+    {
+      name: 'Dr. Rennan Hollen',
+      crm: 'CRM-SP: 208989',
+      specialty: 'Psiquiatria',
+      description: 'Com mais de 6 anos de experiência em psiquiatria e clínica médica, é especialista pelo Hospital Israelita Albert Einstein. Está em constante atualização profissional e dedica-se a um atendimento humanizado, personalizado e bilíngue (português e inglês), sempre priorizando o bem-estar e a qualidade de vida dos seus pacientes.',
+      image: medico2Img
+    }
+  ];
 
   const faqItems = [
     {
-      question: 'O que é uma consulta de Clínica Médica e Medicina de Família?',
-      answer: 'São consultas abrangentes, realizadas por médicos capacitados para atender desde queixas do dia a dia até acompanhamento de doenças crônicas, prevenção de saúde e orientações familiares. Nosso objetivo é oferecer cuidado resolutivo, contínuo e acessível para todas as idades.'
+      question: 'Qual a diferença entre psiquiatra e psicólogo?',
+      answer: 'O psiquiatra é um médico especializado em transtornos mentais e pode prescrever medicamentos. Já o psicólogo é um profissional da saúde mental que trabalha com terapia e não prescreve medicamentos.'
     },
     {
-      question: 'Quais tipos de consultas posso agendar?',
-      answer: 'Oferecemos diferentes modalidades de atendimento, sempre online e com emissão de receita digital válida em todo o Brasil: Consulta Clínica Geral, Renovação de Receita Simples, Puericultura Básica Online, Check-up Clínico e Exames Laboratoriais, Tratamento com Canabinoides Medicinais, Orientações em Saúde e Uso de Medicamentos, Laudos e Atestados Médicos, Segunda Opinião Clínica.'
+      question: 'A consulta online é eficaz para tratamento psiquiátrico?',
+      answer: 'Sim! Estudos mostram que a telepsiquiatria é tão eficaz quanto o atendimento presencial para a maioria dos casos, oferecendo maior comodidade e acessibilidade.'
     },
     {
-      question: 'Qual é a duração da consulta?',
-      answer: 'Você escolhe de acordo com a sua necessidade: 20 minutos – consultas curtas, ideais para renovações de receita, orientações pontuais, afastamentos simples e laudos. 40 minutos – consultas completas, para acompanhamento familiar, avaliação de múltiplas condições, check-ups e casos mais complexos.'
+      question: 'Posso obter receita de medicamentos controlados?',
+      answer: 'Sim, nossos psiquiatras podem prescrever medicamentos controlados através de receitas digitais válidas, seguindo todas as normas do CFM e ANVISA.'
     },
     {
-      question: 'Quais condições podem ser avaliadas em Clínica Médica?',
-      answer: 'Nossos especialistas estão preparados para lidar com: Queixas agudas (febre, gripes, infecções leves, dores de cabeça, problemas gastrointestinais e dermatológicos), Doenças crônicas (hipertensão, diabetes, colesterol, asma, tireoide), Deficiências nutricionais, suplementação e reposição de vitaminas, Prevenção e promoção de saúde, incluindo vacinação, hábitos de vida e orientações gerais, Encaminhamentos e solicitações de exames.'
-    },
-    {
-      question: 'Vocês emitem receitas médicas?',
-      answer: 'Sim ✅. Todas as consultas permitem emissão de receita médica digital válida em todo o Brasil, inclusive controlados de uso clínico (conforme avaliação médica). Também podemos prescrever vitaminas, reposições hormonais, anticoncepcionais e outros medicamentos de uso contínuo.'
-    },
-    {
-      question: 'Posso renovar minha receita online?',
-      answer: 'Sim. A renovação de receita é indicada para pacientes já estabilizados em uso de medicações contínuas (como para hipertensão, diabetes, colesterol, anticoncepcionais e psicotrópicos estáveis). Durante a consulta, o médico poderá revalidar a receita, ajustar doses se necessário e solicitar exames de acompanhamento.'
-    },
-    {
-      question: 'O que é a Puericultura Básica Online?',
-      answer: 'É um acompanhamento voltado para crianças, com foco em crescimento e desenvolvimento. Inclui orientações sobre marcos do desenvolvimento infantil, dúvidas frequentes de pais e responsáveis, triagem de sinais de alerta e vacinação. ⚠ Importante: não substitui as consultas presenciais obrigatórias com o pediatra.'
-    },
-    {
-      question: 'Como funciona o Check-up Clínico?',
-      answer: 'O check-up é uma consulta preventiva, em que avaliamos seu histórico clínico e solicitamos exames laboratoriais de acordo com seu perfil. Podem ser solicitados: Exames metabólicos e hormonais, Avaliação nutricional, Marcadores tumorais e autoimunes, Alergias alimentares, respiratórias e cutâneas, Exames pré-nupciais e pré-gestacionais, Vitaminas e micronutrientes.'
-    },
-    {
-      question: 'Vocês oferecem tratamento com canabinoides medicinais?',
-      answer: 'Sim. Temos médica credenciada para prescrever canabinoides medicinais de forma segura e personalizada. As principais indicações clínicas são: Dor crônica, Epilepsia refratária, Doença de Parkinson, Esclerose múltipla, Alzheimer e outras condições neurodegenerativas, Efeitos da quimioterapia, Espasticidade muscular, Enxaqueca crônica.'
-    },
-    {
-      question: 'Vocês fazem laudos e atestados médicos?',
-      answer: 'Sim. Emitimos documentos mediante avaliação clínica: Atividades físicas (academia, esportes, clubes), Escolares (faltas, restrições temporárias), Atestados para empregadores/instituições, Laudos para INSS (consulta de 20 min – valor fixo). ⚠ Importante: alguns laudos específicos não são realizados.'
-    },
-    {
-      question: 'Como funciona a consulta de Segunda Opinião Clínica?',
-      answer: 'É um atendimento voltado para revisão de exames, condutas e diagnósticos anteriores. O objetivo é oferecer segurança, discutir alternativas terapêuticas e evitar tratamentos redundantes.'
-    },
-    {
-      question: 'Quais atendimentos e laudos NÃO realizamos?',
-      answer: 'Por motivos éticos e legais, não realizamos: Pré-natal de alto risco, Laudos para readequação de gênero, Laudo de curatela, Laudo de interdição, Laudo para aposentadoria por invalidez ou isenção de IR, Laudo para porte ou posse de arma de fogo, Laudo PCD.'
-    },
-    {
-      question: 'Qual é o valor da consulta?',
-      answer: 'Consulta curta (20 min) – R$ 129,90, Consulta estendida (40 min) – R$ 239,90, Laudos específicos (INSS e empregadores) – R$ 300,00 (fixo – 20 min).'
-    },
-    {
-      question: 'Como agendar uma consulta?',
-      answer: 'O processo é simples: 1-Escolha o dia e horário que melhor se adapta à sua rotina, 2-Realize a consulta online (20 ou 40 min), 3-Receba sua receita, orientações ou laudo diretamente no celular.'
+      question: 'Quanto tempo dura o tratamento?',
+      answer: 'O tempo varia conforme cada caso. Algumas condições podem melhorar em semanas, enquanto outras requerem acompanhamento prolongado. Seu médico fará essa avaliação.'
     }
   ];
 
@@ -161,19 +129,19 @@ const Psiquiatria: React.FC = () => {
             <div className="fade-in">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 gradient-secondary rounded-xl flex items-center justify-center">
-                  <Heart className="w-6 h-6 text-blue-600" />
+                  <Brain className="w-6 h-6 text-blue-600" />
                 </div>
-                <span className="text-blue-600 font-semibold text-lg">Clínica Médica & Medicina de Família</span>
+                <span className="text-blue-600 font-semibold text-lg">Psiquiatria</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Cuidado completo para sua
-                <span className="gradient-text"> saúde e da sua família</span>
+                Cuidado especializado para sua
+                <span className="gradient-text"> saúde mental</span>
               </h1>
               
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                Atendimento online com médicos de clínica geral e medicina de família, 
-                para prevenção, diagnóstico e tratamento personalizado em todas as fases da vida.
+                Atendimento psiquiátrico online com médicos especializados, 
+                diagnóstico preciso e tratamento personalizado para seu bem-estar.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -229,7 +197,7 @@ const Psiquiatria: React.FC = () => {
               Casos que <span className="gradient-text">atendemos</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Nossa equipe de clínica médica e medicina de família é especializada em cuidados abrangentes, contínuos e preventivos para todas as idades.
+              Nossa equipe de psiquiatria é especializada no diagnóstico e tratamento de diversos transtornos mentais com abordagem personalizada.
             </p>
           </div>
 
@@ -272,27 +240,11 @@ const Psiquiatria: React.FC = () => {
             })}
           </div>
 
-          {/* Atendimentos que NÃO realizamos */}
-          <div className="mt-16 bg-red-50 rounded-2xl p-8 border border-red-100">
-            <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
-                <XCircle className="w-6 h-6 text-red-600" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-red-800 mb-3">Atendimentos que NÃO realizamos</h3>
-                <p className="text-red-700 leading-relaxed">
-                  <strong>Importante:</strong> Pré-natal de alto risco, laudos judiciais (curatela, interdição), invalidez/isenção de IR, 
-                  porte/posse de arma, PCD, troca de sexo/transgêneros.
-                </p>
-              </div>
-            </div>
-          </div>
-
           {/* Estatísticas com novo design */}
           <div className="mt-20">
             <div className="text-center mb-12">
               <h3 className="text-2xl font-bold text-gray-900 mb-3">Resultados que comprovam nossa excelência</h3>
-              <p className="text-gray-600">Números que refletem nosso compromisso com seu bem-estar</p>
+              <p className="text-gray-600">Números que refletem nosso compromisso com seu bem-estar mental</p>
             </div>
             
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
@@ -332,79 +284,42 @@ const Psiquiatria: React.FC = () => {
         </div>
       </section>
 
-      <WaveDivider gradientFrom="#C5E4F6" gradientTo="#E5D8F0" />
+      <WaveDivider color="#C5E4F6" />
 
       {/* Médicos */}
-      <section className="section-padding bg-gradient-to-r from-[#C5E4F6] to-[#E5D8F0]">
+      <section className="section-padding gradient-secondary">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 slide-up">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Nossa <span className="gradient-text">Especialista</span>
+              Nossos <span className="gradient-text">Especialistas</span>
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Profissional qualificada e experiente, pronta para diagnosticar, tratar e acompanhar suas necessidades de saúde com agilidade e segurança.
+              Profissionais qualificados e experientes, prontos para cuidar da sua saúde mental
             </p>
           </div>
 
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-gradient-to-br from-white to-blue-50 rounded-3xl overflow-hidden shadow-2xl">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                {/* Seção da Imagem */}
-                <div className="relative h-64 lg:h-auto min-h-[400px] overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {doctors.map((doctor, index) => (
+              <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
+                <div className="aspect-square overflow-hidden">
                   <img
                     src={doctor.image}
                     alt={doctor.name}
-                    className="w-full h-full object-cover"
+                    className={`w-full h-full object-cover ${
+                      doctor.name.includes('Bruno') ? 'doctor-image-bruno' : 'doctor-image-rennan'
+                    }`}
                   />
-                  {/* Badge de experiência */}
-                  <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                      <span className="text-sm font-bold text-gray-900">{doctor.experience} de experiência</span>
-                    </div>
-                  </div>
                 </div>
-
-                {/* Seção do Conteúdo */}
-                <div className="p-8 lg:p-12 flex flex-col justify-center">
-                  <div className="mb-6">
-                    <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
-                      {doctor.name}
-                    </h3>
-                    <p className="text-blue-600 font-semibold text-lg mb-2">{doctor.crm}</p>
-                    <p className="text-gray-600 font-medium text-lg">{doctor.specialty}</p>
-                  </div>
-
-                  {/* Quote destacada */}
-                  <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl mb-6">
-                    <blockquote className="text-gray-700 italic leading-relaxed">
-                      "{doctor.quote}"
-                    </blockquote>
-                  </div>
-
-                  {/* Descrição */}
-                  <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                    {doctor.description}
-                  </p>
-
-                  {/* CTA */}
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Link
-                      to="/agendamento"
-                      className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
-                    >
-                      <Calendar className="w-5 h-5" />
-                      <span>Agendar Consulta</span>
-                    </Link>
-                    <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 flex items-center justify-center space-x-2">
-                      <Heart className="w-5 h-5" />
-                      <span>Saiba Mais</span>
-                    </button>
-                  </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    {doctor.name}
+                  </h3>
+                  <p className="text-blue-600 font-semibold mb-3">{doctor.crm}</p>
+                  <p className="text-gray-600 mb-3 font-medium">{doctor.specialty}</p>
+                  <p className="text-sm text-gray-700 leading-relaxed">{doctor.description}</p>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -441,8 +356,8 @@ const Psiquiatria: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">2. Consulte</h3>
               <p className="text-gray-600 leading-relaxed">
-                Videoconsulta segura com médico de clínica geral ou medicina de família. 
-                Opções de 20 ou 40 minutos, conforme sua necessidade.
+                Videochamada segura com psiquiatra especializado. 
+                Consultas a partir de 20 minutos.
               </p>
             </div>
 
@@ -452,22 +367,22 @@ const Psiquiatria: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">3. Receba</h3>
               <p className="text-gray-600 leading-relaxed">
-                Receita médica digital válida, laudos e orientações personalizadas 
-                para seu cuidado contínuo.
+                Receita médica digital válida e orientações personalizadas 
+                para seu tratamento.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <WaveDivider gradientFrom="#D8CAE7" gradientTo="#FEF7D3" />
+      <WaveDivider color="#D5D4F1" />
 
       {/* FAQ */}
-      <section className="section-padding-large bg-gradient-to-r from-[#D8CAE7] to-[#FEF7D3]">
+      <section className="section-padding-large gradient-primary">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16 slide-up">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Dúvidas sobre <span className="gradient-text">Clínica Médica & Medicina de Família</span>
+              Dúvidas sobre <span className="gradient-text">Psiquiatria</span>
             </h2>
             <p className="text-xl text-gray-700">
               Respondemos às perguntas mais frequentes sobre nosso atendimento
