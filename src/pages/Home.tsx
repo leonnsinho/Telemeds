@@ -80,14 +80,14 @@ const Home: React.FC = () => {
     },
     {
       icon: Users,
-      title: 'Clínica Médica & Medicina de Família',
+      title: 'Medicina Geral',
       description: 'Atendimento médico abrangente e cuidado contínuo para toda a família.',
-      path: '/psiquiatria',
-      available: false,
+      path: '/medicina',
+      available: true,
       detailedInfo: {
         symptoms: ['Check-up', 'Sintomas gerais', 'Prevenção', 'Acompanhamento familiar', 'Cuidados básicos', 'Exames'],
-        duration: '30-50 minutos',
-        nextAvailable: 'Em breve'
+        duration: '20-40 minutos',
+        nextAvailable: 'Hoje às 10:00'
       }
     },
     {
@@ -141,9 +141,9 @@ const Home: React.FC = () => {
     },
     { 
       icon: Users, 
-      title: 'Clínica Geral', 
-      path: '/clinica-geral', 
-      available: false,
+      title: 'Medicina Geral', 
+      path: '/medicina', 
+      available: true,
       description: 'Consultas gerais e check-ups'
     }
   ];
