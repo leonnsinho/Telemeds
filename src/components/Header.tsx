@@ -25,6 +25,7 @@ const Header: React.FC = () => {
     { name: 'Psicologia', path: '/psico' },
     { name: 'Endocrinologia', path: '/endo' },
     { name: 'Medicina de Família', path: '/medicina' },
+    { name: 'Ginecologia', path: '/ginecologia' },
   ];
 
   const currentPage = navigationItems.find(item => item.path === location.pathname)?.name || 'Menu';
@@ -56,19 +57,19 @@ const Header: React.FC = () => {
 
             {/* Desktop Navigation */}
             <nav className={`hidden md:flex items-center transition-all duration-700 ease-out ${
-              isScrolled ? 'space-x-4' : 'space-x-8'
+              isScrolled ? 'space-x-2' : 'space-x-4'
             }`}>
               {/* Menu items expandido */}
               <div className={`flex items-center transition-all duration-700 ease-out ${
                 isScrolled 
                   ? 'opacity-0 scale-95 w-0 overflow-hidden pointer-events-none' 
-                  : 'opacity-100 scale-100 w-auto space-x-8'
+                  : 'opacity-100 scale-100 w-auto space-x-4'
               }`}>
                 {navigationItems.map((item) => (
                   <Link
                     key={item.path}
                     to={item.path}
-                    className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-blue-600 rounded-lg hover:bg-blue-50 whitespace-nowrap ${
+                    className={`relative px-2 py-2 text-sm font-medium transition-all duration-300 hover:text-blue-600 rounded-lg hover:bg-blue-50 whitespace-nowrap ${
                       location.pathname === item.path
                         ? 'text-blue-600 bg-blue-50'
                         : 'text-gray-700'

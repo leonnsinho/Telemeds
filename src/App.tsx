@@ -6,6 +6,7 @@ import Psiquiatria from './pages/Psiquiatria';
 import Psicologia from './pages/Psicologia';
 import Endocrinologia from './pages/Endocrinologia';
 import Medicina from './pages/Medicina';
+import Ginecologia from './pages/Ginecologia';
 import Agendamento from './pages/Agendamento';
 import AgendamentoExterno from './pages/AgendamentoExterno';
 import ComingSoon from './pages/ComingSoon';
@@ -25,9 +26,9 @@ function App() {
             <Route path="/psico" element={<Psicologia />} />
             <Route path="/endo" element={<Endocrinologia />} />
             <Route path="/medicina" element={<Medicina />} />
+            <Route path="/ginecologia" element={<Ginecologia />} />
             <Route path="/clinica-geral" element={<ComingSoon specialty="Clínica Geral" />} />
             <Route path="/medicina-da-familia" element={<ComingSoon specialty="Medicina da Família" />} />
-            <Route path="/ginecologia" element={<ComingSoon specialty="Ginecologia" />} />
           </Routes>
         </main>
         <Footer />
