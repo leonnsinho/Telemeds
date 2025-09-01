@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Calendar, ChevronDown } from 'lucide-react';
+import { Calendar, ChevronDown } from 'lucide-react';
 import LogoNavbar from '../assets/images/logo navbar.svg';
 import analytics from '../utils/analytics';
 
@@ -146,7 +146,24 @@ const Header: React.FC = () => {
                 isScrolled ? 'scale-90' : ''
               }`}
             >
-              {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {/* Ícone de menu animado */}
+              <div className="w-5 h-5 relative">
+                <div className={`absolute w-5 h-0.5 bg-gray-600 transition-all duration-300 ease-in-out ${
+                  isMenuOpen 
+                    ? 'top-2.5 rotate-45' 
+                    : 'top-1'
+                }`}></div>
+                <div className={`absolute w-5 h-0.5 bg-gray-600 top-2 transition-all duration-300 ease-in-out ${
+                  isMenuOpen 
+                    ? 'opacity-0 scale-0' 
+                    : 'opacity-100 scale-100'
+                }`}></div>
+                <div className={`absolute w-5 h-0.5 bg-gray-600 transition-all duration-300 ease-in-out ${
+                  isMenuOpen 
+                    ? 'top-2.5 -rotate-45' 
+                    : 'top-3.5'
+                }`}></div>
+              </div>
             </button>
           </div>
         </div>
@@ -154,7 +171,7 @@ const Header: React.FC = () => {
         {/* Mobile Menu */}
         <div className={`md:hidden mt-2 bg-white/95 backdrop-blur-md border border-gray-200/50 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 transform origin-top ${
           isMenuOpen 
-            ? 'opacity-100 scale-100 translate-y-0 max-h-96' 
+            ? 'opacity-100 scale-100 translate-y-0 max-h-[500px]' 
             : 'opacity-0 scale-95 -translate-y-4 max-h-0 pointer-events-none'
         }`}>
           <nav className="flex flex-col">
@@ -172,14 +189,14 @@ const Header: React.FC = () => {
                 {item.name}
               </Link>
             ))}
-            <div className="p-4">
+            <div className="p-6">
               <Link
                 to="/agendamento"
                 onClick={() => {
                   analytics.buttonClick('header_agendar_mobile', 'header_mobile');
                   setIsMenuOpen(false);
                 }}
-                className="w-full btn-primary text-white py-3 rounded-xl font-medium flex items-center justify-center space-x-2"
+                className="w-full btn-primary text-white py-4 rounded-xl font-medium flex items-center justify-center space-x-2"
               >
                 <Calendar className="w-5 h-5" />
                 <span>Agendar Consulta</span>

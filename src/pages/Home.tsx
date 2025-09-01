@@ -377,7 +377,7 @@ const Home: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-screen gradient-primary pt-18 sm:pt-22 lg:pt-0 overflow-hidden">
+      <section className="relative min-h-screen gradient-primary pt-24 sm:pt-28 lg:pt-0 overflow-hidden">
         <div className="absolute inset-0 bg-black/5"></div>
         
         {/* Container centralizado com margens padrão */}
