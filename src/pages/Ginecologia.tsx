@@ -101,13 +101,13 @@ const Ginecologia: React.FC = () => {
   ];
 
   const doctor = {
-    name: 'Dra. Keila Hees',
-    crm: 'CRM-SP: 86684',
+    name: 'Dra. Marina Arruda Negrisolo',
+    crm: 'CRM-SP: 208883',
     specialty: 'Ginecologia e Obstetrícia',
-    quote: 'A saúde da mulher é uma prioridade em todas as fases da vida. Nosso compromisso é oferecer cuidado integral, respeitoso e personalizado.',
-    description: 'Com ampla experiência em ginecologia e obstetrícia, oferece atendimento especializado para todas as fases da vida da mulher. Focada em prevenção, diagnóstico precoce e tratamento humanizado, sempre priorizando o bem-estar e a qualidade de vida das pacientes.',
-    experience: '30+ anos',
-    image: '/dr keila.png'
+    quote: 'Vejo a ginecologia como um espaço de escuta, acolhimento e respeito, que considera não apenas o aspecto clínico, mas também as nuances emocionais, sociais e culturais do universo feminino.',
+    description: 'Sou médica ginecologista e obstetra. Atuo com dedicação no cuidado integral da saúde da mulher, em todas as fases da vida. Vejo a ginecologia como um espaço de escuta, acolhimento e respeito, que considera não apenas o aspecto clínico, mas também as nuances emocionais, sociais e culturais do universo feminino. Acredito no poder da informação para que cada paciente seja protagonista da própria saúde, sendo o meu compromisso oferecer um cuidado especializado, seguro e acessível, valorizando sempre a singularidade de cada mulher.',
+    experience: '10+ anos',
+    image: '/dra marina.jpg'
   };
 
   const faqItems = [
@@ -133,7 +133,7 @@ const Ginecologia: React.FC = () => {
     },
     {
       question: 'Posso solicitar exames ginecológicos na consulta online?',
-      answer: 'Sim. Solicitamos exames como Papanicolau, ultrassom pélvico, mamografia, exames hormonais, cultura vaginal e outros exames necessários para diagnóstico e acompanhamento da saúde ginecológica.'
+      answer: 'Sim. Solicitamos exames como Papanicolau, ultrassom (transvaginal, pelvico, mamas e axilas, abdominal), mamografia, exames hormonais, cultura vaginal e outros exames necessários para diagnóstico e acompanhamento da saúde ginecológica.'
     },
     {
       question: 'A consulta online substitui o exame ginecológico presencial?',
@@ -215,8 +215,8 @@ const Ginecologia: React.FC = () => {
             <div className="hidden lg:block fade-in">
               <div className="relative">
                 <img
-                  src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-                  alt="Consulta de Ginecologia Online"
+                  src="/gine-foto.png"
+                  alt="Ginecologia - Dra. Marina Arruda Negrisolo"
                   className="rounded-3xl shadow-2xl"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-lg">
@@ -291,11 +291,7 @@ const Ginecologia: React.FC = () => {
                           </div>
                           
                           {/* CTA Button */}
-                          <div className="flex items-center justify-between">
-                            <div className="flex items-center space-x-2">
-                              <div className={`w-3 h-3 bg-gradient-to-r ${case_item.color} rounded-full`}></div>
-                              <span className="text-sm font-medium text-gray-500">{case_item.category}</span>
-                            </div>
+                          <div className="flex items-center justify-end">
                             <button 
                               className={`bg-gradient-to-r ${case_item.color} text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center space-x-2`}
                               onClick={() => window.open('https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta de ginecologia para tratar queixas comuns.', '_blank')}
