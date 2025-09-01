@@ -145,7 +145,7 @@ const Psicologia: React.FC = () => {
             <div className="hidden lg:block fade-in">
               <div className="relative">
                 <img
-                  src="https://images.pexels.com/photos/7551661/pexels-photo-7551661.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+                  src="/psicologia.png"
                   alt="Terapia Online"
                   className="rounded-3xl shadow-2xl"
                 />

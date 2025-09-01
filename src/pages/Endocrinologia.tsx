@@ -142,7 +142,7 @@ const Endocrinologia: React.FC = () => {
             <div className="hidden lg:block fade-in">
               <div className="relative">
                 <img
-                  src="https://images.pexels.com/photos/7551662/pexels-photo-7551662.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+                  src="/endocrinologia.png"
                   alt="Consulta de Endocrinologia Online"
                   className="rounded-3xl shadow-2xl"
                 />

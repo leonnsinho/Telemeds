@@ -200,7 +200,7 @@ const Medicina: React.FC = () => {
             <div className="hidden lg:block fade-in">
               <div className="relative">
                 <img
-                  src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+                  src="/medicina.png"
                   alt="Consulta de Medicina de Família Online"
                   className="rounded-3xl shadow-2xl"
                 />

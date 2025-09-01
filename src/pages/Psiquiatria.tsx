@@ -169,7 +169,7 @@ const Psiquiatria: React.FC = () => {
             <div className="hidden lg:block fade-in">
               <div className="relative">
                 <img
-                  src="https://images.pexels.com/photos/7551659/pexels-photo-7551659.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+                  src="/psiquiatria.png"
                   alt="Consulta de Psiquiatria Online"
                   className="rounded-3xl shadow-2xl"
                 />
