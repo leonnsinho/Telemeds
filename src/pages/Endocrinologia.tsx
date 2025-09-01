@@ -270,10 +270,10 @@ const Endocrinologia: React.FC = () => {
       {/* Dra. Gabriela Iervolino */}
       <section className="section-padding gradient-secondary">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Foto da médica */}
             <div className="order-2 lg:order-1">
-              <div className="relative">
+              <div className="relative max-w-md mx-auto lg:max-w-none">
                 <div className="aspect-square overflow-hidden rounded-3xl shadow-2xl">
                   <img
                     src="/dra.jpeg"
@@ -282,27 +282,21 @@ const Endocrinologia: React.FC = () => {
                     style={{ objectPosition: 'top 15%' }}
                   />
                 </div>
-                {/* Badge de credencial */}
-                <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-4 shadow-lg">
-                  <div className="text-center">
-                    <p className="text-sm font-semibold text-gray-900">CRM</p>
-                    <p className="text-lg font-bold text-green-600">167067</p>
-                  </div>
-                </div>
+                {/* Badge de credencial removido */}
               </div>
             </div>
 
             {/* Informações da médica */}
-            <div className="order-1 lg:order-2 space-y-6">
+            <div className="order-1 lg:order-2 space-y-4 lg:space-y-6">
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 lg:mb-4">
                   Conheça a <span className="gradient-text">Dra. Gabriela Iervolino</span>
                 </h2>
-                <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                <p className="text-lg lg:text-xl text-gray-700 leading-relaxed mb-4 lg:mb-6">
                   Endocrinologista com linguagem acolhedora e explicações didáticas, especializada em tireoide, 
                   emagrecimento, diabetes tipo 2, saúde hormonal masculina e osteometabolismo.
                 </p>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                <p className="text-base lg:text-lg text-gray-600 leading-relaxed mb-4 lg:mb-6">
                   Mais de 10 anos de experiência prática, formação nas melhores universidades do país (UNIFESP e FMABC) 
                   e título pela Sociedade Brasileira de Endocrinologia e Metabologia. Oferece prescrição digital com 
                   renovação de receitas controladas pelo Memed.
@@ -310,26 +304,26 @@ const Endocrinologia: React.FC = () => {
               </div>
 
               {/* Credenciais */}
-              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Credenciais</h3>
+              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-4 lg:p-6 border border-white/20">
+                <h3 className="text-base lg:text-lg font-bold text-gray-900 mb-3">Credenciais</h3>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-gray-700"><strong>CRM:</strong> 167067</span>
+                    <span className="text-sm lg:text-base text-gray-700"><strong>CRM:</strong> 167067</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-gray-700"><strong>RQE:</strong> 92003</span>
+                    <span className="text-sm lg:text-base text-gray-700"><strong>RQE:</strong> 92003</span>
                   </div>
                 </div>
               </div>
 
               {/* Principais condições atendidas */}
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3 lg:mb-4">
                   Principais Condições Atendidas
                 </h3>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 lg:gap-3">
                   {[
                     'Diabetes tipo 2',
                     'Tireoide',
@@ -342,19 +336,19 @@ const Endocrinologia: React.FC = () => {
                   ].map((condition, index) => (
                     <div key={index} className="flex items-center space-x-3">
                       <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
-                      <span className="text-gray-700 text-sm">{condition}</span>
+                      <span className="text-gray-700 text-sm lg:text-base">{condition}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* CTA */}
-              <div className="pt-4">
+              <div className="pt-2 lg:pt-4">
                 <Link 
                   to="/agendamento"
-                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-full text-base lg:text-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto"
                 >
-                  <Calendar className="w-5 h-5" />
+                  <Calendar className="w-4 lg:w-5 h-4 lg:h-5" />
                   <span>Agendar com Dra. Gabriela</span>
                 </Link>
               </div>

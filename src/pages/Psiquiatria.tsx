@@ -284,10 +284,10 @@ const Psiquiatria: React.FC = () => {
         </div>
       </section>
 
-      <WaveDivider color="#C5E4F6" />
+  <WaveDivider gradientFrom="#C5E4F6" gradientTo="#E5D8F0" dualLayer={true} heroColor="#ffffff" />
 
-      {/* Médicos */}
-      <section className="section-padding gradient-secondary">
+  {/* Médicos */}
+  <section className="section-padding gradient-secondary" style={{ background: 'linear-gradient(90deg, #C5E4F6 0%, #E5D8F0 100%)' }}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 slide-up">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -375,10 +375,10 @@ const Psiquiatria: React.FC = () => {
         </div>
       </section>
 
-      <WaveDivider color="#D5D4F1" />
+  <WaveDivider gradientFrom="#D5D4F1" gradientTo="#EDEBF8" dualLayer={true} heroColor="#ffffff" />
 
-      {/* FAQ */}
-      <section className="section-padding-large gradient-primary">
+  {/* FAQ */}
+  <section className="section-padding-large" style={{ background: 'linear-gradient(90deg, #D5D4F1 0%, #EDEBF8 100%)' }}>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16 slide-up">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
