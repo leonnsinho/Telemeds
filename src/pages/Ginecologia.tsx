@@ -413,13 +413,6 @@ const Ginecologia: React.FC = () => {
                     alt={doctor.name}
                     className="w-full h-full object-cover"
                   />
-                  {/* Badge de experiência */}
-                  <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-pink-500 rounded-full animate-pulse"></div>
-                      <span className="text-sm font-bold text-gray-900">{doctor.experience} de experiência</span>
-                    </div>
-                  </div>
                 </div>
 
                 {/* Seção do Conteúdo */}
@@ -429,6 +422,7 @@ const Ginecologia: React.FC = () => {
                       {doctor.name}
                     </h3>
                     <p className="text-pink-600 font-semibold text-lg mb-2">{doctor.crm}</p>
+                    <p className="text-pink-600 font-semibold text-lg mb-2">RQE: 142518</p>
                     <p className="text-gray-600 font-medium text-lg">{doctor.specialty}</p>
                   </div>
 
@@ -453,10 +447,6 @@ const Ginecologia: React.FC = () => {
                       <Calendar className="w-5 h-5" />
                       <span>Agendar Consulta</span>
                     </Link>
-                    <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 flex items-center justify-center space-x-2">
-                      <Heart className="w-5 h-5" />
-                      <span>Saiba Mais</span>
-                    </button>
                   </div>
                 </div>
               </div>
