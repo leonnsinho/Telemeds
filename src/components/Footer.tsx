@@ -45,13 +45,17 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <span className="text-gray-500">Clínica Geral (em breve)</span>
+                <Link to="/medicina" className="text-gray-400 hover:text-white transition-colors">
+                  Medicina de Família
+                </Link>
               </li>
               <li>
-                <span className="text-gray-500">Medicina da Família (em breve)</span>
+                <Link to="/ginecologia" className="text-gray-400 hover:text-white transition-colors">
+                  Ginecologia
+                </Link>
               </li>
               <li>
-                <span className="text-gray-500">Ginecologia (em breve)</span>
+                <span className="text-gray-500">Ortopedia (em breve)</span>
               </li>
             </ul>
           </div>

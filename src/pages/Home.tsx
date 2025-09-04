@@ -19,7 +19,9 @@ import {
   ChevronLeft,
   ChevronRight,
   ExternalLink,
-  Bone
+  Bone,
+  Globe,
+  Sparkles
 } from 'lucide-react';
 import WaveDivider from '../components/WaveDivider';
 import medicoImage from '../assets/images/medico_serio.svg';
@@ -614,6 +616,64 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* Vídeo Telemedicina */}
+      <section className="section-padding bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Vídeo */}
+            <div className="order-2 lg:order-1 flex justify-center">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[9/16] max-h-[90vh] w-full max-w-md">
+                <video
+                  className="w-full h-full object-cover"
+                  controls
+                  poster=""
+                  preload="metadata"
+                >
+                  <source src="/video-telemed.mp4" type="video/mp4" />
+                  Seu navegador não suporta o elemento de vídeo.
+                </video>
+              </div>
+            </div>
+
+            {/* Texto */}
+            <div className="order-1 lg:order-2 space-y-6">
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight flex items-center gap-3">
+                  <Globe className="w-10 h-10 text-blue-600 flex-shrink-0" />
+                  Sua saúde a poucos cliques de distância
+                </h2>
+                <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
+                  <p>
+                    Na TeleMeds, cuidar da sua saúde é simples, rápido e seguro.
+                  </p>
+                  <p>
+                    Basta receber o link do seu médico por SMS, WhatsApp ou e-mail, acessar sua receita e, em poucos instantes, já poderá marcar exames ou comprar seus medicamentos em qualquer farmácia do Brasil.
+                  </p>
+                  <p>
+                    Você também pode baixar o PDF da receita para salvar ou compartilhar sempre que precisar.
+                  </p>
+                  <p className="text-xl font-medium text-blue-600 flex items-start gap-3">
+                    <Sparkles className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                    Viu como é fácil? A telemedicina transforma o cuidado em saúde em algo prático, acessível e totalmente online — sem filas, sem burocracia, com a mesma atenção e qualidade que você teria em uma consulta presencial.
+                  </p>
+                </div>
+              </div>
+
+              {/* CTA */}
+              <div className="pt-4">
+                <Link 
+                  to="/agendamento"
+                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                >
+                  <Calendar className="w-5 h-5" />
+                  <span>Experimente Agora</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <WaveDivider 
         gradientFrom="#C5E4F6" 
         gradientTo="#E5D8F0" 
@@ -1115,6 +1175,13 @@ const Home: React.FC = () => {
               <MessageCircle className="w-5 h-5" />
               <span>Fale conosco no WhatsApp</span>
             </a>
+          </div>
+          
+          {/* Nota Fiscal para Reembolso */}
+          <div className="text-center mt-8 p-6 bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl border border-blue-100">
+            <p className="text-blue-800 font-medium text-lg">
+              📋 Emitimos nota fiscal para solicitação do reembolso com a sua operadora de saúde
+            </p>
           </div>
         </div>
       </section>

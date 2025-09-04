@@ -30,28 +30,42 @@ const Header: React.FC = () => {
 
   const currentPage = navigationItems.find(item => item.path === location.pathname)?.name || 'Menu';
 
+  // Calcular largura dinâmica baseada no tamanho do nome da página
+  const getCompactWidth = () => {
+    const logoWidth = 192; // largura da logo (w-48 = 192px)
+    const buttonWidth = 60; // largura estimada do botão CTA compacto
+    const menuWidth = currentPage.length * 8; // largura do texto do menu
+    const padding = 40; // padding interno
+    const minWidth = 400; // largura mínima para não ficar muito pequeno
+    
+    const calculatedWidth = logoWidth + buttonWidth + menuWidth + padding;
+    return `${Math.max(minWidth, calculatedWidth)}px`;
+  };
+
   return (
     <>
       {/* Navbar Flutuante */}
-      <header className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-700 ease-out ${
-        isScrolled 
-          ? 'w-80' 
-          : 'w-[95%] max-w-6xl'
-      }`}>
+      <header 
+        className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-700 ease-out ${
+          isScrolled 
+            ? '' 
+            : 'w-[95%] max-w-6xl'
+        }`}
+        style={isScrolled ? { width: getCompactWidth() } : {}}
+      >
         <div className={`transition-all duration-700 ease-out rounded-2xl backdrop-blur-md border shadow-lg ${
           isScrolled 
-            ? 'bg-white/95 border-gray-200/50 px-4 py-2' 
+            ? 'bg-white/95 border-gray-200/50 pl-0 pr-6 py-2' 
             : 'bg-white/90 border-white/20 px-6 py-4'
         }`}>
           <div className="flex justify-between items-center h-full">
             {/* Logo */}
-            <Link to="/" className="flex items-center justify-center group">
+            <Link to="/" className="flex items-center justify-center group flex-shrink-0 w-48">
               <img 
                 src={LogoNavbar} 
                 alt="Telemeds" 
-                className={`transition-all duration-500 ease-out group-hover:scale-110 object-contain ${
-                  isScrolled ? 'h-9' : 'h-11'
-                }`}
+                className="transition-all duration-500 ease-out group-hover:scale-110 object-contain"
+                style={{ width: '180px', height: '40px' }}
               />
             </Link>
 
