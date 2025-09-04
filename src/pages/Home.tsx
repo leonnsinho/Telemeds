@@ -619,10 +619,10 @@ const Home: React.FC = () => {
       {/* Vídeo Telemedicina */}
       <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Vídeo */}
             <div className="order-2 lg:order-1 flex justify-center">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[9/16] max-h-[90vh] w-full max-w-md">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[9/16] w-full max-w-sm lg:max-w-md">
                 <video
                   className="w-full h-full object-cover"
                   controls
@@ -636,13 +636,15 @@ const Home: React.FC = () => {
             </div>
 
             {/* Texto */}
-            <div className="order-1 lg:order-2 space-y-6">
+            <div className="order-1 lg:order-2 space-y-4 lg:space-y-6 text-center lg:text-left">
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight flex items-center gap-3">
-                  <Globe className="w-10 h-10 text-blue-600 flex-shrink-0" />
-                  Sua saúde a poucos cliques de distância
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 lg:mb-6 leading-tight">
+                  <div className="flex items-center justify-center lg:justify-start gap-2 lg:gap-3 flex-wrap">
+                    <Globe className="w-8 h-8 lg:w-10 lg:h-10 text-blue-600 flex-shrink-0" />
+                    <span>Sua saúde a poucos cliques de distância</span>
+                  </div>
                 </h2>
-                <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
+                <div className="space-y-3 lg:space-y-4 text-base lg:text-lg text-gray-700 leading-relaxed">
                   <p>
                     Na TeleMeds, cuidar da sua saúde é simples, rápido e seguro.
                   </p>
@@ -652,20 +654,21 @@ const Home: React.FC = () => {
                   <p>
                     Você também pode baixar o PDF da receita para salvar ou compartilhar sempre que precisar.
                   </p>
-                  <p className="text-xl font-medium text-blue-600 flex items-start gap-3">
-                    <Sparkles className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-                    Viu como é fácil? A telemedicina transforma o cuidado em saúde em algo prático, acessível e totalmente online — sem filas, sem burocracia, com a mesma atenção e qualidade que você teria em uma consulta presencial.
-                  </p>
+                  <div className="text-lg lg:text-xl font-medium text-blue-600">
+                    <div className="flex items-start justify-center lg:justify-start gap-2 lg:gap-3">
+                      <span>Viu como é fácil? A telemedicina transforma o cuidado em saúde em algo prático, acessível e totalmente online — sem filas, sem burocracia, com a mesma atenção e qualidade que você teria em uma consulta presencial.</span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               {/* CTA */}
-              <div className="pt-4">
+              <div className="pt-2 lg:pt-4 flex justify-center lg:justify-start">
                 <Link 
                   to="/agendamento"
-                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                  className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-full text-base lg:text-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 w-full sm:w-auto max-w-xs lg:max-w-none"
                 >
-                  <Calendar className="w-5 h-5" />
+                  <Calendar className="w-4 lg:w-5 h-4 lg:h-5" />
                   <span>Experimente Agora</span>
                 </Link>
               </div>

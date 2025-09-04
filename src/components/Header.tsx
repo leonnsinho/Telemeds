@@ -48,14 +48,14 @@ const Header: React.FC = () => {
       <header 
         className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-700 ease-out ${
           isScrolled 
-            ? '' 
+            ? 'w-[95%] max-w-6xl md:w-auto' 
             : 'w-[95%] max-w-6xl'
         }`}
-        style={isScrolled ? { width: getCompactWidth() } : {}}
+        style={isScrolled ? { width: window.innerWidth >= 768 ? getCompactWidth() : undefined } : {}}
       >
         <div className={`transition-all duration-700 ease-out rounded-2xl backdrop-blur-md border shadow-lg ${
           isScrolled 
-            ? 'bg-white/95 border-gray-200/50 pl-0 pr-6 py-2' 
+            ? 'bg-white/95 border-gray-200/50 px-6 py-4 md:pl-0 md:pr-6 md:py-2' 
             : 'bg-white/90 border-white/20 px-6 py-4'
         }`}>
           <div className="flex justify-between items-center h-full">

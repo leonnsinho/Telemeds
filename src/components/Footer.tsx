@@ -65,29 +65,19 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Institucional</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Sobre Nós
-                </a>
+                <Link to="/politicas-privacidade" className="text-gray-400 hover:text-white transition-colors">
+                  Políticas de Privacidade
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Como Funciona
-                </a>
+                <Link to="/politicas-cookies" className="text-gray-400 hover:text-white transition-colors">
+                  Políticas de Cookies
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/termos-uso" className="text-gray-400 hover:text-white transition-colors">
                   Termos de Uso
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Política de Privacidade
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  LGPD
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
