@@ -23,7 +23,7 @@ const Header: React.FC = () => {
     { name: 'Início', path: '/' },
     { name: 'Psiquiatria', path: '/psiquiatria' },
     { name: 'Psicologia', path: '/psico' },
-    { name: 'Endocrinologia', path: '/endo' },
+    { name: 'Endocrinologia', path: '/endocrinologia' },
     { name: 'Medicina de Família', path: '/medicina' },
     { name: 'Ginecologia', path: '/ginecologia' },
   ];

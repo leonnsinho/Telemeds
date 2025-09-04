@@ -73,7 +73,7 @@ const Home: React.FC = () => {
       icon: Activity,
       title: 'Endocrinologia',
       description: 'Tratamento de distúrbios hormonais e metabólicos.',
-      path: '/endo',
+      path: '/endocrinologia',
       available: true,
       detailedInfo: {
         symptoms: ['Diabetes', 'Tireoide', 'Obesidade', 'Hormônios'],
@@ -138,7 +138,7 @@ const Home: React.FC = () => {
     { 
       icon: Activity, 
       title: 'Endocrinologia', 
-      path: '/endo', 
+      path: '/endocrinologia', 
       available: true,
       description: 'Diabetes, tireoide e hormônios'
     },

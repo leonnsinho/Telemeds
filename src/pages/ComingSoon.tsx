@@ -67,7 +67,7 @@ const ComingSoon: React.FC<ComingSoonProps> = ({ specialty }) => {
                   Psicologia
                 </a>
                 <a
-                  href="/endo"
+                  href="/endocrinologia"
                   className="bg-white/90 backdrop-blur-sm text-green-600 px-6 py-3 rounded-full font-semibold hover:bg-white transition-all duration-300"
                 >
                   Endocrinologia

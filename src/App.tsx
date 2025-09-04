@@ -29,7 +29,7 @@ function App() {
             <Route path="/agendamento-externo" element={<AgendamentoExterno />} />
             <Route path="/psiquiatria" element={<Psiquiatria />} />
             <Route path="/psico" element={<Psicologia />} />
-            <Route path="/endo" element={<Endocrinologia />} />
+            <Route path="/endocrinologia" element={<Endocrinologia />} />
             <Route path="/medicina" element={<Medicina />} />
             <Route path="/ginecologia" element={<Ginecologia />} />
             <Route path="/politicas-privacidade" element={<PoliticasPrivacidade />} />
