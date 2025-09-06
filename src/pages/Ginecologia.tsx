@@ -294,7 +294,7 @@ const Ginecologia: React.FC = () => {
                           <div className="flex items-center justify-end">
                             <button 
                               className={`bg-gradient-to-r ${case_item.color} text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center space-x-2`}
-                              onClick={() => window.open('https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta de ginecologia para tratar queixas comuns.', '_blank')}
+                              onClick={() => window.open('https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta de ginecologia para tratar queixas comuns.', '_blank')}
                             >
                               <Calendar className="w-4 h-4" />
                               <span>Agendar Consulta</span>

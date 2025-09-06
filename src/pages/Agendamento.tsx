@@ -18,41 +18,118 @@ const Agendamento: React.FC = () => {
         </div>
       </div>
 
-      {/* Iframe de agendamento - Largura total */}
+      {/* Card de agendamento via WhatsApp */}
       <div className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4">
-              <h2 className="text-xl font-semibold text-white">
-                Sistema de Agendamento Online
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-3xl shadow-2xl overflow-hidden border border-green-100">
+            
+            {/* Header do card */}
+            <div className="bg-gradient-to-r from-green-600 to-green-700 px-8 py-6 text-center">
+              <MessageCircle className="w-16 h-16 text-white mx-auto mb-4 animate-pulse" />
+              <h2 className="text-3xl font-bold text-white mb-2">
+                Agende via WhatsApp
               </h2>
-              <p className="text-blue-100 text-sm mt-1">
-                Selecione o profissional, data e horário desejado
+              <p className="text-green-100 text-lg">
+                Rápido, fácil e com atendimento personalizado
               </p>
             </div>
             
-            <div className="p-2 sm:p-4">
-              <div className="relative w-full bg-gray-50 rounded-lg overflow-hidden" style={{ minHeight: '800px' }}>
-                <iframe
-                  src="https://app.clinicanasnuvens.com.br/agendaExterna?token=e518320a8add31db78213bad77b32e70"
-                  className="w-full h-full min-h-[800px] border-0"
-                  title="Sistema de Agendamento - Clínica nas Nuvens"
-                  allow="fullscreen"
-                  loading="lazy"
-                  onLoad={(e) => {
-                    const loadingElement = e.currentTarget.nextElementSibling as HTMLElement;
-                    if (loadingElement) {
-                      loadingElement.style.display = 'none';
-                    }
-                  }}
-                />
-                
-                {/* Loading indicator */}
-                <div className="absolute inset-0 flex items-center justify-center bg-gray-50">
-                  <div className="text-center">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-                    <p className="text-gray-600">Carregando sistema de agendamento...</p>
+            {/* Conteúdo do card */}
+            <div className="p-8">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Por que agendar pelo WhatsApp?
+                </h3>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Nossa equipe está pronta para te ajudar a encontrar o melhor horário e especialista para sua consulta.
+                </p>
+              </div>
+
+              {/* Benefícios */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center p-6 bg-white rounded-xl shadow-md border border-green-100">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Clock className="w-8 h-8 text-green-600" />
                   </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Atendimento Imediato</h4>
+                  <p className="text-gray-600 text-sm">
+                    Resposta em poucos minutos durante o horário comercial
+                  </p>
+                </div>
+
+                <div className="text-center p-6 bg-white rounded-xl shadow-md border border-blue-100">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Seguro e Confiável</h4>
+                  <p className="text-gray-600 text-sm">
+                    Dados protegidos e atendimento profissional
+                  </p>
+                </div>
+
+                <div className="text-center p-6 bg-white rounded-xl shadow-md border border-purple-100">
+                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Fácil e Prático</h4>
+                  <p className="text-gray-600 text-sm">
+                    Sem complicações, direto no seu celular
+                  </p>
+                </div>
+              </div>
+
+              {/* Como funciona */}
+              <div className="bg-white rounded-2xl p-6 mb-8 border border-gray-100">
+                <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">
+                  Como funciona?
+                </h4>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <span className="text-green-600 font-bold">1</span>
+                    </div>
+                    <p className="text-sm font-medium text-gray-900">Clique no botão</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <span className="text-green-600 font-bold">2</span>
+                    </div>
+                    <p className="text-sm font-medium text-gray-900">Informe a especialidade</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <span className="text-green-600 font-bold">3</span>
+                    </div>
+                    <p className="text-sm font-medium text-gray-900">Escolha data/horário</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <CheckCircle className="w-6 h-6 text-green-600" />
+                    </div>
+                    <p className="text-sm font-medium text-gray-900">Consulta agendada!</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Botão de ação */}
+              <div className="text-center">
+                <a
+                  href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta. Podem me ajudar?"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                >
+                  <MessageCircle className="w-7 h-7" />
+                  <span>Agendar via WhatsApp</span>
+                </a>
+                
+                <p className="text-gray-600 text-sm mt-4">
+                  Ou ligue: <a href="tel:+5511917983233" className="text-green-600 font-medium hover:text-green-700">+55 (11) 91798-3233</a>
+                </p>
+                
+                <div className="flex items-center justify-center space-x-2 mt-4">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-sm text-gray-700 font-medium">Equipe online agora</span>
                 </div>
               </div>
             </div>
@@ -64,66 +141,6 @@ const Agendamento: React.FC = () => {
       <div className="bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           
-          {/* Como funciona */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Como funciona o agendamento?
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Processo simples e rápido para agendar sua consulta online
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-600 font-bold text-xl">1</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Escolha o profissional
-              </h3>
-              <p className="text-gray-600">
-                Selecione a especialidade e o médico que deseja consultar
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-600 font-bold text-xl">2</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Selecione data e horário
-              </h3>
-              <p className="text-gray-600">
-                Escolha o melhor horário na agenda disponível
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-600 font-bold text-xl">3</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Preencha seus dados
-              </h3>
-              <p className="text-gray-600">
-                Informe seus dados pessoais e informações sobre a consulta
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Confirme e finalize
-              </h3>
-              <p className="text-gray-600">
-                Receba a confirmação por email e WhatsApp
-              </p>
-            </div>
-          </div>
-
           {/* Informações de contato e ajuda */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             
@@ -141,12 +158,12 @@ const Agendamento: React.FC = () => {
                   <div>
                     <p className="font-medium text-gray-900">WhatsApp</p>
                     <a 
-                      href="https://wa.me/5511960689201" 
+                      href="https://wa.me/5511917983233" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-sm text-green-600 hover:text-green-700"
                     >
-                      +55 (11) 96068-9201
+                      +55 (11) 91798-3233
                     </a>
                   </div>
                 </div>

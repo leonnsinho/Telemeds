@@ -1170,7 +1170,7 @@ const Home: React.FC = () => {
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">Não encontrou sua dúvida?</p>
             <a
-              href="https://wa.me/5511960689201"
+              href="https://wa.me/5511917983233"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 text-green-600 font-semibold hover:text-green-700 transition-colors"
@@ -1226,7 +1226,7 @@ const Home: React.FC = () => {
                 <div className="absolute left-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-white border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
               </div>
               <a 
-                href="https://wa.me/5511960689201" 
+                href="https://wa.me/5511917983233" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="medical-action-button bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 group-hover:-rotate-12"

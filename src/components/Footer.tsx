@@ -87,13 +87,13 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Contato</h3>
             <div className="space-y-3">
               <a 
-                href="https://wa.me/5511960689201" 
+                href="https://wa.me/5511917983233" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors"
               >
                 <MessageCircle className="w-5 h-5" />
-                <span>+55 (11) 96068-9201</span>
+                <span>+55 (11) 91798-3233</span>
               </a>
               <a 
                 href="mailto:contato@telemeds.com.br"
