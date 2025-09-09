@@ -270,7 +270,7 @@ const Agendamento: React.FC = () => {
                   Posso cancelar ou remarcar?
                 </h4>
                 <p className="text-sm text-gray-600">
-                  Sim, você pode cancelar ou remarcar com até 2 horas de antecedência pelo WhatsApp.
+                  Sim, você pode cancelar ou remarcar com até 24 horas de antecedência pelo WhatsApp.
                 </p>
               </div>
               
