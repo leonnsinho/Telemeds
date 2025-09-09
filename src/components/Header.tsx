@@ -21,7 +21,7 @@ const Header: React.FC = () => {
 
   const navigationItems = [
     { name: 'Início', path: '/' },
-    { name: 'Psiquiatria', path: '/psiquiatria' },
+    { name: 'Psiquiatria', path: '/psiquiatra' },
     { name: 'Psicologia', path: '/psico' },
     { name: 'Endocrinologia', path: '/endocrinologia' },
     { name: 'Medicina de Família', path: '/medicina' },

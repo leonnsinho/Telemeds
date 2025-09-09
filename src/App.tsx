@@ -27,7 +27,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/agendamento" element={<Agendamento />} />
             <Route path="/agendamento-externo" element={<AgendamentoExterno />} />
-            <Route path="/psiquiatria" element={<Psiquiatria />} />
+            <Route path="/psiquiatra" element={<Psiquiatria />} />
             <Route path="/psico" element={<Psicologia />} />
             <Route path="/endocrinologia" element={<Endocrinologia />} />
             <Route path="/medicina" element={<Medicina />} />

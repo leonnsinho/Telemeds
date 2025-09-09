@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Especialidades</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/psiquiatria" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/psiquiatra" className="text-gray-400 hover:text-white transition-colors">
                   Psiquiatria
                 </Link>
               </li>

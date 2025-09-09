@@ -49,7 +49,7 @@ const Home: React.FC = () => {
       icon: Brain,
       title: 'Psiquiatria',
       description: 'Cuidado especializado para saúde mental e transtornos psiquiátricos.',
-      path: '/psiquiatria',
+      path: '/psiquiatra',
       available: true,
       detailedInfo: {
         symptoms: ['Ansiedade', 'Depressão', 'Transtornos de humor', 'Distúrbios do sono'],
@@ -124,7 +124,7 @@ const Home: React.FC = () => {
     { 
       icon: Brain, 
       title: 'Psiquiatria', 
-      path: '/psiquiatria', 
+      path: '/psiquiatra', 
       available: true,
       description: 'Ansiedade, depressão e saúde mental'
     },

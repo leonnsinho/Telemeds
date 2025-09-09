@@ -55,7 +55,7 @@ const ComingSoon: React.FC<ComingSoonProps> = ({ specialty }) => {
               <p className="text-gray-600 mb-4">Enquanto isso, conheça nossas especialidades disponíveis:</p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a
-                  href="/psiquiatria"
+                  href="/psiquiatra"
                   className="bg-white/90 backdrop-blur-sm text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-white transition-all duration-300"
                 >
                   Psiquiatria
