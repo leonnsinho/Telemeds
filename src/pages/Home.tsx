@@ -571,13 +571,15 @@ const Home: React.FC = () => {
                         <div className="flex space-x-2 pt-2">
                           {specialty.available ? (
                             <>
-                              <Link 
-                                to="/agendamento"
+                              <a 
+                                href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta."
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="expand-button flex-1 text-white px-4 py-2 rounded-xl text-sm font-semibold flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-200"
                               >
                                 <Calendar className="w-4 h-4" />
                                 <span>Consultar</span>
-                              </Link>
+                              </a>
                               <Link
                                 to={specialty.path}
                                 className="border-2 border-gray-200 text-gray-700 px-4 py-2 rounded-xl text-sm font-semibold hover:bg-gray-50 transition-colors flex items-center justify-center"
@@ -664,13 +666,15 @@ const Home: React.FC = () => {
 
               {/* CTA */}
               <div className="pt-2 lg:pt-4 flex justify-center lg:justify-start">
-                <Link 
-                  to="/agendamento"
+                <a 
+                  href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-full text-base lg:text-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 w-full sm:w-auto max-w-xs lg:max-w-none"
                 >
                   <Calendar className="w-4 lg:w-5 h-4 lg:h-5" />
                   <span>Experimente Agora</span>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -768,12 +772,14 @@ const Home: React.FC = () => {
               <p className="text-gray-700 mb-4 font-medium">
                 Pronto para revolucionar seu cuidado com a saúde?
               </p>
-              <Link 
-                to="/agendamento"
+              <a 
+                href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-gradient-to-r from-blue-600 to-teal-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Comece Agora
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -1170,7 +1176,7 @@ const Home: React.FC = () => {
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">Não encontrou sua dúvida?</p>
             <a
-              href="https://wa.me/5511917983233"
+              href="https://wa.me/551151969958"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 text-green-600 font-semibold hover:text-green-700 transition-colors"
@@ -1206,8 +1212,10 @@ const Home: React.FC = () => {
                 <span className="text-sm font-medium text-gray-700">Consultar Online Agora</span>
                 <div className="absolute left-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-white border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
               </div>
-              <Link 
-                to="/agendamento"
+              <a 
+                href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta."
+                target="_blank"
+                rel="noopener noreferrer"
                 onMouseEnter={() => setShowAgendaTooltip(false)}
                 className="medical-action-button bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 group-hover:rotate-12"
               >
@@ -1216,7 +1224,7 @@ const Home: React.FC = () => {
                   <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-ping"></div>
                   <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full"></div>
                 </div>
-              </Link>
+              </a>
             </div>
 
             {/* WhatsApp - Design médico */}
@@ -1226,7 +1234,7 @@ const Home: React.FC = () => {
                 <div className="absolute left-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-white border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
               </div>
               <a 
-                href="https://wa.me/5511917983233" 
+                href="https://wa.me/551151969958" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="medical-action-button bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 group-hover:-rotate-12"

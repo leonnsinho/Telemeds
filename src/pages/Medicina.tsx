@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Heart, Calendar, Shield, Clock, ChevronDown, Activity, Baby, FileText, Leaf, BookOpen, Search, XCircle, Users, Stethoscope } from 'lucide-react';
 import WaveDivider from '../components/WaveDivider';
 
@@ -176,13 +175,15 @@ const Medicina: React.FC = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
-                  to="/agendamento"
+                <a 
+                  href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta de Medicina Geral."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-primary text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-300"
                 >
                   <Calendar className="w-5 h-5" />
                   <span>Agendar Consulta</span>
-                </Link>
+                </a>
                 <button 
                   onClick={() => {
                     const casosSection = document.getElementById('casos-comuns');
@@ -389,13 +390,15 @@ const Medicina: React.FC = () => {
 
                   {/* CTA */}
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Link
-                      to="/agendamento"
+                    <a
+                      href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta de Medicina Geral."
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
                     >
                       <Calendar className="w-5 h-5" />
                       <span>Agendar Consulta</span>
-                    </Link>
+                    </a>
                     <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 flex items-center justify-center space-x-2">
                       <Heart className="w-5 h-5" />
                       <span>Saiba Mais</span>
@@ -514,13 +517,15 @@ const Medicina: React.FC = () => {
               para uma vida mais equilibrada e saudável.
             </p>
             <div className="flex justify-center">
-              <Link 
-                to="/agendamento"
+              <a 
+                href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta de Medicina Geral."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg"
               >
                 <Calendar className="w-5 h-5" />
                 <span>Agendar Consulta Agora</span>
-              </Link>
+              </a>
             </div>
             
             <div className="mt-6 flex items-center justify-center space-x-6 text-sm opacity-80">

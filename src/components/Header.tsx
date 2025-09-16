@@ -135,8 +135,10 @@ const Header: React.FC = () => {
               </div>
               
               {/* Botão CTA sempre visível */}
-              <Link 
-                to="/agendamento"
+              <a 
+                href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta."
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => analytics.buttonClick('header_agendar', 'header')}
                 className={`btn-primary text-white rounded-full font-medium flex items-center transition-all duration-500 ease-out ${
                   isScrolled ? 'px-3 py-2 text-sm space-x-1' : 'px-6 py-3 space-x-2'
@@ -150,7 +152,7 @@ const Header: React.FC = () => {
                 }`}>
                   Agendar
                 </span>
-              </Link>
+              </a>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -204,8 +206,10 @@ const Header: React.FC = () => {
               </Link>
             ))}
             <div className="p-6">
-              <Link
-                to="/agendamento"
+              <a
+                href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta."
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => {
                   analytics.buttonClick('header_agendar_mobile', 'header_mobile');
                   setIsMenuOpen(false);
@@ -214,7 +218,7 @@ const Header: React.FC = () => {
               >
                 <Calendar className="w-5 h-5" />
                 <span>Agendar Consulta</span>
-              </Link>
+              </a>
             </div>
           </nav>
         </div>

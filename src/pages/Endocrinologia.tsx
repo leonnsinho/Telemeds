@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Activity, Calendar, Shield, Clock, ChevronDown, Heart, Zap, Scale, Users, Thermometer, TrendingUp, Target } from 'lucide-react';
 import WaveDivider from '../components/WaveDivider';
 
@@ -118,13 +117,15 @@ const Endocrinologia: React.FC = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
-                  to="/agendamento"
+                <a 
+                  href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta de endocrinologia."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-primary text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-300"
                 >
                   <Calendar className="w-5 h-5" />
                   <span>Agendar Consulta</span>
-                </Link>
+                </a>
                 <button 
                   onClick={() => {
                     const condicoesSection = document.getElementById('condicoes-tratamento');
@@ -344,13 +345,15 @@ const Endocrinologia: React.FC = () => {
 
               {/* CTA */}
               <div className="pt-2 lg:pt-4">
-                <Link 
-                  to="/agendamento"
+                <a 
+                  href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta de Endocrinologia com a Dra. Gabriela."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-full text-base lg:text-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto"
                 >
                   <Calendar className="w-4 lg:w-5 h-4 lg:h-5" />
                   <span>Agendar com Dra. Gabriela</span>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -463,13 +466,15 @@ const Endocrinologia: React.FC = () => {
               tratamento para diabetes, tireoide e outros distúrbios hormonais.
             </p>
             <div className="flex justify-center">
-              <Link 
-                to="/agendamento"
+              <a 
+                href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta de Endocrinologia."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white text-green-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg"
               >
                 <Calendar className="w-5 h-5" />
                 <span>Agendar Consulta Agora</span>
-              </Link>
+              </a>
             </div>
             
             <div className="mt-6 flex items-center justify-center space-x-6 text-sm opacity-80">
