@@ -176,7 +176,7 @@ const Medicina: React.FC = () => {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta de Medicina Geral."
+                  href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta de medicina"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-300"
@@ -391,7 +391,7 @@ const Medicina: React.FC = () => {
                   {/* CTA */}
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a
-                      href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta de Medicina Geral."
+                      href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta de medicina"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
@@ -518,7 +518,7 @@ const Medicina: React.FC = () => {
             </p>
             <div className="flex justify-center">
               <a 
-                href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta de Medicina Geral."
+                href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta de medicina"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg"
