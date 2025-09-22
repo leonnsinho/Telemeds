@@ -136,7 +136,7 @@ const Header: React.FC = () => {
               
               {/* Botão CTA sempre visível */}
               <a 
-                href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta."
+                href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta."
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => analytics.buttonClick('header_agendar', 'header')}
@@ -207,7 +207,7 @@ const Header: React.FC = () => {
             ))}
             <div className="p-6">
               <a
-                href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta."
+                href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta."
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => {

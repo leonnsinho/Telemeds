@@ -572,7 +572,7 @@ const Home: React.FC = () => {
                           {specialty.available ? (
                             <>
                               <a 
-                                href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta."
+                                href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta."
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="expand-button flex-1 text-white px-4 py-2 rounded-xl text-sm font-semibold flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-200"
@@ -667,7 +667,7 @@ const Home: React.FC = () => {
               {/* CTA */}
               <div className="pt-2 lg:pt-4 flex justify-center lg:justify-start">
                 <a 
-                  href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta."
+                  href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-full text-base lg:text-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 w-full sm:w-auto max-w-xs lg:max-w-none"
@@ -773,7 +773,7 @@ const Home: React.FC = () => {
                 Pronto para revolucionar seu cuidado com a saúde?
               </p>
               <a 
-                href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta."
+                href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-gradient-to-r from-blue-600 to-teal-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
@@ -1176,7 +1176,7 @@ const Home: React.FC = () => {
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">Não encontrou sua dúvida?</p>
             <a
-              href="https://wa.me/551151969958"
+              href="https://wa.me/5511917983233"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 text-green-600 font-semibold hover:text-green-700 transition-colors"
@@ -1213,7 +1213,7 @@ const Home: React.FC = () => {
                 <div className="absolute left-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-white border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
               </div>
               <a 
-                href="https://wa.me/551151969958?text=Olá! Gostaria de agendar uma consulta."
+                href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta."
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={() => setShowAgendaTooltip(false)}
@@ -1234,7 +1234,7 @@ const Home: React.FC = () => {
                 <div className="absolute left-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-white border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
               </div>
               <a 
-                href="https://wa.me/551151969958" 
+                href="https://wa.me/5511917983233" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="medical-action-button bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 group-hover:-rotate-12"
