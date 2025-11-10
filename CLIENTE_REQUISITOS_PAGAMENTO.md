@@ -2,7 +2,7 @@
 
 ## 📋 O que Você Precisa Fazer para Ativar os Pagamentos Online
 
-Este documento lista **exclusivamente** os passos que você deve seguir e as informações que deve nos enviar para implementarmos o sistema de pagamentos mensais da Telemeds usando **Mercado Pago**.
+Este documento lista **exclusivamente** os passos que você deve seguir e as informações que deve nos enviar para implementarmos o sistema de pagamentos mensais da Luximedi usando **Mercado Pago**.
 
 ---
 

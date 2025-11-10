@@ -114,7 +114,7 @@ const Agendamento: React.FC = () => {
               {/* Botão de ação */}
               <div className="text-center">
                 <a
-                  href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta. Podem me ajudar?"
+                  href="https://wa.me/5511984999066?text=Olá! Gostaria de agendar uma consulta. Podem me ajudar?"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
@@ -124,7 +124,7 @@ const Agendamento: React.FC = () => {
                 </a>
                 
                 <p className="text-gray-600 text-sm mt-4">
-                  Ou ligue: <a href="tel:+5511917983233" className="text-green-600 font-medium hover:text-green-700">+55 (11) 9179-83233</a>
+                  Ou ligue: <a href="tel:+5511984999066" className="text-green-600 font-medium hover:text-green-700">+55 (11) 98499-9066</a>
                 </p>
                 
                 <div className="flex items-center justify-center space-x-2 mt-4">
@@ -158,12 +158,12 @@ const Agendamento: React.FC = () => {
                   <div>
                     <p className="font-medium text-gray-900">WhatsApp</p>
                     <a 
-                      href="https://wa.me/5511917983233" 
+                      href="https://wa.me/5511984999066" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-sm text-green-600 hover:text-green-700"
                     >
-                      +55 (11) 9179-83233
+                      +55 (11) 98499-9066
                     </a>
                   </div>
                 </div>
@@ -175,10 +175,10 @@ const Agendamento: React.FC = () => {
                   <div>
                     <p className="font-medium text-gray-900">Email</p>
                     <a 
-                      href="mailto:contato@telemeds.com.br"
+                      href="mailto:contato@luximedi.com.br"
                       className="text-sm text-blue-600 hover:text-blue-700"
                     >
-                      contato@telemeds.com.br
+                      contato@luximedi.com.br
                     </a>
                   </div>
                 </div>
@@ -212,7 +212,7 @@ const Agendamento: React.FC = () => {
             <div className="bg-white rounded-xl shadow-md p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                 <Shield className="w-6 h-6 text-blue-600 mr-2" />
-                Por que escolher a Telemeds?
+                Por que escolher a Luximedi?
               </h3>
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">

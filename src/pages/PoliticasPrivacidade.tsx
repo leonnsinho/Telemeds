@@ -8,7 +8,7 @@ const PoliticasPrivacidade: React.FC = () => {
       id: 'quem-somos',
       title: 'Quem somos',
       icon: Users,
-      content: 'O endereço do nosso site é: https://telemeds.com.br.'
+      content: 'O endereço do nosso site é: https://luximedi.com.br.'
     },
     {
       id: 'comentarios',
@@ -149,13 +149,13 @@ Para usuários que se registram no nosso site (se houver), também guardamos as 
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:contato@telemeds.com.br"
+                href="mailto:contato@luximedi.com.br"
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-green-600 text-white px-6 py-3 rounded-full font-semibold hover:from-blue-700 hover:to-green-700 transition-all duration-300"
               >
-                <span>contato@telemeds.com.br</span>
+                <span>contato@luximedi.com.br</span>
               </a>
               <a
-                href="https://wa.me/5511917983233"
+                href="https://wa.me/5511984999066"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 border-2 border-green-600 text-green-600 px-6 py-3 rounded-full font-semibold hover:bg-green-600 hover:text-white transition-all duration-300"

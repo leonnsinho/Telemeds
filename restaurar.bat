@@ -1,7 +1,7 @@
 @echo off
 chcp 65001 >nul
 echo ===================================
-echo   SISTEMA DE RESTAURAÇÃO TELEMEDS
+echo   SISTEMA DE RESTAURAÇÃO LUXIMEDI
 echo ===================================
 echo.
 

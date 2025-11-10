@@ -2,7 +2,7 @@
 
 ## 📋 Visão Geral
 
-Este documento detalha os requisitos e passos necessários para integrar sistemas de pagamento (Mercado Pago e Stripe) no projeto Telemeds para permitir que usuários assinem planos mensais.
+Este documento detalha os requisitos e passos necessários para integrar sistemas de pagamento (Mercado Pago e Stripe) no projeto Luximedi para permitir que usuários assinem planos mensais.
 
 ## 🎯 Objetivos
 

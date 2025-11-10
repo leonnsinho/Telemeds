@@ -1,4 +1,4 @@
-# Sistema de Backup - Projeto Telemeds
+# Sistema de Backup - Projeto Luximedi
 
 ## 🎯 Como Usar
 

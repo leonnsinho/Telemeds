@@ -45,7 +45,7 @@ const Header: React.FC = () => {
             <Link to="/" className="flex items-center justify-center group">
               <img 
                 src={LogoNavbar} 
-                alt="Telemeds" 
+                alt="Luximedi" 
                 className={`transition-all duration-500 ease-out group-hover:scale-110 object-contain ${
                   isScrolled ? 'h-9' : 'h-11'
                 }`}

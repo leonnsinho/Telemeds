@@ -35,7 +35,7 @@ const ComingSoon: React.FC<ComingSoonProps> = ({ specialty }) => {
               </h3>
               <p className="text-gray-700 mb-6">
                 Deixe seu e-mail e seja o primeiro a saber quando a especialidade de {specialty} 
-                estiver disponível na Telemeds.
+                estiver disponível na Luximedi.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">

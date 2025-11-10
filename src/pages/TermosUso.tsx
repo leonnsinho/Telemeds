@@ -43,8 +43,8 @@ const TermosUso: React.FC = () => {
             <div className="ml-16 space-y-4">
               <p className="text-gray-700 leading-relaxed">
                 O presente instrumento jurídico tem por escopo estabelecer, de forma inequívoca e juridicamente vinculante, 
-                os termos e condições que regerão a relação contratual entre a <strong>TELEMEDS SERVIÇOS MÉDICOS DIGITAIS</strong> 
-                (doravante denominada simplesmente "CONTRATADA" ou "TELEMEDS"), pessoa jurídica de direito privado devidamente 
+                os termos e condições que regerão a relação contratual entre a <strong>LUXIMEDI SERVIÇOS MÉDICOS DIGITAIS</strong> 
+                (doravante denominada simplesmente "CONTRATADA" ou "LUXIMEDI"), pessoa jurídica de direito privado devidamente 
                 constituída e registrada sob as leis da República Federativa do Brasil, e o <strong>PACIENTE/USUÁRIO</strong> 
                 (doravante denominado "CONTRATANTE"), pessoa natural capaz, que manifesta sua aquiescência aos presentes 
                 termos mediante aceite eletrônico.
@@ -465,22 +465,22 @@ const TermosUso: React.FC = () => {
           <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-3xl p-8 text-center">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Informações de Contato</h3>
             <div className="text-gray-700 mb-6 space-y-2">
-              <p><strong>TeleMeds Brasil LTDA</strong></p>
-              <p>Av. Paulista, 1636 - sala, 1504 - Cerqueira César, São Paulo - SP, 01310-200</p>
+              <p><strong>Luximedi Brasil LTDA</strong></p>
+              <p>Av. Pref. Osmar Cunha, 416, Sala 1108, Florianópolis/SC, 88015-100</p>
               <p>Brasil</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:contato@telemeds.com.br"
+                href="mailto:contato@luximedi.com.br"
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-green-600 text-white px-6 py-3 rounded-full font-semibold hover:from-blue-700 hover:to-green-700 transition-all duration-300"
               >
-                <span>contato@telemeds.com.br</span>
+                <span>contato@luximedi.com.br</span>
               </a>
               <a
-                href="tel:+5511917983233"
+                href="tel:+5511984999066"
                 className="inline-flex items-center space-x-2 border-2 border-green-600 text-green-600 px-6 py-3 rounded-full font-semibold hover:bg-green-600 hover:text-white transition-all duration-300"
               >
-                <span>+55 (11) 9179-83233</span>
+                <span>+55 (11) 98499-9066</span>
               </a>
             </div>
           </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, MessageCircle, MapPin, Phone } from 'lucide-react';
-import Logo from '../assets/images/Logo.svg';
+import Logo from '../assets/images/Logo.png';
 
 const Footer: React.FC = () => {
   return (
@@ -11,17 +11,17 @@ const Footer: React.FC = () => {
           {/* Logo e Descrição */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center">
-                <img src={Logo} alt="Telemeds Logo" className="w-10 h-10" />
+              <div className="flex items-center justify-center">
+                <img src={Logo} alt="Luximed Logo" className="h-12 object-contain" />
               </div>
-              <span className="text-2xl font-bold">Telemeds</span>
+              <span className="text-2xl font-bold">Luximed</span>
             </div>
             <p className="text-gray-400 mb-4">
               Clínica médica 100% digital, oferecendo atendimento de qualidade com médicos experientes, 
               de forma acessível e confiável.
             </p>
             <div className="text-sm text-gray-500">
-              <p>CNPJ: 60.926.988/0001-46</p>
+              <p>CNPJ: 63.086.717/0001-18</p>
             </div>
           </div>
 
@@ -87,26 +87,26 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Contato</h3>
             <div className="space-y-3">
               <a 
-                href="https://wa.me/5511917983233" 
+                href="https://wa.me/5511984999066" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors"
               >
                 <MessageCircle className="w-5 h-5" />
-                <span>+55 (11) 9179-83233</span>
+                <span>+55 (11) 98499-9066</span>
               </a>
               <a 
-                href="mailto:contato@telemeds.com.br"
+                href="mailto:contato@luximedi.com.br"
                 className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors"
               >
                 <Mail className="w-5 h-5" />
-                <span>contato@telemeds.com.br</span>
+                <span>contato@luximedi.com.br</span>
               </a>
               <div className="flex items-start space-x-3 text-gray-400">
                 <MapPin className="w-5 h-5 mt-0.5" />
                 <div>
-                  <p>Av. Paulista, 1636 - sala 1504</p>
-                  <p>São Paulo - SP, 01310-200</p>
+                  <p>Av. Pref. Osmar Cunha, 416, Sala 1108</p>
+                  <p>Florianópolis/SC, 88015-100</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3 text-gray-400">
@@ -128,7 +128,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
             <p className="text-gray-400">
-              © 2025 Telemeds. Todos os direitos reservados.
+              © 2025 Luximed. Todos os direitos reservados.
             </p>
             <p className="text-gray-500 text-sm">
               Designed by{' '}
