@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Calendar, ChevronDown } from 'lucide-react';
-import LogoNavbar from '../assets/images/logo navbar.png';
+import LogoNavbar from '../assets/images/logo navbar.svg';
 import analytics from '../utils/analytics';
 
 const Header: React.FC = () => {
@@ -63,7 +63,7 @@ const Header: React.FC = () => {
             <Link to="/" className="flex items-center justify-center group flex-shrink-0 w-48">
               <img 
                 src={LogoNavbar} 
-                alt="Luximedi" 
+                alt="Telemeds" 
                 className="transition-all duration-500 ease-out group-hover:scale-110 object-contain"
                 style={{ width: '180px', height: '40px' }}
               />
@@ -136,7 +136,7 @@ const Header: React.FC = () => {
               
               {/* Botão CTA sempre visível */}
               <a 
-                href="https://wa.me/5511984999066?text=Olá! Gostaria de agendar uma consulta."
+                href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta."
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => analytics.buttonClick('header_agendar', 'header')}
@@ -207,7 +207,7 @@ const Header: React.FC = () => {
             ))}
             <div className="p-6">
               <a
-                href="https://wa.me/5511984999066?text=Olá! Gostaria de agendar uma consulta."
+                href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta."
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => {

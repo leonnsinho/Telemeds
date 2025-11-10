@@ -1,7 +1,7 @@
 @echo off
 chcp 65001 >nul
 echo ================================
-echo    SISTEMA DE BACKUP LUXMEDI
+echo    SISTEMA DE BACKUP TELEMEDS
 echo ================================
 echo.
 

@@ -28,7 +28,7 @@ O site não estava funcionando quando executado `npm run dev` devido aos scripts
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luximedi - Clínica Digital Moderna</title>
+    <title>Telemeds - Clínica Digital Moderna</title>
     <meta name="facebook-domain-verification" content="2m5dczn8avbdsdozh71labs073en9" />
   </head>
   <body>    
