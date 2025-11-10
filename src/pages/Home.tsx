@@ -399,21 +399,21 @@ const Home: React.FC = () => {
                 </div>
 
                 {/* Grid de Especialidades - Compacto e Centralizado */}
-                <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-6">
+                <div className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-center gap-3 sm:gap-4 mb-6">
                   {quickSpecialties.filter(specialty => specialty.available).map((specialty, index) => {
                     const IconComponent = specialty.icon;
                     return (
                       <button
                         key={index}
                         onClick={() => handleSpecialtySelect(specialty)}
-                        className={`specialty-option text-center p-4 rounded-xl border-2 transition-all duration-200 border-gray-200 hover:border-blue-400 hover:bg-blue-50 cursor-pointer w-[calc(50%-0.375rem)] sm:w-[calc(33.333%-0.667rem)] ${
+                        className={`specialty-option p-4 rounded-xl border-2 transition-all duration-200 border-gray-200 hover:border-blue-400 hover:bg-blue-50 cursor-pointer w-full sm:w-[calc(33.333%-0.667rem)] ${
                           selectedSpecialty === specialty.title ? 'selected border-blue-400 bg-blue-50' : ''}`}
                       >
-                        <div className="flex flex-col items-center space-y-2">
-                          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center bg-blue-100">
+                        <div className="flex items-center sm:flex-col sm:text-center space-x-3 sm:space-x-0 sm:space-y-2">
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center bg-blue-100 flex-shrink-0">
                             <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
                           </div>
-                          <h3 className="font-semibold text-gray-900 text-xs sm:text-sm">
+                          <h3 className="font-semibold text-gray-900 text-sm sm:text-sm text-left sm:text-center">
                             {specialty.title}
                           </h3>
                         </div>
