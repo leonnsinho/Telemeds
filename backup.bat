@@ -47,11 +47,23 @@ git commit -m "[%mydate% %mytime%] %commit_message%"
 
 if %errorlevel% equ 0 (
     echo.
-    echo ✅ Backup realizado com sucesso!
+    echo ✅ Backup local realizado com sucesso!
     echo 📅 Data/Hora: %mydate% %mytime%
     echo 💬 Mensagem: %commit_message%
     echo.
-    echo 📊 Status atual do repositório:
+    echo 🌐 Enviando para o repositório GitHub...
+    git push origin main
+
+    if %errorlevel% equ 0 (
+        echo ✅ Backup enviado para GitHub com sucesso!
+        echo 🔗 https://github.com/leonnsinho/Telemeds
+    ) else (
+        echo ⚠️ Aviso: Não foi possível enviar para o GitHub.
+        echo    Verifique sua conexão e credenciais.
+    )
+
+    echo.
+    echo 📊 Últimos 5 commits:
     git log --oneline -5
 ) else (
     echo ❌ Erro ao fazer backup.
