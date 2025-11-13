@@ -36,6 +36,7 @@ const Home: React.FC = () => {
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState<number>(0);
   const [isPaused, setIsPaused] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState<boolean>(false);
   const navigate = useNavigate();
 
   const handleSpecialtySelect = (specialty: any) => {
@@ -54,8 +55,7 @@ const Home: React.FC = () => {
       available: true,
       detailedInfo: {
         symptoms: ['Ansiedade', 'Depressão', 'Transtornos de humor', 'Distúrbios do sono'],
-        duration: '50-60 minutos',
-        nextAvailable: 'Hoje às 14:30'
+        duration: '20-60 minutos'
       }
     },
     {
@@ -66,8 +66,7 @@ const Home: React.FC = () => {
       available: true,
       detailedInfo: {
         symptoms: ['Estresse', 'Relacionamentos', 'Autoestima', 'Traumas'],
-        duration: '50 minutos',
-        nextAvailable: 'Hoje às 16:00'
+        duration: '20-60 minutos'
       }
     },
     {
@@ -78,8 +77,7 @@ const Home: React.FC = () => {
       available: true,
       detailedInfo: {
         symptoms: ['Diabetes', 'Tireoide', 'Obesidade', 'Hormônios'],
-        duration: '40-50 minutos',
-        nextAvailable: 'Amanhã às 09:00'
+        duration: '20-60 minutos'
       }
     },
     {
@@ -90,8 +88,7 @@ const Home: React.FC = () => {
       available: true,
       detailedInfo: {
         symptoms: ['Check-up', 'Sintomas gerais', 'Prevenção', 'Acompanhamento familiar', 'Cuidados básicos', 'Exames'],
-        duration: '20-40 minutos',
-        nextAvailable: 'Hoje às 10:00'
+        duration: '20-60 minutos'
       }
     },
     {
@@ -102,8 +99,7 @@ const Home: React.FC = () => {
       available: true,
       detailedInfo: {
         symptoms: ['Consulta ginecológica', 'Prevenção', 'Saúde da mulher', 'Contraceptivos', 'Exames preventivos'],
-        duration: '20-40 minutos',
-        nextAvailable: 'Hoje às 15:00'
+        duration: '20-60 minutos'
       }
     },
     {
@@ -114,8 +110,7 @@ const Home: React.FC = () => {
       available: false,
       detailedInfo: {
         symptoms: ['Dores articulares', 'Lesões esportivas', 'Problemas posturais', 'Fraturas'],
-        duration: '40-50 minutos',
-        nextAvailable: 'Em breve'
+        duration: '20-60 minutos'
       }
     }
   ];
@@ -401,33 +396,33 @@ const Home: React.FC = () => {
           <div className="flex items-center min-h-screen py-12 sm:py-16 lg:py-0">
             {/* Modal Vertical no lado esquerdo */}
             <div className="w-full lg:w-1/2 lg:pr-8">
-              <div className="specialty-selection-modal specialty-card rounded-2xl p-6 sm:p-8">
-                <div className="text-center mb-6">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+              <div className="specialty-selection-modal specialty-card rounded-2xl p-4 sm:p-6 scale-90 sm:scale-95">
+                <div className="text-center mb-4">
+                  <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
                     O que você precisa hoje?
                   </h2>
                 </div>
 
                 {/* Grid de Especialidades - Vertical */}
-                <div className="space-y-3 mb-6">
+                <div className="space-y-2 mb-4">
                   {quickSpecialties.filter(specialty => specialty.available).map((specialty, index) => {
                     const IconComponent = specialty.icon;
                     return (
                       <button
                         key={index}
                         onClick={() => handleSpecialtySelect(specialty)}
-                        className={`specialty-option w-full p-4 rounded-xl border-2 transition-all duration-200 border-gray-200 hover:border-blue-400 hover:bg-blue-50 cursor-pointer ${
+                        className={`specialty-option w-full p-3 rounded-xl border-2 transition-all duration-200 border-gray-200 hover:border-blue-400 hover:bg-blue-50 cursor-pointer ${
                           selectedSpecialty === specialty.title ? 'selected border-blue-400 bg-blue-50' : ''}`}
                       >
                         <div className="flex items-center space-x-3">
-                          <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-blue-100 flex-shrink-0">
-                            <IconComponent className="w-6 h-6 text-blue-600" />
+                          <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-blue-100 flex-shrink-0">
+                            <IconComponent className="w-5 h-5 text-blue-600" />
                           </div>
                           <div className="text-left flex-1">
-                            <h3 className="font-semibold text-gray-900 text-sm">
+                            <h3 className="font-semibold text-gray-900 text-xs sm:text-sm">
                               {specialty.title}
                             </h3>
-                            <p className="text-xs text-gray-500 mt-1">
+                            <p className="text-xs text-gray-500 mt-0.5">
                               {specialty.description}
                             </p>
                           </div>
@@ -537,12 +532,6 @@ const Home: React.FC = () => {
                           </div>
                         </div>
 
-                        {/* Próxima Disponibilidade */}
-                        <div className="bg-green-50 p-3 rounded-lg">
-                          <span className="text-green-600 text-xs font-medium">Próxima disponibilidade:</span>
-                          <p className="text-green-800 font-semibold text-sm">{specialty.detailedInfo.nextAvailable}</p>
-                        </div>
-
                         {/* Botões de Ação */}
                         <div className="flex space-x-2 pt-2">
                           {specialty.available ? (
@@ -600,16 +589,60 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Vídeo */}
             <div className="order-2 lg:order-1 flex justify-center">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[9/16] w-full max-w-sm lg:max-w-md">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[9/16] w-full max-w-sm lg:max-w-md group">
                 <video
+                  id="telemeds-video"
                   className="w-full h-full object-cover"
-                  controls
                   poster=""
                   preload="metadata"
+                  onLoadedMetadata={(e) => {
+                    const video = e.currentTarget;
+                    video.currentTime = 1;
+                  }}
+                  onClick={(e) => {
+                    const video = e.currentTarget;
+                    if (video.paused) {
+                      video.currentTime = 0;
+                      video.play();
+                      setIsVideoPlaying(true);
+                    } else {
+                      video.pause();
+                      setIsVideoPlaying(false);
+                    }
+                  }}
+                  onPlay={() => setIsVideoPlaying(true)}
+                  onPause={() => setIsVideoPlaying(false)}
+                  onEnded={() => {
+                    const video = document.getElementById('telemeds-video') as HTMLVideoElement;
+                    if (video) {
+                      video.currentTime = 1;
+                    }
+                  }}
                 >
                   <source src="/video-telemed.mp4" type="video/mp4" />
                   Seu navegador não suporta o elemento de vídeo.
                 </video>
+                
+                {/* Botão de Play customizado */}
+                {!isVideoPlaying && (
+                  <button
+                    onClick={() => {
+                      const video = document.getElementById('telemeds-video') as HTMLVideoElement;
+                      if (video) {
+                        video.currentTime = 0;
+                        video.play();
+                        setIsVideoPlaying(true);
+                      }
+                    }}
+                    className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm transition-opacity duration-300 hover:bg-black/40 cursor-pointer"
+                  >
+                    <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center shadow-2xl hover:bg-white hover:scale-110 transition-all duration-300">
+                      <svg className="w-10 h-10 text-blue-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </button>
+                )}
               </div>
             </div>
 
