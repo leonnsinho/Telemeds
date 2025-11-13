@@ -26,6 +26,7 @@ import {
   User
 } from 'lucide-react';
 import WaveDivider from '../components/WaveDivider';
+import medicoImage from '../assets/images/medico_serio.svg';
 
 const Home: React.FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -381,56 +382,40 @@ const Home: React.FC = () => {
     <div>
       {/* Hero Section */}
       <section className="relative min-h-screen gradient-primary pt-24 sm:pt-28 lg:pt-0 overflow-hidden">
-        {/* Vídeo de fundo */}
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/video-hero.mp4" type="video/mp4" />
-        </video>
+        <div className="absolute inset-0 bg-black/5"></div>
         
-        {/* Overlay escuro para melhorar legibilidade */}
-        <div className="absolute inset-0 bg-black/40"></div>
-        
-        {/* Container centralizado */}
+        {/* Container centralizado com margens padrão */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen">
-          {/* Layout centralizado no lado esquerdo */}
-          <div className="flex items-center min-h-screen py-12 sm:py-16 lg:py-0">
-            {/* Modal Vertical no lado esquerdo */}
-            <div className="w-full lg:w-1/2 lg:pr-8">
+          {/* Layout centralizado */}
+          <div className="min-h-screen flex items-center justify-center py-12 sm:py-16 lg:py-0">
+            {/* Modal de Seleção de Especialidades - Minimalista */}
+            <div className="w-full max-w-3xl">
               <div className="specialty-selection-modal specialty-card rounded-2xl p-6 sm:p-8">
                 <div className="text-center mb-6">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
                     O que você precisa hoje?
                   </h2>
+                  <p className="text-gray-600 text-sm">Selecione a especialidade desejada</p>
                 </div>
 
-                {/* Grid de Especialidades - Vertical */}
-                <div className="space-y-3 mb-6">
+                {/* Grid de Especialidades - Compacto e Centralizado */}
+                <div className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-center gap-3 sm:gap-4 mb-6">
                   {quickSpecialties.filter(specialty => specialty.available).map((specialty, index) => {
                     const IconComponent = specialty.icon;
                     return (
                       <button
                         key={index}
                         onClick={() => handleSpecialtySelect(specialty)}
-                        className={`specialty-option w-full p-4 rounded-xl border-2 transition-all duration-200 border-gray-200 hover:border-blue-400 hover:bg-blue-50 cursor-pointer ${
+                        className={`specialty-option p-4 rounded-xl border-2 transition-all duration-200 border-gray-200 hover:border-blue-400 hover:bg-blue-50 cursor-pointer w-full sm:w-[calc(33.333%-0.667rem)] ${
                           selectedSpecialty === specialty.title ? 'selected border-blue-400 bg-blue-50' : ''}`}
                       >
-                        <div className="flex items-center space-x-3">
-                          <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-blue-100 flex-shrink-0">
-                            <IconComponent className="w-6 h-6 text-blue-600" />
+                        <div className="flex items-center sm:flex-col sm:text-center space-x-3 sm:space-x-0 sm:space-y-2">
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center bg-blue-100 flex-shrink-0">
+                            <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
                           </div>
-                          <div className="text-left flex-1">
-                            <h3 className="font-semibold text-gray-900 text-sm">
-                              {specialty.title}
-                            </h3>
-                            <p className="text-xs text-gray-500 mt-1">
-                              {specialty.description}
-                            </p>
-                          </div>
+                          <h3 className="font-semibold text-gray-900 text-sm sm:text-sm text-left sm:text-center">
+                            {specialty.title}
+                          </h3>
                         </div>
                       </button>
                     );
@@ -439,14 +424,17 @@ const Home: React.FC = () => {
 
                 {/* Botão de Ação Principal */}
                 <div className="text-center">
-                  <a 
-                    href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group relative inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-xl text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
+                  <button 
+                    onClick={() => {
+                      const planosSection = document.querySelector('.section-planos');
+                      if (planosSection) {
+                        planosSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                    className="group relative inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-xl text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   >
                     Agendar Consulta
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
