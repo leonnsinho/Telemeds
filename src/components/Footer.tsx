@@ -93,7 +93,7 @@ const Footer: React.FC = () => {
                 className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors"
               >
                 <MessageCircle className="w-5 h-5" />
-                <span>+55 (11) 9179-83233</span>
+                <span>+55 (11) 91798-3233</span>
               </a>
               <a 
                 href="mailto:contato@telemeds.com.br"
@@ -113,7 +113,7 @@ const Footer: React.FC = () => {
                 <Phone className="w-5 h-5 mt-0.5" />
                 <div>
                   <p>Seg-Sex: 8h às 20h</p>
-                  <p>Sáb-Dom: 8h às 13h</p>
+                  <p>Sábado: 8h às 13h</p>
                 </div>
               </div>
               <div className="pt-3 border-t border-gray-700">

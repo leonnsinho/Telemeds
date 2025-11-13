@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Brain, Calendar, Shield, Clock, ChevronDown, Heart, Zap, Moon, Users, AlertCircle, Activity, Pill } from 'lucide-react';
 import WaveDivider from '../components/WaveDivider';
-import medicoSerioImg from '../assets/images/medico serio.jpg';
-import medico2Img from '../assets/images/medico 2.jpeg';
+import medico2Img from '../assets/images/medico 2.jpg';
 
 const Psiquiatria: React.FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -82,22 +81,15 @@ const Psiquiatria: React.FC = () => {
     }
   ];
 
-  const doctors = [
-    {
-      name: 'Dr. Bruno Hees Toews',
-      crm: 'CRM-SP: 167551',
-      specialty: 'Psiquiatria',
-      description: 'Atua há mais de 10 anos em psiquiatria e clínica médica, com especialização pela Santa Casa de São Paulo e vivência internacional. Reconhecido por sua abordagem empática e foco em resultados, oferece atendimento bilíngue (português e inglês) e conduz os atendimentos com excelência e responsabilidade médica.',
-      image: medicoSerioImg
-    },
-    {
-      name: 'Dr. Rennan Hollen',
-      crm: 'CRM-SP: 208989',
-      specialty: 'Psiquiatria',
-      description: 'Com mais de 6 anos de experiência em psiquiatria e clínica médica, é especialista pelo Hospital Israelita Albert Einstein. Está em constante atualização profissional e dedica-se a um atendimento humanizado, personalizado e bilíngue (português e inglês), sempre priorizando o bem-estar e a qualidade de vida dos seus pacientes.',
-      image: medico2Img
-    }
-  ];
+  const doctor = {
+    name: 'Dr. Rennan Hollen',
+    crm: 'CRM-SP: 208989',
+    specialty: 'Psiquiatria',
+    quote: 'Dedico-me a um atendimento humanizado e personalizado, sempre priorizando o bem-estar e a qualidade de vida dos meus pacientes.',
+    description: 'Com mais de 6 anos de experiência em psiquiatria e clínica médica, sou especialista pelo Hospital Israelita Albert Einstein. Estou em constante atualização profissional e ofereço atendimento bilíngue (português e inglês), sempre com foco em resultados e excelência no cuidado com a saúde mental.',
+    experience: '6+ anos',
+    image: medico2Img
+  };
 
   const faqItems = [
     {
@@ -287,40 +279,68 @@ const Psiquiatria: React.FC = () => {
 
   <WaveDivider gradientFrom="#C5E4F6" gradientTo="#E5D8F0" dualLayer={true} heroColor="#ffffff" />
 
-  {/* Médicos */}
+  {/* Médico */}
   <section className="section-padding gradient-secondary" style={{ background: 'linear-gradient(90deg, #C5E4F6 0%, #E5D8F0 100%)' }}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 slide-up">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Nossos <span className="gradient-text">Especialistas</span>
+              Nosso <span className="gradient-text">Especialista</span>
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Profissionais qualificados e experientes, prontos para cuidar da sua saúde mental
+              Profissional qualificado e experiente, dedicado ao cuidado integral da sua saúde mental com acolhimento e expertise.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {doctors.map((doctor, index) => (
-              <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
-                <div className="aspect-square overflow-hidden">
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-gradient-to-br from-white to-blue-50 rounded-3xl overflow-hidden shadow-2xl">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                {/* Seção da Imagem */}
+                <div className="relative h-64 lg:h-auto min-h-[400px] overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10"></div>
                   <img
                     src={doctor.image}
                     alt={doctor.name}
-                    className={`w-full h-full object-cover ${
-                      doctor.name.includes('Bruno') ? 'doctor-image-bruno' : 'doctor-image-rennan'
-                    }`}
+                    className="w-full h-full object-cover doctor-image-rennan"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {doctor.name}
-                  </h3>
-                  <p className="text-blue-600 font-semibold mb-3">{doctor.crm}</p>
-                  <p className="text-gray-600 mb-3 font-medium">{doctor.specialty}</p>
-                  <p className="text-sm text-gray-700 leading-relaxed">{doctor.description}</p>
+
+                {/* Seção do Conteúdo */}
+                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                  <div className="mb-6">
+                    <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
+                      {doctor.name}
+                    </h3>
+                    <p className="text-blue-600 font-semibold text-lg mb-2">{doctor.crm}</p>
+                    <p className="text-gray-600 font-medium text-lg">{doctor.specialty}</p>
+                  </div>
+
+                  {/* Quote destacada */}
+                  <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl mb-6">
+                    <blockquote className="text-gray-700 italic leading-relaxed">
+                      "{doctor.quote}"
+                    </blockquote>
+                  </div>
+
+                  {/* Descrição */}
+                  <p className="text-gray-700 leading-relaxed mb-8 text-lg">
+                    {doctor.description}
+                  </p>
+
+                  {/* CTA */}
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <a
+                      href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta de psiquiatria."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-gradient-to-r from-blue-600 to-purple-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-800 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+                    >
+                      <Calendar className="w-5 h-5" />
+                      <span>Agendar Consulta</span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
