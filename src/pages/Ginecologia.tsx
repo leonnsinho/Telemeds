@@ -382,7 +382,7 @@ const Ginecologia: React.FC = () => {
                   <Shield className="w-6 h-6 text-white" />
                 </div>
                 <div className="text-3xl font-bold text-rose-600 mb-2">8h-13h</div>
-                <p className="text-gray-600 font-medium text-sm">Sáb e Dom</p>
+                <p className="text-gray-600 font-medium text-sm">Sábado</p>
               </div>
             </div>
           </div>
