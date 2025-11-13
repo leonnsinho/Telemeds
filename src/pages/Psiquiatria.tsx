@@ -86,7 +86,7 @@ const Psiquiatria: React.FC = () => {
     crm: 'CRM-SP: 208989',
     specialty: 'Psiquiatria',
     quote: 'Dedico-me a um atendimento humanizado e personalizado, sempre priorizando o bem-estar e a qualidade de vida dos meus pacientes.',
-    description: 'Com mais de 6 anos de experiência em psiquiatria e clínica médica, sou especialista pelo Hospital Israelita Albert Einstein. Estou em constante atualização profissional e ofereço atendimento bilíngue (português e inglês), sempre com foco em resultados e excelência no cuidado com a saúde mental.',
+    description: 'Com mais de 6 anos de experiência em psiquiatria e clínica médica, especialista pelo Hospital Israelita Albert Einstein. Em constante atualização profissional, oferece atendimento bilíngue (português e inglês), sempre com foco em resultados e excelência no cuidado com a saúde mental.',
     experience: '6+ anos',
     image: medico2Img
   };
