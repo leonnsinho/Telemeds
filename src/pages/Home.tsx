@@ -59,13 +59,13 @@ const Home: React.FC = () => {
       }
     },
     {
-      icon: Heart,
-      title: 'Psicologia',
-      description: 'Apoio psicológico e terapia para bem-estar emocional.',
-      path: '/psico',
+      icon: Users,
+      title: 'Ginecologia',
+      description: 'Saúde feminina com foco em prevenção e tratamento.',
+      path: '/ginecologia',
       available: true,
       detailedInfo: {
-        symptoms: ['Estresse', 'Relacionamentos', 'Autoestima', 'Traumas'],
+        symptoms: ['Consulta ginecológica', 'Prevenção', 'Saúde da mulher', 'Contraceptivos', 'Exames preventivos'],
         duration: '20-60 minutos'
       }
     },
@@ -92,24 +92,24 @@ const Home: React.FC = () => {
       }
     },
     {
-      icon: Users,
-      title: 'Ginecologia',
-      description: 'Saúde feminina com foco em prevenção e tratamento.',
-      path: '/ginecologia',
+      icon: Heart,
+      title: 'Psicologia',
+      description: 'Apoio psicológico e terapia para bem-estar emocional.',
+      path: '/psico',
       available: true,
       detailedInfo: {
-        symptoms: ['Consulta ginecológica', 'Prevenção', 'Saúde da mulher', 'Contraceptivos', 'Exames preventivos'],
+        symptoms: ['Estresse', 'Relacionamentos', 'Autoestima', 'Traumas'],
         duration: '20-60 minutos'
       }
     },
     {
       icon: Bone,
-      title: 'Ortopedia',
-      description: 'Tratamento de problemas ósseos, articulares e musculares.',
-      path: '/ortopedia',
+      title: 'Dermatologia',
+      description: 'Cuidado especializado para saúde da pele, cabelos e unhas.',
+      path: '/dermatologia',
       available: false,
       detailedInfo: {
-        symptoms: ['Dores articulares', 'Lesões esportivas', 'Problemas posturais', 'Fraturas'],
+        symptoms: ['Acne', 'Dermatite', 'Manchas na pele', 'Queda de cabelo', 'Micoses', 'Alergias cutâneas'],
         duration: '20-60 minutos'
       }
     }
@@ -125,11 +125,11 @@ const Home: React.FC = () => {
       description: 'Ansiedade, depressão e saúde mental'
     },
     { 
-      icon: Heart, 
-      title: 'Psicologia', 
-      path: '/psico', 
+      icon: Users, 
+      title: 'Ginecologia', 
+      path: '/ginecologia', 
       available: true,
-      description: 'Terapia e bem-estar emocional'
+      description: 'Saúde da mulher e prevenção'
     },
     { 
       icon: Activity, 
@@ -146,11 +146,11 @@ const Home: React.FC = () => {
       description: 'Consultas gerais e check-ups'
     },
     { 
-      icon: User, 
-      title: 'Ginecologia', 
-      path: '/ginecologia', 
+      icon: Heart, 
+      title: 'Psicologia', 
+      path: '/psico', 
       available: true,
-      description: 'Saúde feminina e prevenção'
+      description: 'Terapia e bem-estar emocional'
     }
   ];
 
@@ -356,7 +356,7 @@ const Home: React.FC = () => {
     },
     {
       question: 'As receitas têm validade legal?',
-      answer: 'Sim! Todas as receitas são digitais e têm validade legal em todo território nacional, conforme regulamentação do CFM.'
+      answer: 'Sim! Todas as receitas e documentos são emitidos com assinatura digital ICP-BRASIL, válidos em todo território nacional, conforme regulamentação do CFM e da Lei federal nº 14.510/2022.'
     },
     {
       question: 'Posso usar meu plano de saúde?',
@@ -819,7 +819,7 @@ const Home: React.FC = () => {
                 ))}
               </div>
               <span className="text-lg font-semibold text-gray-900">5.0</span>
-              <span className="text-gray-600">(155 avaliações)</span>
+              <span className="text-gray-600">(467 avaliações)</span>
             </div>
           </div>
 

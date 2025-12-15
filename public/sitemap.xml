@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Página Principal -->
+  <url>
+    <loc>https://www.telemeds.com.br/</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.telemeds.com.br/Logo.png</image:loc>
+      <image:title>Telemeds - Clínica Digital</image:title>
+    </image:image>
+  </url>
+
+  <!-- Psiquiatria -->
+  <url>
+    <loc>https://www.telemeds.com.br/psiquiatra</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.telemeds.com.br/psiquiatria.png</image:loc>
+      <image:title>Psiquiatria Online - Telemeds</image:title>
+    </image:image>
+  </url>
+
+  <!-- Ginecologia -->
+  <url>
+    <loc>https://www.telemeds.com.br/ginecologia</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.telemeds.com.br/gine-foto.png</image:loc>
+      <image:title>Ginecologia Online - Telemeds</image:title>
+    </image:image>
+  </url>
+
+  <!-- Endocrinologia -->
+  <url>
+    <loc>https://www.telemeds.com.br/endocrinologia</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.telemeds.com.br/endocrinologia.png</image:loc>
+      <image:title>Endocrinologia Online - Telemeds</image:title>
+    </image:image>
+  </url>
+
+  <!-- Medicina de Família -->
+  <url>
+    <loc>https://www.telemeds.com.br/medicina</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.telemeds.com.br/medicina.png</image:loc>
+      <image:title>Medicina de Família Online - Telemeds</image:title>
+    </image:image>
+  </url>
+
+  <!-- Psicologia -->
+  <url>
+    <loc>https://www.telemeds.com.br/psico</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.telemeds.com.br/psicologia.png</image:loc>
+      <image:title>Psicologia Online - Telemeds</image:title>
+    </image:image>
+  </url>
+
+  <!-- Agendamento -->
+  <url>
+    <loc>https://www.telemeds.com.br/agendamento</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Agendamento Externo -->
+  <url>
+    <loc>https://www.telemeds.com.br/agendamento-externo</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Políticas de Privacidade -->
+  <url>
+    <loc>https://www.telemeds.com.br/politicas-privacidade</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Políticas de Cookies -->
+  <url>
+    <loc>https://www.telemeds.com.br/politicas-cookies</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Termos de Uso -->
+  <url>
+    <loc>https://www.telemeds.com.br/termos-uso</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+</urlset>

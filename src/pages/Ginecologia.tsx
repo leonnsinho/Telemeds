@@ -104,7 +104,7 @@ const Ginecologia: React.FC = () => {
     crm: 'CRM-SP: 208883',
     specialty: 'Ginecologia e Obstetrícia',
     quote: 'Vejo a ginecologia como um espaço de escuta, acolhimento e respeito, que considera não apenas o aspecto clínico, mas também as nuances emocionais, sociais e culturais do universo feminino.',
-    description: 'Sou médica ginecologista e obstetra. Atuo com dedicação no cuidado integral da saúde da mulher, em todas as fases da vida. Vejo a ginecologia como um espaço de escuta, acolhimento e respeito, que considera não apenas o aspecto clínico, mas também as nuances emocionais, sociais e culturais do universo feminino. Acredito no poder da informação para que cada paciente seja protagonista da própria saúde, sendo o meu compromisso oferecer um cuidado especializado, seguro e acessível, valorizando sempre a singularidade de cada mulher.',
+    description: 'Graduou-se em medicina na UAM (Universidade Anhembi Morumbi) em São Paulo. Residência médica em Ginecologia e Obstetrícia pela Santa Casa de Misericórdia de Campo Grande, Mato Grosso do Sul. Especialização em Ginecologia Endócrina e Infanto-puberal no Hospital Sírio Libanês em São Paulo.',
     experience: '10+ anos',
     image: '/dra marina.jpg'
   };

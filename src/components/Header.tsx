@@ -22,10 +22,10 @@ const Header: React.FC = () => {
   const navigationItems = [
     { name: 'Início', path: '/' },
     { name: 'Psiquiatria', path: '/psiquiatra' },
-    { name: 'Psicologia', path: '/psico' },
+    { name: 'Ginecologia', path: '/ginecologia' },
     { name: 'Endocrinologia', path: '/endocrinologia' },
     { name: 'Medicina de Família', path: '/medicina' },
-    { name: 'Ginecologia', path: '/ginecologia' },
+    { name: 'Psicologia', path: '/psico' },
   ];
 
   const currentPage = navigationItems.find(item => item.path === location.pathname)?.name || 'Menu';

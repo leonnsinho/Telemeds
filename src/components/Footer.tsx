@@ -35,8 +35,8 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/psico" className="text-gray-400 hover:text-white transition-colors">
-                  Psicologia
+                <Link to="/ginecologia" className="text-gray-400 hover:text-white transition-colors">
+                  Ginecologia
                 </Link>
               </li>
               <li>
@@ -50,12 +50,12 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/ginecologia" className="text-gray-400 hover:text-white transition-colors">
-                  Ginecologia
+                <Link to="/psico" className="text-gray-400 hover:text-white transition-colors">
+                  Psicologia
                 </Link>
               </li>
               <li>
-                <span className="text-gray-500">Ortopedia (em breve)</span>
+                <span className="text-gray-500">Dermatologia (em breve)</span>
               </li>
             </ul>
           </div>
