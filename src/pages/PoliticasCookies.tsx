@@ -321,7 +321,7 @@ const PoliticasCookies: React.FC = () => {
                 href="tel:+5511917983233"
                 className="inline-flex items-center space-x-2 border-2 border-green-600 text-green-600 px-6 py-3 rounded-full font-semibold hover:bg-green-600 hover:text-white transition-all duration-300"
               >
-                <span>+55 (11) 9179-83233</span>
+                <span>+55 (11) 91798-3233</span>
               </a>
             </div>
             <p className="text-sm text-gray-600 mt-6">

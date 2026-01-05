@@ -103,9 +103,9 @@ const Home: React.FC = () => {
       }
     },
     {
-      icon: Bone,
+      icon: Sparkles,
       title: 'Dermatologia',
-      description: 'Cuidado especializado para saúde da pele, cabelos e unhas.',
+      description: 'Atendimento especializado para prevenção, diagnóstico e cuidados com a pele.',
       path: '/dermatologia',
       available: false,
       detailedInfo: {

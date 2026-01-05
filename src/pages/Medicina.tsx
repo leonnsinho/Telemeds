@@ -100,10 +100,6 @@ const Medicina: React.FC = () => {
       answer: 'Oferecemos diferentes modalidades de atendimento, sempre online e com emissão de receita digital válida em todo o Brasil: Consulta Clínica Geral, Renovação de Receita Simples, Puericultura Básica Online, Check-up Clínico e Exames Laboratoriais, Tratamento com Canabinoides Medicinais, Orientações em Saúde e Uso de Medicamentos, Laudos e Atestados Médicos, Segunda Opinião Clínica.'
     },
     {
-      question: 'Qual é a duração da consulta?',
-      answer: 'Você escolhe de acordo com a sua necessidade: 20 minutos – consultas curtas, ideais para renovações de receita, orientações pontuais, afastamentos simples e laudos. 40 minutos – consultas completas, para acompanhamento familiar, avaliação de múltiplas condições, check-ups e casos mais complexos.'
-    },
-    {
       question: 'Quais condições podem ser avaliadas na Medicina de Família?',
       answer: 'Nossos especialistas estão preparados para lidar com: Queixas agudas (febre, gripes, infecções leves, dores de cabeça, problemas gastrointestinais e dermatológicos), Doenças crônicas (hipertensão, diabetes, colesterol, asma, tireoide), Deficiências nutricionais, suplementação e reposição de vitaminas, Prevenção e promoção de saúde, incluindo vacinação, hábitos de vida e orientações gerais, Encaminhamentos e solicitações de exames.'
     },
@@ -138,14 +134,6 @@ const Medicina: React.FC = () => {
     {
       question: 'Quais atendimentos e laudos NÃO realizamos?',
       answer: 'Por motivos éticos e legais, não realizamos: Pré-natal de alto risco, Laudos para readequação de gênero, Laudo de curatela, Laudo de interdição, Laudo para aposentadoria por invalidez ou isenção de IR, Laudo para porte ou posse de arma de fogo, Laudo PCD.'
-    },
-    {
-      question: 'Qual é o valor da consulta?',
-      answer: 'Consulta curta (20 min) – R$ 129,90, Consulta estendida (40 min) – R$ 239,90, Laudos específicos (INSS e empregadores) – R$ 300,00 (fixo – 20 min).'
-    },
-    {
-      question: 'Como agendar uma consulta?',
-      answer: 'O processo é simples: 1-Escolha o dia e horário que melhor se adapta à sua rotina, 2-Realize a consulta online (20 ou 40 min), 3-Receba sua receita, orientações ou laudo diretamente no celular.'
     }
   ];
 

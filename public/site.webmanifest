@@ -1,5 +1,5 @@
 {
-  "name": "Telemeds - Clínica Digital Moderna",
+  "name": "Telemeds",
   "short_name": "Telemeds",
   "icons": [
     {
@@ -15,7 +15,5 @@
   ],
   "theme_color": "#3b82f6",
   "background_color": "#ffffff",
-  "display": "standalone",
-  "start_url": "/",
-  "description": "Clínica médica 100% digital com especialistas em Psiquiatria, Ginecologia, Endocrinologia, Medicina de Família e Psicologia."
+  "display": "standalone"
 }

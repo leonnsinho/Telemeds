@@ -120,7 +120,7 @@ const Ginecologia: React.FC = () => {
     },
     {
       question: 'Qual é a duração da consulta ginecológica?',
-      answer: 'As consultas têm duração de 20 a 40 minutos, dependendo da complexidade do caso. Consultas de rotina e renovação de receitas são mais rápidas, enquanto primeiras consultas e casos complexos requerem mais tempo.'
+      answer: 'As consultas têm duração de 20 a 60 minutos, dependendo da complexidade do caso. Consultas de rotina e renovação de receitas são mais rápidas, enquanto primeiras consultas e casos complexos requerem mais tempo.'
     },
     {
       question: 'Quais condições ginecológicas podem ser avaliadas online?',
@@ -153,14 +153,6 @@ const Ginecologia: React.FC = () => {
     {
       question: 'Quais atendimentos ginecológicos NÃO realizamos online?',
       answer: 'Não realizamos: exame físico ginecológico, inserção de DIU, procedimentos cirúrgicos, pré-natal de alto risco, emergências ginecológicas agudas que requerem avaliação presencial imediata.'
-    },
-    {
-      question: 'Qual é o valor da consulta ginecológica?',
-      answer: 'Consulta curta (20 min) – R$ 129,90, Consulta estendida (40 min) – R$ 239,90. Incluem prescrição digital, orientações personalizadas e solicitação de exames quando necessário.'
-    },
-    {
-      question: 'Como agendar uma consulta ginecológica?',
-      answer: 'O agendamento é simples: 1-Escolha o horário disponível, 2-Realize a consulta online (20 ou 40 min), 3-Receba suas prescrições, orientações e solicitações de exames diretamente no celular.'
     }
   ];
 

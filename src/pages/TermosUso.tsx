@@ -423,11 +423,8 @@ const TermosUso: React.FC = () => {
               
               <div className="mt-6 bg-blue-50 p-6 rounded-2xl border border-blue-200">
                 <h3 className="text-lg font-bold text-blue-800 mb-3">Consultas de Retorno</h3>
-                <p className="text-gray-700 mb-2">
+                <p className="text-gray-700">
                   <strong>A CONTRATADA NÃO OFERECE consultas de retorno gratuitas.</strong>
-                </p>
-                <p className="text-gray-700 text-sm">
-                  Desconto promocional de 10% para retornos agendados em até 45 dias da última consulta, condicionado à disponibilidade.
                 </p>
               </div>
             </div>
@@ -480,7 +477,7 @@ const TermosUso: React.FC = () => {
                 href="tel:+5511917983233"
                 className="inline-flex items-center space-x-2 border-2 border-green-600 text-green-600 px-6 py-3 rounded-full font-semibold hover:bg-green-600 hover:text-white transition-all duration-300"
               >
-                <span>+55 (11) 9179-83233</span>
+                <span>+55 (11) 91798-3233</span>
               </a>
             </div>
           </div>
