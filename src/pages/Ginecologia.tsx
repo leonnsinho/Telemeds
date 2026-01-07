@@ -460,7 +460,7 @@ const Ginecologia: React.FC = () => {
               Como funciona a <span className="gradient-text">consulta online</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Processo simples e seguro para cuidar da sua saúde ginecológica
+              Processo simples e seguro para cuidar da sua saúde
             </p>
           </div>
 
@@ -478,23 +478,23 @@ const Ginecologia: React.FC = () => {
 
             <div className="text-center fade-in">
               <div className="w-20 h-20 gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                <Heart className="w-10 h-10 text-pink-600" />
+                <Heart className="w-10 h-10 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">2. Consulte</h3>
               <p className="text-gray-600 leading-relaxed">
-                Videoconsulta segura com ginecologista especializada. 
-                Opções de 20 ou 40 minutos, conforme sua necessidade.
+                Videochamada segura com ginecologista especializada. 
+                Consultas a partir de 20 minutos.
               </p>
             </div>
 
             <div className="text-center fade-in">
               <div className="w-20 h-20 gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-10 h-10 text-green-600" />
+                <Shield className="w-10 h-10 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">3. Receba</h3>
               <p className="text-gray-600 leading-relaxed">
-                Receita médica digital válida, orientações personalizadas 
-                e solicitação de exames quando necessário.
+                Plano personalizado com medicações, orientações 
+                e acompanhamento contínuo.
               </p>
             </div>
           </div>

@@ -388,8 +388,8 @@ const Psiquiatria: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">3. Receba</h3>
               <p className="text-gray-600 leading-relaxed">
-                Receita médica digital válida e orientações personalizadas 
-                para seu tratamento.
+                Plano personalizado com medicações, orientações 
+                e acompanhamento contínuo.
               </p>
             </div>
           </div>

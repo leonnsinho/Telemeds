@@ -367,41 +367,41 @@ const Endocrinologia: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 slide-up">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Como funciona a <span className="gradient-text">consulta endocrinológica</span>
+              Como funciona a <span className="gradient-text">consulta online</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Processo completo e detalhado para avaliação hormonal e metabólica
+              Processo simples e seguro para cuidar da sua saúde
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center fade-in">
-              <div className="w-20 h-20 gradient-secondary rounded-full flex items-center justify-center mx-auto mb-6">
-                <Calendar className="w-10 h-10 text-green-600" />
+              <div className="w-20 h-20 gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                <Calendar className="w-10 h-10 text-blue-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">1. Agendamento</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">1. Agende</h3>
               <p className="text-gray-600 leading-relaxed">
-                Escolha data e horário. Prepare seus exames recentes 
-                e lista de medicamentos em uso.
+                Escolha o horário que melhor se adapta à sua rotina. 
+                Agendamento fácil e rápido online.
               </p>
             </div>
 
             <div className="text-center fade-in">
-              <div className="w-20 h-20 gradient-secondary rounded-full flex items-center justify-center mx-auto mb-6">
-                <Activity className="w-10 h-10 text-green-600" />
+              <div className="w-20 h-20 gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                <Activity className="w-10 h-10 text-blue-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">2. Avaliação</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">2. Consulte</h3>
               <p className="text-gray-600 leading-relaxed">
-                Consulta detalhada com análise de exames, histórico 
-                e avaliação clínica completa.
+                Videochamada segura com endocrinologista especializado. 
+                Consultas a partir de 20 minutos.
               </p>
             </div>
 
             <div className="text-center fade-in">
-              <div className="w-20 h-20 gradient-secondary rounded-full flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-10 h-10 text-green-600" />
+              <div className="w-20 h-20 gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-10 h-10 text-blue-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">3. Tratamento</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">3. Receba</h3>
               <p className="text-gray-600 leading-relaxed">
                 Plano personalizado com medicações, orientações 
                 e acompanhamento contínuo.

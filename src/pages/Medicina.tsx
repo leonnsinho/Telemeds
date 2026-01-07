@@ -16,8 +16,8 @@ const Medicina: React.FC = () => {
       category: 'Essencial'
     },
     {
-      title: 'Renovação de Receita Simples e Controladas / Encaminhamentos',
-      description: 'Reemissão de prescrições estáveis (hipertensão, diabetes, colesterol, asma, anticoncepcionais, exames nutricionais, hormônios e psicotrópicos). Inclui encaminhamentos para fisioterapia, acupuntura, pilates e RPG.',
+      title: 'Acompanhamento Clínico Contínuo',
+      description: 'Avaliação e acompanhamento de condições clínicas estáveis, com orientações médicas individualizadas conforme cada caso. Inclui encaminhamentos para fisioterapia, acupuntura, pilates e RPG.',
       icon: FileText,
       color: 'from-green-500 to-emerald-500',
       bgColor: 'from-green-50 via-emerald-50 to-teal-50',
@@ -43,17 +43,8 @@ const Medicina: React.FC = () => {
       category: 'Preventivo'
     },
     {
-      title: 'Tratamento com Canabinoides Medicinais',
-      description: 'Indicado para dor crônica, epilepsia refratária, doença de Parkinson, esclerose múltipla, Alzheimer, fibromialgia, enxaqueca crônica e efeitos da quimioterapia/radioterapia.',
-      icon: Leaf,
-      color: 'from-emerald-500 to-teal-500',
-      bgColor: 'from-emerald-50 via-teal-50 to-green-50',
-      borderColor: 'border-emerald-100 hover:border-emerald-300',
-      category: 'Especializado'
-    },
-    {
-      title: 'Orientações em Saúde e Uso de Medicamentos',
-      description: 'Prevenção de doenças infecciosas, promoção de hábitos saudáveis, revisão de polifarmácia e esclarecimento sobre efeitos colaterais e interações medicamentosas.',
+      title: 'Orientações em Saúde e Prevenção',
+      description: 'Apoio médico para prevenção, controle de condições crônicas e promoção da saúde. Orientações individualizadas para hábitos saudáveis e bem-estar.',
       icon: BookOpen,
       color: 'from-amber-500 to-orange-500',
       bgColor: 'from-amber-50 via-yellow-50 to-orange-50',
@@ -61,8 +52,8 @@ const Medicina: React.FC = () => {
       category: 'Orientação'
     },
     {
-      title: 'Laudos e Atestados Médicos',
-      description: 'Emissão de documentos mediante avaliação clínica: Atividades físicas (academia, clubes, esportes), Escolares (faltas, restrições temporárias), INSS, Documentos para empregadores/instituições.',
+      title: 'Documentação Clínica',
+      description: 'Emissão de documentos clínicos conforme avaliação médica e necessidade assistencial: Atividades físicas (academia, clubes, esportes), Escolares (faltas, restrições temporárias), Documentos para empregadores/instituições.',
       icon: FileText,
       color: 'from-slate-500 to-gray-500',
       bgColor: 'from-slate-50 via-gray-50 to-zinc-50',
@@ -97,19 +88,19 @@ const Medicina: React.FC = () => {
     },
     {
       question: 'Quais tipos de consultas posso agendar?',
-      answer: 'Oferecemos diferentes modalidades de atendimento, sempre online e com emissão de receita digital válida em todo o Brasil: Consulta Clínica Geral, Renovação de Receita Simples, Puericultura Básica Online, Check-up Clínico e Exames Laboratoriais, Tratamento com Canabinoides Medicinais, Orientações em Saúde e Uso de Medicamentos, Laudos e Atestados Médicos, Segunda Opinião Clínica.'
+      answer: 'Oferecemos diferentes modalidades de atendimento online: Consulta Clínica Geral, Acompanhamento Clínico Contínuo, Puericultura Básica Online, Check-up Clínico e Exames Laboratoriais, Orientações em Saúde e Prevenção, Documentação Clínica e Segunda Opinião Clínica.'
     },
     {
       question: 'Quais condições podem ser avaliadas na Medicina de Família?',
       answer: 'Nossos especialistas estão preparados para lidar com: Queixas agudas (febre, gripes, infecções leves, dores de cabeça, problemas gastrointestinais e dermatológicos), Doenças crônicas (hipertensão, diabetes, colesterol, asma, tireoide), Deficiências nutricionais, suplementação e reposição de vitaminas, Prevenção e promoção de saúde, incluindo vacinação, hábitos de vida e orientações gerais, Encaminhamentos e solicitações de exames.'
     },
     {
-      question: 'Vocês emitem receitas médicas?',
-      answer: 'Sim ✅. Todas as consultas permitem emissão de receita médica digital válida em todo o Brasil, inclusive controlados de uso clínico (conforme avaliação médica). Também podemos prescrever vitaminas, reposições hormonais, anticoncepcionais e outros medicamentos de uso contínuo.'
+      question: 'Quais orientações recebo após a consulta?',
+      answer: 'Após a consulta, você recebe orientações médicas personalizadas, documentação clínica digital válida conforme necessidade e plano de acompanhamento individualizado para continuidade do cuidado.'
     },
     {
-      question: 'Posso renovar minha receita online?',
-      answer: 'Sim. A renovação de receita é indicada para pacientes já estabilizados em uso de medicações contínuas (como para hipertensão, diabetes, colesterol, anticoncepcionais e psicotrópicos estáveis). Durante a consulta, o médico poderá revalidar a receita, ajustar doses se necessário e solicitar exames de acompanhamento.'
+      question: 'Como funciona o acompanhamento clínico?',
+      answer: 'O acompanhamento clínico é indicado para pacientes com condições estáveis que necessitam de avaliação médica contínua. Durante a consulta, o médico avalia a evolução do quadro clínico, ajusta condutas se necessário e solicita exames de acompanhamento conforme cada caso.'
     },
     {
       question: 'O que é a Puericultura Básica Online?',
@@ -120,20 +111,16 @@ const Medicina: React.FC = () => {
       answer: 'O check-up é uma consulta preventiva, em que avaliamos seu histórico clínico e solicitamos exames laboratoriais de acordo com seu perfil. Podem ser solicitados: Exames metabólicos e hormonais, Avaliação nutricional, Marcadores tumorais e autoimunes, Alergias alimentares, respiratórias e cutâneas, Exames pré-nupciais e pré-gestacionais, Vitaminas e micronutrientes.'
     },
     {
-      question: 'Vocês oferecem tratamento com canabinoides medicinais?',
-      answer: 'Sim. Temos médica credenciada para prescrever canabinoides medicinais de forma segura e personalizada. As principais indicações clínicas são: Dor crônica, Epilepsia refratária, Doença de Parkinson, Esclerose múltipla, Alzheimer e outras condições neurodegenerativas, Efeitos da quimioterapia, Espasticidade muscular, Enxaqueca crônica.'
-    },
-    {
-      question: 'Vocês fazem laudos e atestados médicos?',
-      answer: 'Sim. Emitimos documentos mediante avaliação clínica: Atividades físicas (academia, esportes, clubes), Escolares (faltas, restrições temporárias), Atestados para empregadores/instituições, Laudos para INSS (consulta de 20 min – valor fixo). ⚠ Importante: alguns laudos específicos não são realizados.'
+      question: 'Que tipo de documentação clínica é fornecida?',
+      answer: 'Emitimos documentação clínica mediante avaliação médica: Atividades físicas (academia, esportes, clubes), Escolares (faltas, restrições temporárias), Documentos para empregadores/instituições. ⚠ Importante: alguns documentos específicos não fazem parte do escopo do serviço.'
     },
     {
       question: 'Como funciona a consulta de Segunda Opinião Clínica?',
       answer: 'É um atendimento voltado para revisão de exames, condutas e diagnósticos anteriores. O objetivo é oferecer segurança, discutir alternativas terapêuticas e evitar tratamentos redundantes.'
     },
     {
-      question: 'Quais atendimentos e laudos NÃO realizamos?',
-      answer: 'Por motivos éticos e legais, não realizamos: Pré-natal de alto risco, Laudos para readequação de gênero, Laudo de curatela, Laudo de interdição, Laudo para aposentadoria por invalidez ou isenção de IR, Laudo para porte ou posse de arma de fogo, Laudo PCD.'
+      question: 'Quais atendimentos NÃO realizamos?',
+      answer: 'Por motivos éticos e legais, alguns atendimentos e documentos específicos não fazem parte do escopo do serviço. Entre em contato com nossa equipe para esclarecimentos sobre casos específicos.'
     }
   ];
 
@@ -159,7 +146,7 @@ const Medicina: React.FC = () => {
               
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
                 Atendimento online com médicos de clínica geral e medicina de família, 
-                para prevenção, diagnóstico e tratamento personalizado em todas as fases da vida.
+                para prevenção, diagnóstico e acompanhamento personalizado em todas as fases da vida.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -269,8 +256,7 @@ const Medicina: React.FC = () => {
               <div>
                 <h3 className="text-xl font-bold text-red-800 mb-3">Atendimentos que NÃO realizamos</h3>
                 <p className="text-red-700 leading-relaxed">
-                  <strong>Importante:</strong> Pré-natal de alto risco, laudos judiciais (curatela, interdição), invalidez/isenção de IR, 
-                  porte/posse de arma, PCD, troca de sexo/transgêneros.
+                  <strong>Importante:</strong> Alguns atendimentos específicos não fazem parte do escopo do serviço. Consulte nossa equipe para mais informações.
                 </p>
               </div>
             </div>
@@ -350,8 +336,8 @@ const Medicina: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">2. Consulte</h3>
               <p className="text-gray-600 leading-relaxed">
-                Videoconsulta segura com médico de medicina de família. 
-                Opções de 20 ou 40 minutos, conforme sua necessidade.
+                Videochamada segura com médico especializado. 
+                Consultas a partir de 20 minutos.
               </p>
             </div>
 
@@ -361,8 +347,8 @@ const Medicina: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">3. Receba</h3>
               <p className="text-gray-600 leading-relaxed">
-                Receita médica digital válida, laudos e orientações personalizadas 
-                para seu cuidado contínuo.
+                Plano personalizado com medicações, orientações 
+                e acompanhamento contínuo.
               </p>
             </div>
           </div>
