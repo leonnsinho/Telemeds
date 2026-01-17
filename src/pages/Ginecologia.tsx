@@ -7,8 +7,8 @@ const Ginecologia: React.FC = () => {
 
   const commonCases = [
     {
-      title: 'Contracepção e Planejamento Familiar',
-      description: 'Anticoncepção - contraceptivos orais, anel vaginal, injetáveis, adesivo, implante subdérmico, DIU (em relação a DIU e implante - aconselhamentos e guia para solicitação); Contracepção de emergência',
+      title: 'Planejamento Familiar',
+      description: 'Orientação médica para planejamento familiar e saúde reprodutiva, com acompanhamento individualizado.',
       icon: Users,
       color: 'from-purple-500 to-violet-500',
       bgColor: 'from-purple-50 via-violet-50 to-indigo-50',
@@ -25,22 +25,22 @@ const Ginecologia: React.FC = () => {
       category: 'Endócrina'
     },
     {
-      title: 'Saúde Sexual',
-      description: 'ISTs (prevenção, sorologias, resultados); Corrimentos vaginais; Candidíase de repetição',
+      title: 'Bem-estar íntimo e saúde feminina',
+      description: 'Acompanhamento profissional para qualidade de vida, bem-estar e saúde íntima.',
       icon: Heart,
       color: 'from-emerald-500 to-green-500',
       bgColor: 'from-emerald-50 via-green-50 to-lime-50',
       borderColor: 'border-emerald-100 hover:border-emerald-300',
-      category: 'Sexual'
+      category: 'Bem-estar'
     },
     {
-      title: 'Oncologia Ginecológica (Acompanhamento)',
-      description: 'Exames de rastreio (Papanicolau, HPV, mamografia); Orientações conforme protocolos de rastreamento',
+      title: 'Acompanhamento especializado',
+      description: 'Orientação e acompanhamento clínico especializado conforme necessidade individual.',
       icon: Shield,
       color: 'from-red-500 to-pink-500',
       bgColor: 'from-red-50 via-pink-50 to-rose-50',
       borderColor: 'border-red-100 hover:border-red-300',
-      category: 'Oncologia'
+      category: 'Especializado'
     },
     {
       title: 'Gestação de Baixo Risco',
@@ -52,13 +52,13 @@ const Ginecologia: React.FC = () => {
       category: 'Gestação'
     },
     {
-      title: 'Saúde Mental',
-      description: 'Ansiedade/depressão relacionadas ao ciclo, pós-parto ou menopausa; TDPM; Encaminhamento quando necessário',
+      title: 'Bem-estar emocional',
+      description: 'Apoio e orientação para equilíbrio emocional e qualidade de vida.',
       icon: Heart,
       color: 'from-blue-500 to-indigo-500',
       bgColor: 'from-blue-50 via-indigo-50 to-purple-50',
       borderColor: 'border-blue-100 hover:border-blue-300',
-      category: 'Mental'
+      category: 'Emocional'
     },
     {
       title: 'Saúde da Adolescente',
@@ -71,7 +71,7 @@ const Ginecologia: React.FC = () => {
     },
     {
       title: 'Climatério e Menopausa',
-      description: 'Tratamento de sintomas (fogachos, insônia, irritabilidade, ressecamento vaginal, queda da libido); Terapia de reposição hormonal e não hormonais; prevenção de osteoporose; suplementação',
+      description: 'Acompanhamento de sintomas (fogachos, insônia, irritabilidade, ressecamento vaginal, queda da libido); Orientação hormonal e não hormonal; prevenção de osteoporose; suplementação',
       icon: Clock,
       color: 'from-orange-500 to-amber-500',
       bgColor: 'from-orange-50 via-amber-50 to-yellow-50',
@@ -82,13 +82,13 @@ const Ginecologia: React.FC = () => {
       title: 'Queixas Comuns (Manejo Inicial)',
       description: 'Atendimento inicial e orientação para os problemas ginecológicos mais frequentes',
       details: [
-        'Infecção urinária - diagnóstico e tratamento',
-        'Cólicas menstruais e dismenorreia - alívio da dor',
-        'Síndrome pré-menstrual e TDPM - manejo hormonal',
-        'Corrimentos vaginais - identificação e tratamento',
+        'Infecção urinária - avaliação e acompanhamento',
+        'Cólicas menstruais e dismenorreia - orientação para alívio',
+        'Síndrome pré-menstrual e TDPM - acompanhamento',
+        'Corrimentos vaginais - avaliação e orientações',
         'Dor pélvica - avaliação e orientações',
-        'Sangramento uterino anormal - investigação inicial',
-        'Alterações no ciclo menstrual - regulação hormonal'
+        'Sangramento uterino anormal - avaliação inicial',
+        'Alterações no ciclo menstrual - orientação e acompanhamento'
       ],
       icon: TestTube,
       color: 'from-indigo-500 to-blue-500',
@@ -112,43 +112,43 @@ const Ginecologia: React.FC = () => {
   const faqItems = [
     {
       question: 'O que é uma consulta ginecológica online?',
-      answer: 'A consulta ginecológica online é um atendimento especializado em saúde da mulher realizado por videoconferência. Inclui orientações, prescrições, solicitação de exames e acompanhamento de condições ginecológicas que não requerem exame físico imediato.'
+      answer: 'A consulta ginecológica online é um atendimento especializado em saúde da mulher realizado por videoconferência. Inclui orientações médicas, acompanhamento e avaliação de condições ginecológicas que não requerem exame físico imediato.'
     },
     {
       question: 'Quais tipos de consultas ginecológicas posso agendar?',
-      answer: 'Oferecemos consultas para orientação contraceptiva, acompanhamento de ciclo menstrual, infecções ginecológicas, climatério/menopausa, solicitação de exames preventivos, orientações pré-gestacionais e segunda opinião médica.'
+      answer: 'Oferecemos consultas para orientação sobre planejamento familiar, acompanhamento de ciclo menstrual, avaliação de infecções ginecológicas, climatério/menopausa, orientações sobre exames preventivos, orientações pré-gestacionais e segunda opinião médica.'
     },
     {
       question: 'Qual é a duração da consulta ginecológica?',
-      answer: 'As consultas têm duração de 20 a 60 minutos, dependendo da complexidade do caso. Consultas de rotina e renovação de receitas são mais rápidas, enquanto primeiras consultas e casos complexos requerem mais tempo.'
+      answer: 'As consultas têm duração de 20 a 60 minutos, dependendo da complexidade do caso. Consultas de rotina e acompanhamento são mais rápidas, enquanto primeiras consultas e casos complexos requerem mais tempo.'
     },
     {
       question: 'Quais condições ginecológicas podem ser avaliadas online?',
-      answer: 'Podemos avaliar: irregularidades menstruais, sintomas de infecções vaginais, orientação contraceptiva, sintomas da menopausa, dúvidas sobre métodos contraceptivos, acompanhamento de exames e orientações gerais sobre saúde feminina.'
+      answer: 'Podemos avaliar: irregularidades menstruais, sintomas de infecções vaginais, orientação sobre planejamento familiar, sintomas da menopausa, dúvidas sobre saúde reprodutiva, acompanhamento de exames e orientações gerais sobre saúde feminina.'
     },
     {
-      question: 'Vocês prescrevem anticoncepcionais e outros medicamentos?',
-      answer: 'Sim ✅. Prescrevemos anticoncepcionais hormonais, medicamentos para infecções ginecológicas, terapia hormonal para menopausa e outros medicamentos necessários, sempre com receita digital válida em todo o Brasil.'
+      question: 'Como funciona o acompanhamento e as orientações após a consulta?',
+      answer: 'Após a consulta, você recebe orientações clínicas personalizadas e documentação médica digital válida em todo o Brasil, conforme avaliação profissional. O acompanhamento é contínuo e individualizado.'
     },
     {
-      question: 'Posso solicitar exames ginecológicos na consulta online?',
-      answer: 'Sim. Solicitamos exames como Papanicolau, ultrassom (transvaginal, pelvico, mamas e axilas, abdominal), mamografia, exames hormonais, cultura vaginal e outros exames necessários para diagnóstico e acompanhamento da saúde ginecológica.'
+      question: 'Como funciona a avaliação e o encaminhamento para exames quando necessário?',
+      answer: 'Durante a consulta, a médica avaliará sua necessidade e poderá encaminhar para exames laboratoriais e de imagem conforme indicação clínica, facilitando o acompanhamento da sua saúde ginecológica.'
     },
     {
       question: 'A consulta online substitui o exame ginecológico presencial?',
-      answer: 'A consulta online é excelente para orientações, prescrições e acompanhamento, mas o exame físico ginecológico ainda deve ser realizado presencialmente quando necessário. Orientamos quando é importante buscar atendimento presencial.'
+      answer: 'A consulta online é excelente para orientações médicas e acompanhamento, mas o exame físico ginecológico ainda deve ser realizado presencialmente quando necessário. Orientamos quando é importante buscar atendimento presencial.'
     },
     {
       question: 'Como funciona o acompanhamento do climatério e menopausa?',
-      answer: 'Realizamos avaliação dos sintomas, orientações sobre mudanças hormonais, prescrição de terapia de reposição hormonal quando indicada, e acompanhamento contínuo para manejo dos sintomas e prevenção de complicações.'
+      answer: 'Realizamos avaliação dos sintomas, orientações sobre mudanças hormonais e acompanhamento contínuo para manejo dos sintomas e prevenção de complicações.'
     },
     {
       question: 'Vocês orientam sobre planejamento familiar?',
-      answer: 'Sim. Oferecemos orientação completa sobre métodos contraceptivos, planejamento reprodutivo, orientações pré-concepcionais e acompanhamento para casais que desejam engravidar.'
+      answer: 'Sim. Oferecemos orientação completa sobre planejamento familiar, saúde reprodutiva, orientações pré-concepcionais e acompanhamento para casais que desejam engravidar.'
     },
     {
-      question: 'Que tipos de infecções ginecológicas podem ser tratadas online?',
-      answer: 'Tratamos candidíase vaginal, vaginose bacteriana, infecções urinárias simples e oferecemos orientações sobre prevenção de ISTs. Casos mais complexos podem necessitar avaliação presencial.'
+      question: 'Que tipos de infecções ginecológicas podem ser acompanhadas online?',
+      answer: 'Acompanhamos candidíase vaginal, vaginose bacteriana, infecções urinárias simples e oferecemos orientações sobre prevenção de ISTs. Casos mais complexos podem necessitar avaliação presencial.'
     },
     {
       question: 'Quais atendimentos ginecológicos NÃO realizamos online?',
@@ -178,7 +178,7 @@ const Ginecologia: React.FC = () => {
               
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
                 Atendimento ginecológico online especializado, com foco em prevenção, 
-                diagnóstico e tratamento personalizado para todas as fases da vida feminina.
+                diagnóstico e acompanhamento personalizado para todas as fases da vida feminina.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -491,10 +491,10 @@ const Ginecologia: React.FC = () => {
               <div className="w-20 h-20 gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="w-10 h-10 text-blue-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">3. Receba</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">3. Acompanhamento</h3>
               <p className="text-gray-600 leading-relaxed">
-                Plano personalizado com medicações, orientações 
-                e acompanhamento contínuo.
+                Receba orientações clínicas e acompanhamento profissional 
+                conforme avaliação individual.
               </p>
             </div>
           </div>
