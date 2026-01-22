@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Psiquiatria from './pages/Psiquiatria';
+import SaudeMental from './pages/SaudeMental';
 import Psicologia from './pages/Psicologia';
 import Endocrinologia from './pages/Endocrinologia';
 import Medicina from './pages/Medicina';
@@ -28,6 +29,7 @@ function App() {
             <Route path="/agendamento" element={<Agendamento />} />
             <Route path="/agendamento-externo" element={<AgendamentoExterno />} />
             <Route path="/psiquiatra" element={<Psiquiatria />} />
+            <Route path="/saude-mental" element={<SaudeMental />} />
             <Route path="/psico" element={<Psicologia />} />
             <Route path="/endocrinologia" element={<Endocrinologia />} />
             <Route path="/medicina" element={<Medicina />} />
