@@ -9,75 +9,75 @@ const Psiquiatria: React.FC = () => {
   const commonCases = [
     {
       title: 'Depressão e Transtornos do Humor',
-      description: 'Diagnóstico e tratamento de episódios depressivos, distimia e transtornos bipolares com abordagem personalizada e medicação adequada.',
+      description: 'Diagnóstico e tratamento para diferentes formas de depressão, incluindo distimia e outros',
       icon: Heart,
       color: 'from-blue-500 to-cyan-500',
       bgColor: 'from-blue-50 via-cyan-50 to-sky-50',
       borderColor: 'border-blue-100 hover:border-blue-300',
-      category: 'Transtornos do Humor'
+      category: 'Humor'
     },
     {
       title: 'Ansiedade e Transtornos Ansiosos',
-      description: 'Tratamento de ansiedade generalizada, fobias específicas, transtorno obsessivo-compulsivo e ataques de pânico com terapias eficazes.',
+      description: 'Tratamento especializado para ansiedade generalizada, síndrome do pânico, fobias e outros transtornos ansiosos.',
       icon: Zap,
       color: 'from-amber-500 to-orange-500',
       bgColor: 'from-amber-50 via-yellow-50 to-orange-50',
       borderColor: 'border-amber-100 hover:border-amber-300',
-      category: 'Transtornos Ansiosos'
+      category: 'Ansiedade'
     },
     {
       title: 'Transtornos do Sono',
-      description: 'Avaliação e tratamento de insônia, hipersonia, parassonias e outros distúrbios que afetam a qualidade do sono e descanso.',
+      description: 'Diagnóstico e tratamento de insônia, hipersonia e outros distúrbios que afetam a qualidade do sono.',
       icon: Moon,
       color: 'from-indigo-500 to-purple-500',
       bgColor: 'from-indigo-50 via-purple-50 to-violet-50',
       borderColor: 'border-indigo-100 hover:border-indigo-300',
-      category: 'Transtornos do Sono'
+      category: 'Sono'
     },
     {
-      title: 'TDAH (Transtorno de Déficit de Atenção)',
-      description: 'Diagnóstico e acompanhamento de TDAH em adultos e adolescentes, com estratégias medicamentosas e comportamentais.',
+      title: 'TDAH (Transtorno de Déficit de Atenção e Hiperatividade)',
+      description: 'Avaliação e tratamento para adultos e adolescentes com dificuldades de atenção, concentração e hiperatividade.',
       icon: AlertCircle,
       color: 'from-red-500 to-pink-500',
       bgColor: 'from-red-50 via-pink-50 to-rose-50',
       borderColor: 'border-red-100 hover:border-red-300',
-      category: 'Transtornos do Neurodesenvolvimento'
+      category: 'TDAH'
     },
     {
       title: 'Dependência Química',
-      description: 'Suporte especializado para tratamento de dependência de álcool, drogas e outras substâncias, com acompanhamento contínuo.',
+      description: 'Acompanhamento psiquiátrico no tratamento de dependências químicas e transtornos relacionados ao uso de substâncias.',
       icon: Pill,
       color: 'from-emerald-500 to-teal-500',
       bgColor: 'from-emerald-50 via-teal-50 to-green-50',
       borderColor: 'border-emerald-100 hover:border-emerald-300',
-      category: 'Dependências'
+      category: 'Dependência'
     },
     {
       title: 'Transtornos Alimentares',
-      description: 'Tratamento de anorexia, bulimia, compulsão alimentar e outros transtornos relacionados à alimentação e imagem corporal.',
+      description: 'Tratamento especializado para anorexia, bulimia, compulsão alimentar e outros transtornos relacionados à alimentação.',
       icon: Activity,
       color: 'from-purple-500 to-violet-500',
       bgColor: 'from-purple-50 via-violet-50 to-indigo-50',
       borderColor: 'border-purple-100 hover:border-purple-300',
-      category: 'Transtornos Alimentares'
+      category: 'Alimentação'
     },
     {
       title: 'Transtorno Bipolar',
-      description: 'Diagnóstico e estabilização de episódios maníacos e depressivos, com monitoramento contínuo e ajuste medicamentoso.',
+      description: 'Diagnóstico e tratamento dos transtornos bipolares, com acompanhamento das fases de mania e depressão.',
       icon: Zap,
       color: 'from-orange-500 to-red-500',
       bgColor: 'from-orange-50 via-red-50 to-pink-50',
       borderColor: 'border-orange-100 hover:border-orange-300',
-      category: 'Transtornos do Humor'
+      category: 'Bipolar'
     },
     {
       title: 'Estresse e Burnout',
-      description: 'Tratamento de estresse excessivo, síndrome de burnout e esgotamento mental relacionado ao trabalho e vida pessoal.',
+      description: 'Tratamento para estresse crônico, esgotamento profissional e síndrome de burnout com abordagem terapêutica completa.',
       icon: Users,
       color: 'from-slate-500 to-gray-500',
       bgColor: 'from-slate-50 via-gray-50 to-zinc-50',
       borderColor: 'border-slate-100 hover:border-slate-300',
-      category: 'Estresse e Adaptação'
+      category: 'Estresse'
     }
   ];
 
@@ -86,7 +86,7 @@ const Psiquiatria: React.FC = () => {
     crm: 'CRM-SP: 208989',
     specialty: 'Psiquiatria',
     quote: 'Dedico-me a um atendimento humanizado e personalizado, sempre priorizando o bem-estar e a qualidade de vida dos meus pacientes.',
-    description: 'Com mais de 6 anos de experiência em psiquiatria e clínica médica, especialista pelo Hospital Israelita Albert Einstein. Em constante atualização profissional, oferece atendimento bilíngue (português e inglês), sempre com foco em resultados e excelência no cuidado com a saúde mental.',
+    description: 'Com mais de 6 anos de experiência em psiquiatria e clínica médica, especialista pelo Hospital Israelita Albert Einstein. Em constante atualização profissional, oferece atendimento bilíngue (português e inglês), sempre com foco em resultados e excelência no cuidado emocional.',
     experience: '6+ anos',
     image: medico2Img
   };
@@ -94,19 +94,19 @@ const Psiquiatria: React.FC = () => {
   const faqItems = [
     {
       question: 'Qual a diferença entre psiquiatra e psicólogo?',
-      answer: 'O psiquiatra é um médico especializado em transtornos mentais e pode prescrever medicamentos. Já o psicólogo é um profissional da saúde mental que trabalha com terapia e não prescreve medicamentos.'
+      answer: 'O psiquiatra é um médico especializado em saúde mental que pode prescrever medicamentos e realizar tratamento medicamentoso. Já o psicólogo é um profissional da saúde que trabalha com psicoterapia e não prescreve medicamentos. Muitas vezes, o tratamento ideal combina ambos.'
     },
     {
-      question: 'A consulta online é eficaz para tratamento psiquiátrico?',
-      answer: 'Sim! Estudos mostram que a telepsiquiatria é tão eficaz quanto o atendimento presencial para a maioria dos casos, oferecendo maior comodidade e acessibilidade.'
+      question: 'Como funciona a prescrição de medicamentos online?',
+      answer: 'Após a avaliação psiquiátrica completa por videoconferência, o médico pode prescrever medicamentos quando necessário. A receita digital é enviada diretamente para você e é válida em qualquer farmácia do Brasil.'
     },
     {
-      question: 'Posso obter receita de medicamentos controlados?',
-      answer: 'Sim, nossos psiquiatras podem prescrever medicamentos controlados através de receitas digitais válidas, seguindo todas as normas do CFM e ANVISA.'
+      question: 'Quais tipos de tratamento psiquiátrico são oferecidos?',
+      answer: 'Oferecemos avaliação diagnóstica completa, prescrição e ajuste de medicamentos psiquiátricos, psicoterapia de apoio, orientações sobre mudanças de hábitos e acompanhamento contínuo do tratamento.'
     },
     {
-      question: 'Quanto tempo dura o tratamento?',
-      answer: 'O tempo varia conforme cada caso. Algumas condições podem melhorar em semanas, enquanto outras requerem acompanhamento prolongado. Seu médico fará essa avaliação.'
+      question: 'Quanto tempo dura o tratamento psiquiátrico?',
+      answer: 'O tempo de tratamento varia conforme cada caso. Alguns transtornos respondem bem em semanas ou meses, enquanto outros requerem acompanhamento de longo prazo. Seu psiquiatra fará essa avaliação de forma individualizada.'
     }
   ];
 
@@ -131,8 +131,8 @@ const Psiquiatria: React.FC = () => {
               </h1>
               
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                Atendimento psiquiátrico online com médicos especializados, 
-                diagnóstico preciso e tratamento personalizado para seu bem-estar.
+                Atendimento psiquiátrico online com diagnóstico preciso, tratamento personalizado 
+                e prescrição de medicamentos quando necessário.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -287,7 +287,7 @@ const Psiquiatria: React.FC = () => {
               Nosso <span className="gradient-text">Especialista</span>
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Profissional qualificado e experiente, dedicado ao cuidado integral da sua saúde mental com acolhimento e expertise.
+              Profissional qualificado e experiente, dedicado ao cuidado integral da sua saúde emocional com acolhimento e expertise.
             </p>
           </div>
 
@@ -377,7 +377,7 @@ const Psiquiatria: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">2. Consulte</h3>
               <p className="text-gray-600 leading-relaxed">
-                Videochamada segura com psiquiatra especializado. 
+                Videochamadas segura e especializada. 
                 Consultas a partir de 20 minutos.
               </p>
             </div>
@@ -386,10 +386,10 @@ const Psiquiatria: React.FC = () => {
               <div className="w-20 h-20 gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="w-10 h-10 text-blue-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">3. Receba</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">3. Receba medicações</h3>
               <p className="text-gray-600 leading-relaxed">
-                Plano personalizado com medicações, orientações 
-                e acompanhamento contínuo.
+                Prescrição digital de medicamentos quando necessário. 
+                Receita válida em todo Brasil.
               </p>
             </div>
           </div>
@@ -447,7 +447,7 @@ const Psiquiatria: React.FC = () => {
               Pronto para cuidar da sua saúde mental?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Agende sua consulta com nossos psiquiatras especializados e dê o primeiro passo 
+              Agende sua consulta com nosso psiquiatra e dê o primeiro passo 
               para uma vida mais equilibrada e saudável.
             </p>
             <div className="flex justify-center">

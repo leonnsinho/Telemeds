@@ -104,7 +104,7 @@ const Ginecologia: React.FC = () => {
     crm: 'CRM-SP: 208883',
     specialty: 'Ginecologia e Obstetrícia',
     quote: 'Vejo a ginecologia como um espaço de escuta, acolhimento e respeito, que considera não apenas o aspecto clínico, mas também as nuances emocionais, sociais e culturais do universo feminino.',
-    description: 'Graduou-se em medicina na UAM (Universidade Anhembi Morumbi) em São Paulo. Residência médica em Ginecologia e Obstetrícia pela Santa Casa de Misericórdia de Campo Grande, Mato Grosso do Sul. Especialização em Ginecologia Endócrina e Infanto-puberal no Hospital Sírio Libanês em São Paulo.',
+    description: 'Residência médica em Ginecologia e Obstetrícia pela Santa Casa de Misericórdia de Campo Grande, Mato Grosso do Sul. Especialização em Ginecologia Endócrina e Infanto-puberal no Hospital Sírio Libanês em São Paulo.',
     experience: '10+ anos',
     image: '/dra marina.jpg'
   };
@@ -178,7 +178,7 @@ const Ginecologia: React.FC = () => {
               
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
                 Atendimento ginecológico online especializado, com foco em prevenção, 
-                diagnóstico e acompanhamento personalizado para todas as fases da vida feminina.
+                orientação e acompanhamento personalizado para todas as fases da vida feminina.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
