@@ -435,7 +435,7 @@ const Home: React.FC = () => {
                 {/* Botão de Ação Principal */}
                 <div className="text-center">
                   <a 
-                    href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta."
+                    href="https://wa.me/5511921110959?text=Olá! Gostaria de agendar uma consulta."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group relative inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-xl text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
@@ -537,7 +537,7 @@ const Home: React.FC = () => {
                           {specialty.available ? (
                             <>
                               <a 
-                                href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta."
+                                href="https://wa.me/5511921110959?text=Olá! Gostaria de agendar uma consulta."
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="expand-button flex-1 text-white px-4 py-2 rounded-xl text-sm font-semibold flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-200"
@@ -999,7 +999,7 @@ const Home: React.FC = () => {
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">Não encontrou sua dúvida?</p>
             <a
-              href="https://wa.me/5511917983233"
+              href="https://wa.me/5511921110959"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 text-green-600 font-semibold hover:text-green-700 transition-colors"
@@ -1057,7 +1057,7 @@ const Home: React.FC = () => {
                 <div className="absolute left-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-white border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
               </div>
               <a 
-                href="https://wa.me/5511917983233" 
+                href="https://wa.me/5511921110959" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="medical-action-button bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 group-hover:-rotate-12"

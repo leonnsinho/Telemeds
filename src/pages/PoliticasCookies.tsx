@@ -318,10 +318,10 @@ const PoliticasCookies: React.FC = () => {
                 <span>contato@telemeds.com.br</span>
               </a>
               <a
-                href="tel:+5511917983233"
+                href="tel:+5511921110959"
                 className="inline-flex items-center space-x-2 border-2 border-green-600 text-green-600 px-6 py-3 rounded-full font-semibold hover:bg-green-600 hover:text-white transition-all duration-300"
               >
-                <span>+55 (11) 91798-3233</span>
+                <span>+55 11 92111-0959</span>
               </a>
             </div>
             <p className="text-sm text-gray-600 mt-6">

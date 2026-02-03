@@ -3,7 +3,7 @@ import { Heart, Calendar, Shield, Clock, ChevronDown, Brain, Users, Smile, User,
 import WaveDivider from '../components/WaveDivider';
 // removed unused doctor images (specialists section r            <div className="flex justify-center">
               <a 
-                href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta de psicologia."
+                href="https://wa.me/5511921110959?text=Olá! Gostaria de agendar uma consulta de psicologia."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg"
@@ -130,7 +130,7 @@ const Psicologia: React.FC = () => {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta de psicologia."
+                  href="https://wa.me/5511921110959?text=Olá! Gostaria de agendar uma consulta de psicologia."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-300"
@@ -332,7 +332,7 @@ const Psicologia: React.FC = () => {
             </p>
             <div className="flex justify-center">
               <a 
-                href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta de psicologia."
+                href="https://wa.me/5511921110959?text=Olá! Gostaria de agendar uma consulta de psicologia."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg"

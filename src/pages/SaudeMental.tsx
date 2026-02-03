@@ -137,7 +137,7 @@ const SaudeMental: React.FC = () => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta de saúde emocional."
+                  href="https://wa.me/5511921110959?text=Olá! Gostaria de agendar uma consulta de saúde emocional."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-300"
@@ -329,7 +329,7 @@ const SaudeMental: React.FC = () => {
                   {/* CTA */}
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a
-                      href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta de saúde emocional."
+                      href="https://wa.me/5511921110959?text=Olá! Gostaria de agendar uma consulta de saúde emocional."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-gradient-to-r from-blue-600 to-purple-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-800 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"

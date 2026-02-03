@@ -183,7 +183,7 @@ const Ginecologia: React.FC = () => {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta de ginecologia."
+                  href="https://wa.me/5511921110959?text=Olá! Gostaria de agendar uma consulta de ginecologia."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-300"
@@ -287,7 +287,7 @@ const Ginecologia: React.FC = () => {
                           <div className="flex items-center justify-end">
                             <button 
                               className={`bg-gradient-to-r ${case_item.color} text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center space-x-2`}
-                              onClick={() => window.open('https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta de ginecologia para tratar queixas comuns.', '_blank')}
+                              onClick={() => window.open('https://wa.me/5511921110959?text=Olá! Gostaria de agendar uma consulta de ginecologia para tratar queixas comuns.', '_blank')}
                             >
                               <Calendar className="w-4 h-4" />
                               <span>Agendar Consulta</span>
@@ -434,7 +434,7 @@ const Ginecologia: React.FC = () => {
                   {/* CTA */}
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a
-                      href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta de ginecologia."
+                      href="https://wa.me/5511921110959?text=Olá! Gostaria de agendar uma consulta de ginecologia."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-gradient-to-r from-pink-600 to-rose-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-pink-700 hover:to-rose-800 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
@@ -557,7 +557,7 @@ const Ginecologia: React.FC = () => {
             </p>
             <div className="flex justify-center">
               <a 
-                href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta de ginecologia"
+                href="https://wa.me/5511921110959?text=Olá! Gostaria de agendar uma consulta de ginecologia"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-pink-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg"
