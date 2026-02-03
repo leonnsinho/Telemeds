@@ -676,7 +676,7 @@ const Home: React.FC = () => {
               {/* CTA */}
               <div className="pt-2 lg:pt-4 flex justify-center lg:justify-start">
                 <a 
-                  href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta."
+                  href="https://wa.me/5511921110959?text=Olá! Gostaria de agendar uma consulta."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-full text-base lg:text-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 w-full sm:w-auto max-w-xs lg:max-w-none"
@@ -782,7 +782,7 @@ const Home: React.FC = () => {
                 Pronto para revolucionar seu cuidado com a saúde?
               </p>
               <a 
-                href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta."
+                href="https://wa.me/5511921110959?text=Olá! Gostaria de agendar uma consulta."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-gradient-to-r from-blue-600 to-teal-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
@@ -819,7 +819,7 @@ const Home: React.FC = () => {
                 ))}
               </div>
               <span className="text-lg font-semibold text-gray-900">5.0</span>
-              <span className="text-gray-600">(467 avaliações)</span>
+              <span className="text-gray-600">(510 avaliações)</span>
             </div>
           </div>
 
