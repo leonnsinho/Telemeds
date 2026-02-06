@@ -1036,7 +1036,7 @@ const Home: React.FC = () => {
                 <div className="absolute left-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-white border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
               </div>
               <a 
-                href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta."
+                href="https://wa.me/5511921110959?text=Olá! Gostaria de agendar uma consulta."
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={() => setShowAgendaTooltip(false)}

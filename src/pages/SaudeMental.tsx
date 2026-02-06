@@ -452,7 +452,7 @@ const SaudeMental: React.FC = () => {
             </p>
             <div className="flex justify-center">
               <a
-                href="https://wa.me/5511917983233?text=Olá! Gostaria de agendar uma consulta de saúde emocional."
+                href="https://wa.me/5511921110959?text=Olá! Gostaria de agendar uma consulta de saúde emocional."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg"
